@@ -1,0 +1,80 @@
+@import "src/style/mixins";
+
+.profileCard{
+  width: 274px;
+  height: 297px;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 50px;
+  right: 180px;
+  padding: 26px 30px;
+  img{
+    width: 60px;
+    height: 60px;
+    border: 5px solid #664EF9;
+    border-radius: 50%;
+  }
+  p:nth-child(2){
+    @include text(14px, 500, 14px, #BDBDBD)
+  }
+  p:nth-child(3){
+    @include text(20px, 700, 20px, #1E2123)
+  }
+  p:nth-child(4){
+    @include text(20px, 700, 20px, #1E2123)
+  }
+  strong{
+    @include text(16px, 500, 16px, #664EF9);
+    text-decoration: 1px solid #664EF9;
+  }
+  .socialBtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+.profileCardActive{
+  width: 274px;
+  height: 297px;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 50px;
+  right: 180px;
+  padding: 26px 30px;
+  img{
+    width: 60px;
+    height: 60px;
+    border: 5px solid #664EF9;
+    border-radius: 50%;
+  }
+  p:nth-child(2){
+    @include text(14px, 500, 14px, #BDBDBD)
+  }
+  p:nth-child(3){
+    @include text(20px, 700, 20px, #1E2123)
+  }
+  p:nth-child(4){
+    @include text(20px, 700, 20px, #1E2123)
+  }
+  strong{
+    @include text(16px, 500, 16px, #664EF9);
+    border-bottom: 1px solid #664EF9;
+  }
+  .socialBtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

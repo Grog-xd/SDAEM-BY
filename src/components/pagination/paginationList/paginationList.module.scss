@@ -1,0 +1,7 @@
+@import "src/style/mixins";
+.pagination{
+  display: flex;
+  margin-bottom: 60px;
+  justify-content: start;
+  align-items: center;
+}

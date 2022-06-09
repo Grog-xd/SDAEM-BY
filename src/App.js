@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {useDispatch, useSelector} from "react-redux";
+import {Navigate, Route, Routes} from "react-router-dom";
+import {publicRoutes} from "./routes/routes";
 
 function App() {
+  const dispatch = useDispatch()
+  const count = useSelector(state => state.toolkit.count)
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        {publicRoutes.map((route, index) =>
+            <Route key={index} element={route.element} path={route.path}/>
+        )}
+        <Route path='*' element={<Navigate to='404' replace/>}/>
+      </Routes>
     </div>
   );
 }

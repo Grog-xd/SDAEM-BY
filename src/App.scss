@@ -1,0 +1,22 @@
+@import "./style/mixins";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.3s all ease-in-out;
+}
+.App{
+  overflow: hidden;
+}
+ul li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+body{
+}
+
+

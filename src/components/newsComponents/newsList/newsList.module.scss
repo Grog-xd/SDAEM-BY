@@ -1,0 +1,16 @@
+@import "src/style/mixins";
+.newsList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px;
+
+}
+h2{
+  text-align: center;
+  margin-bottom: 100px;
+  @include text(30px, 700, 30px, #1E2123)
+}
