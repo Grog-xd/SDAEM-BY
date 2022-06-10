@@ -13,11 +13,14 @@ const News = () => {
     const dispatch = useDispatch()
     const posts = useSelector(state => state.toolkit.posts)
     const limit = useSelector(state => state.toolkit.limitNewsItems)
+    const currentPage = useSelector(state => state.toolkit.currentPage)
+
     const [inputValue, setInputValue] = useState('')
 
     useEffect(()=>{
+        window.scrollTo(0, 0)
         dispatch(getNews())
-    }, [])
+    }, [currentPage])
 
 
     function searchQuery(){
