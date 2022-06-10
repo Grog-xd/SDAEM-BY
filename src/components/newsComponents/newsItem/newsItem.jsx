@@ -13,7 +13,7 @@ const NewsItem = ({post}) => {
                 <p>{post.body}</p>
                 <div className={classes.btnsBlock}>
                     <p>{post.date}</p>
-                    <button onClick={()=>navigate(`${post.id}`)}>Читать</button>
+                    <button onClick={()=>navigate(`/news/${post.id}`)}>Читать</button>
                 </div>
             </div>
         </div>

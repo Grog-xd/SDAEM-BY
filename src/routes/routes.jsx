@@ -3,7 +3,7 @@ import Login from "../pages/login/Login";
 import Catalog from "../pages/catalog/Catalog";
 import Contacts from "../pages/contacts/Contacts";
 import News from "../pages/news/News";
-import NewsItem from "../pages/newsItem/NewsItem";
+import NewIdPage from "../pages/newsItem/NewIdPage";
 import Registration from "../pages/registration/Registration";
 import Page404 from "../pages/page404/Page404";
 
@@ -14,6 +14,6 @@ export const publicRoutes =[
     {path: 'catalog', element: <Catalog/>},
     {path: 'contacts', element: <Contacts/>},
     {path: 'news', element: <News/>},
-    {path: 'news/:id', element: <NewsItem/>},
+    {path: 'news/:id', element: <NewIdPage/>},
     {path: '404', element: <Page404/>},
 ]
