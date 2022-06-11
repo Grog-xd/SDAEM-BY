@@ -8,7 +8,7 @@ import ProfileCard from "../profileCard/profileCard";
 
 
 const Header = () => {
-    const isAuth = useSelector(state => state.toolkit.auth)
+    const isAuth = useSelector(state => state.toolkit.isAuth)
     const profile = useSelector(state => state.toolkit.profile)
     const [profileActive, setProfileActive] = useState(false)
 
