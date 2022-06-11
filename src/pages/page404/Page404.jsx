@@ -10,7 +10,7 @@ const Page404 = () => {
     return (
         <React.Fragment>
             <Header />
-            <main>
+            <main className={classes.page404}>
                 <img src={yellowPoints} alt="yellow points"/>
                 <img src={whitePoints} alt="white points"/>
                 <div className={classes.container}>

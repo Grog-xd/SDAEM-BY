@@ -17,3 +17,14 @@ export const publicRoutes =[
     {path: 'news/:id', element: <NewIdPage/>},
     {path: '404', element: <Page404/>},
 ]
+
+export const privateRoutes =[
+    {path: '/', element: <Main/>},
+    {path: 'catalog', element: <Catalog/>},
+    {path: 'contacts', element: <Contacts/>},
+    {path: 'news', element: <News/>},
+    {path: 'news/:id', element: <NewIdPage/>},
+    {path: '404', element: <Page404/>},
+]
+
+
