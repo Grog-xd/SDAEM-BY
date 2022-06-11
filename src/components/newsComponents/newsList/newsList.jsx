@@ -5,8 +5,6 @@ import NewsItem from "../newsItem/newsItem";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 const NewsList = () => {
-    const posts = useSelector(state => state.toolkit.posts)
-    const limit = useSelector(state => state.toolkit.limitNewsItems)
     let sortedPosts = useSelector(state => state.toolkit.sortedPosts)
 
     // sortedPosts.length
