@@ -1,22 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import classes from './contacts.module.scss'
 import {useSelector} from "react-redux";
-import {Link} from "react-router-dom";
+import Modal from "../../components/modal/modal";
 
 const Contacts = () => {
     const information = useSelector(state => state.toolkit.contactsInformation)
-
+    const [modalActive, setModalActive] = useState(false)
 
     function submit(e){
-        // e.preventDefault()
+        e.preventDefault()
+        setModalActive(!modalActive)
     }
 
     return (
         <React.Fragment>
             <Header />
             <main className={classes.contacts}>
+                {modalActive
+                    ?
+                        <Modal>
+                            <p className={'modalTitle'}><b>Ваше письмо отправлено!</b></p>
+                            <p className={'modalBody'}>Какое-то сообщение о том, что письмо отправлено, какое-то сообщение, что письмо отправлено.</p>
+                            <button onClick={()=> setModalActive(!modalActive)} className={'modalButton'}>Закрыть окно</button>
+                        </Modal>
+                    :
+                        null
+                }
                 <div className={classes.container}>
                     <div className={classes.textBlock}>
                         <h1>Контакты</h1>

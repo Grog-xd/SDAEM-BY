@@ -34,3 +34,21 @@ body{
   transition: opacity 500ms ease-in;
 }
 
+.modalTitle{
+  @include text(25px, 700, 30px, #000000);
+}
+.modalBody{
+  @include text(14px, 400, 17px, #686868);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.modalButton{
+  background: #FFD54F;
+  border-radius: 33px;
+  padding: 12px 24px;
+  @include text(16px, 700, 24px, #1E2123);
+  cursor: pointer;
+  border: none;
+
+}
+
