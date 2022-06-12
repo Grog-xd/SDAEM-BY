@@ -109,7 +109,7 @@ const Contacts = () => {
                                         </clipPath>
                                     </defs>
                                 </svg>
-                                <input className={classes.test} placeholder={'Введите ваше имя'} type="text" name={'name'} id={'name'} minLength={3} maxLength={10} required/>
+                                <input placeholder={'Введите ваше имя'} type="text" name={'name'} id={'name'} minLength={3} maxLength={10} required/>
                             </div>
                             <div className={classes.inputBlock}>
                                 <label htmlFor='email'>Ваша электронная почта</label>

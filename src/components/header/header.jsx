@@ -48,19 +48,24 @@ const Header = () => {
                             <Link className={classes.login} to={"/login"}>Вход и регистрация</Link>
                             :
                             <div className={classes.profile} onClick={() => setProfileActive(!profileActive)}>
-                                <img src={profile.avatar} alt="avatar"/>
+                                {
+                                    profile.avatar
+                                        ?
+                                            <img src={profile.avatar} alt="avatar"/>
+                                        :   null
+                                }
                                 <p>{profile.name}</p>
                                 <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.5 1.38477L6 5.64152L10.5 1.38477" stroke="#4E64F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.5 1.38477L6 5.64152L10.5 1.38477" stroke="#4E64F9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </div>
                     }
                     {
                         profileActive
                             ?
-                                <ProfileCard active={true}/>
+                                <ProfileCard profile={profile} setActive={setProfileActive}/>
                             :
-                                <ProfileCard active={false}/>
+                                null
                     }
 
                 </div>
