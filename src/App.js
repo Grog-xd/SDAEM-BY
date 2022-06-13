@@ -1,31 +1,31 @@
 import './App.scss';
 import {useDispatch, useSelector} from "react-redux";
-import {Navigate, Route, Routes} from "react-router-dom";
-import {privateRoutes, publicRoutes} from "./routes/routes";
+import {useEffect} from "react";
+import {enter} from "./redux/toolkitSlice";
+import AppRoutes from "./components/appRoutes";
 
 function App() {
 
-  const isAuth = useSelector(state => state.toolkit.isAuth)
+  const profilesArr = useSelector(state => state.toolkit.profilesArr)
+  const dispatch = useDispatch()
+
+  useEffect(()=>{
+    if(localStorage.hasOwnProperty('profile')){
+      const profile = localStorage.getItem('profile').split(' ')
+      for(let i = 0; i<profilesArr.length; i++){
+        if(profilesArr[i].name === profile[0] && profilesArr[i].password === profile[1]){
+          dispatch(enter(profilesArr[i]))
+          break
+        }
+      }
+    }
+  }, [])
+
 
 
   return (
     <div className="App">
-        {isAuth
-            ?
-              <Routes>
-                {privateRoutes.map((route, index) =>
-                    <Route key={index} element={route.element} path={route.path}/>
-                )}
-                <Route path='*' element={<Navigate to='404' replace/>}/>
-              </Routes>
-            :
-                <Routes>
-                    {publicRoutes.map((route, index) =>
-                        <Route key={index} element={route.element} path={route.path}/>
-                    )}
-                    <Route path='*' element={<Navigate to='404' replace/>}/>
-              </Routes>
-        }
+        <AppRoutes />
     </div>
   );
 }
