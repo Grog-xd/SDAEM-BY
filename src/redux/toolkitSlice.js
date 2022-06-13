@@ -10,6 +10,7 @@ const toolkitSlice = createSlice({
         sortedPosts:[],
         limitNewsItems:9,
         currentPage:1,
+        bookMarkActive:false,
         contactsInformation:{location:'220068, РБ, г. Минск, ул. Осипенко, 21, кв.23', tel:'+375 29 621-48-33', email:'sdaem@sdaem.by', timeWork:'08:00-22:00'},
         posts: [
             {id:1, img: postImg, title: 'test',  description: 'test description', body: 'Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...', date: '14 января 2008', },
@@ -234,6 +235,9 @@ const toolkitSlice = createSlice({
         profile: {name: 'dmitriy', avatar:'', phone:'', city:'', email: 'vladimir6234@tut.by', password: '123', viber: '', whatsUpp:''},
     },
     reducers:{
+        setBookMarkActive(state){
+          state.bookMarkActive = !state.bookMarkActive
+        },
         enter(state, action){
             state.isAuth = true
             state.profile = action.payload
@@ -242,6 +246,10 @@ const toolkitSlice = createSlice({
         exit(state){
             state.isAuth = false
             localStorage.clear()
+        },
+        registerUser(state, action){
+            state.profilesArr = [...state.profilesArr, action.payload]
+            console.log(state.profilesArr)
         },
         getNews(state){
             state.sortedPosts = state.posts.filter(post => post.id <= state.limitNewsItems*state.currentPage && post.id > state.limitNewsItems*(state.currentPage-1))
@@ -259,4 +267,4 @@ const toolkitSlice = createSlice({
 })
 
 export default toolkitSlice.reducer
-export const {newsInputHandler, setNewsPage, getNews, exit, enter} = toolkitSlice.actions
+export const {newsInputHandler, setNewsPage, getNews, exit, enter, setBookMarkActive, registerUser} = toolkitSlice.actions
