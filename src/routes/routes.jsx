@@ -12,6 +12,7 @@ export const publicRoutes =[
     {path: 'login', element: <Login/>},
     {path: 'registration', element: <Registration/>},
     {path: 'catalog', element: <Catalog/>},
+    {path: 'catalog/:type', element: <Catalog/>},
     {path: 'contacts', element: <Contacts/>},
     {path: 'news', element: <News/>},
     {path: 'news/:id', element: <NewIdPage/>},
@@ -21,6 +22,7 @@ export const publicRoutes =[
 export const privateRoutes =[
     {path: '/', element: <Main/>},
     {path: 'catalog', element: <Catalog/>},
+    {path: 'catalog/:type', element: <Catalog/>},
     {path: 'contacts', element: <Contacts/>},
     {path: 'news', element: <News/>},
     {path: 'news/:id', element: <NewIdPage/>},

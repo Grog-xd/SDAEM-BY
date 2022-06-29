@@ -1,0 +1,536 @@
+@import "src/style/mixins";
+
+.mainPage{
+  .container{
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .filterSection{
+    background: url("../../assets/img/bg-404.png"), linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%) no-repeat;
+    height: 430px;
+    border-radius: 0 0 40px 40px;
+    padding-top: 82.5px;
+    h1{
+      @include text(30px, 700, 36px, #fff);
+      text-shadow: 0 2px 5px rgba(0, 14, 142, 0.3);
+      text-align: center;
+      margin-bottom: 50.5px;
+      b{
+        color: #FFD54F;
+      }
+    }
+    form{
+      max-width: 1032px;
+      padding: 0 15px;
+      margin: 0 auto;
+      .inputBLock{
+        margin: 15px 0 20px 20px;
+        padding-right: 20px;
+        border-right: 1px solid rgba(102, 78, 249, 0.1);
+        .inputBLockText{
+          @include text(14px, 500, 17px, #BDBDBD);
+          margin-bottom: 11px;
+        }
+      }
+      .costBlock{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #4E64F9;
+        //input[type="number"]::-webkit-outer-spin-button,
+        //input[type="number"]::-webkit-inner-spin-button {
+        //  display: none;
+        //}
+        input{
+          background: #F8F8F8;
+          border-radius: 20px;
+          border: none;
+          padding: 9px 14px 11px 14px;
+          width: 72px;
+          outline: none;
+          &:first-child{
+            margin-right: 4px;
+          }
+          &:last-child{
+            margin-left: 4px;
+          }
+          &::placeholder{
+            @include text(14px, 500, 17px, #686868)
+          }
+        }
+      }
+      .openMoreFilter{
+        display: flex;
+        align-items: center;
+        @include text(14px, 500, 17px, #1E2123);
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 20px 0;
+        svg{
+          margin-left: 4px;
+        }
+      }
+      .openMapButton{
+        @include text(14px, 500, 17px, #1E2123);
+        display: flex;
+        align-items: center;
+        border: none;
+        padding-left: 17px;
+        padding-right: 17px;
+        svg{
+          margin-left: 5px;
+        }
+      }
+      .filterButton{
+        display: flex;
+        align-items: center;
+        padding: 9px 16px;
+        @include text(14px, 700, 17px, #242424);
+        background: #FFD54F;
+        border-radius: 22px;
+        margin-right: 34px;
+        svg{
+          margin-left: 12px;
+        }
+      }
+
+    }
+  }
+  .filterCardsSection{
+    display: flex;
+    margin-top: 50px;
+    position: relative;
+    justify-content: space-between;
+    .cardsBlock{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 65vw;
+      .card{
+        height: 270px;
+        margin-right: 30px;
+        background: rgba(30, 33, 35, 0.4);
+        border-radius: 10px;
+        filter: drop-shadow(0px 20px 40px rgba(135, 124, 202, 0.15));
+        padding: 38px;
+        margin-top: 35px;
+        strong{
+          @include text(13px, 700, 16px, #fff);
+          background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        p{
+          margin-top: 16px;
+          b{
+            @include text(25px, 700, 30px, #fff);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          }
+        }
+        .listCity{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: start;
+          margin-top: 7px;
+          a{
+            padding: 8px 14px;
+            background: #664EF9;
+            border-radius: 16px;
+            @include text(14px, 500, 17px, rgba(255, 255, 255, 0.7));
+            margin-top: 14px;
+            margin-right: 16px;
+            &:hover{
+              background: #612BFB;
+              color: #fff;
+            }
+          }
+        }
+        .cardButton{
+          border: 1px solid #fff;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          bottom: 10%;
+          right: 5%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &:nth-child(1){
+          background: url("../../assets/img/mainBgCardsImg-1.png"), rgba(30, 33, 35, 0.4);
+        }
+        &:nth-child(2){
+          background: url("../../assets/img/mainBgCardsImg-2.png"), rgba(30, 33, 35, 0.4);
+        }
+        &:nth-child(3){
+          background: url("../../assets/img/mainBgCardsImg-3.png"), rgba(30, 33, 35, 0.4);
+        }
+        &:nth-child(4){
+          background: url("../../assets/img/mainBgCardsImg-4.png"), rgba(30, 33, 35, 0.4);
+        }
+        &:nth-child(1n){
+          width: 21vw;
+
+        }
+        &:nth-child(3n+1){
+          width: 25.5vw;
+        }
+
+      }
+    }
+    .linksBlock{
+      .linkBlock{
+        margin-top: 35px;
+        p{
+          @include text(18px, 700, 22px, #333333);
+          margin-bottom: 15px;
+        }
+        ul{
+          li{
+            display: flex;
+            justify-content: space-between;
+            a{
+              @include text(14px, 400, 17px, #FEB700);
+              margin-bottom: 10px;
+            }
+            p{
+              margin-bottom: 0;
+              @include text(14px, 400, 17px, #BDBDBD)
+            }
+          }
+        }
+      }
+    }
+    .moreLinks{
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #FEB700;
+      @include text(14px, 500, 17px, #FEB700);
+      background: white;
+      cursor: pointer;
+      svg{
+        margin-left: 6px;
+      }
+
+    }
+    img{
+      position: absolute;
+      left: -2vw;
+      top: 700px;
+    }
+  }
+  .sliderSection{
+    margin-top: 150px;
+    position: relative;
+    .sliderTitle{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+      .textBlock{
+        strong{
+          @include text(14px, 600, 17px, #000);
+          background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        p{
+          margin-top: 15px;
+          b{
+            @include text(25px, 700, 30px, #000);
+          }
+        }
+      }
+      .sliderFilter{
+        display: flex;
+        align-items: center;
+        .sliderSelect{
+          width: 185px;
+          margin-left: 30px;
+        }
+      }
+    }
+    .sliderBgItem{
+      width: 848px;
+      height: 970px;
+      position: absolute;
+      background: linear-gradient(90deg, #94AFFF 0%, #4E64F9 94.5%);
+      opacity: 0.1;
+      border-radius: 40px 40px 40px 0;
+      right: -15%;
+      top: -1%;
+      z-index: -1;
+    }
+    .productLength{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 22vw;
+      margin-top: 20px;
+      margin-bottom: 90px;
+      .textBlock{
+        padding-right: 40px;
+        border-right: 2px solid rgba(148, 175, 255, 0.1);
+        p{
+          b{
+            @include text(60px, 700, 73px, #1E2123);
+          }
+          strong{
+            @include text(60px, 700, 73px, #664EF9);
+          }
+        }
+        .text{
+          @include text(14px, 500, 17px, #8291A3);
+          opacity: 0.6;
+        }
+      }
+      a{
+        background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+        box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
+        border-radius: 17px;
+        padding: 10px 18px;
+        display: flex;
+        align-items: center;
+        margin-left: 25px;
+        @include text(14px, 700, 17px, #fff);
+        svg{
+          margin-left: 12.5px;
+        }
+        &:hover{
+          background: linear-gradient(90deg, #867CFC 0%, #6929F3 94.5%);
+        }
+      }
+    }
+
+  }
+  .advantagesSection{
+    background: url("../../assets/img/bg-404.png"), linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%) no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 440px;
+    position: relative;
+    margin-bottom: 360px;
+    .textBlock{
+      margin-top: 75px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2{
+        @include text(25px, 700, 30px, #fff);
+        margin-bottom: 20px;
+      }
+      p{
+        @include text(16px, 500, 19px, #fff);
+        max-width: 390px;
+        text-align: center;
+        margin-bottom: 23px;
+      }
+      a{
+        background: #FFFFFF;
+        border-radius: 19px;
+        padding: 10px 18px;
+        @include text(14px, 600, 17px, #1E2123);
+        &:hover{
+          @include text(14px, 600, 17px, #FEC100);
+        }
+        svg{
+          margin-right: 11.5px;
+        }
+      }
+    }
+    .whitePoints{
+      position: absolute;
+      top: 46px;
+      right: 18vw;
+    }
+    .yellowPoints{
+      position: absolute;
+      right: 20vw;
+      top: 700px;
+    }
+    .advantagesBlocks{
+      position: absolute;
+      top: 316px;
+      display: flex;
+      justify-content: space-between;
+      max-width: 1410px;
+      margin: 0 auto;
+      padding: 0 15px;
+      .card{
+        height: 345px;
+        width: 23vw;
+        margin-right: 23px;
+        box-shadow: 0 20px 40px rgba(135, 124, 202, 0.15);
+        border-radius: 10px;
+        padding: 0 24px 44px 37px;
+        background: #fff;
+        .title{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          svg{
+            margin-right: 27px;
+          }
+          p{
+            b{
+              @include text(18px, 700, 22px, #664EF9)
+            }
+          }
+        }
+        .body{
+          @include text(14px, 400, 17px, #1E2123);
+        }
+        a{
+          background: #FFD54F;
+          box-shadow: 0 15px 40px rgba(254, 193, 0, 0.15);
+          border-radius: 17px;
+          padding: 10px 18px;
+          @include text(14px, 700, 17px, #242424);
+          margin-top: 34px;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          svg{
+            margin-left: 12.5px;
+          }
+          &:hover{
+            background: #FEC100;
+          }
+        }
+      }
+      .primaryCard{
+        height: 345px;
+        width: 23vw;
+        box-shadow: 0 20px 40px rgba(135, 124, 202, 0.15);
+        border-radius: 10px;
+        padding: 39px 65px 44px 37px;
+        background: linear-gradient(105.54deg, #FFD54F 33.53%, #FEC100 94.13%);
+        position: relative;
+        img{
+          position: absolute;
+          top: 115px;
+          right: 0;
+        }
+        .title{
+          @include text(30px, 700, 26px, #333);
+          margin-bottom: 34px;
+          text-align: center;
+        }
+        .body{
+          @include text(14px, 400, 17px, #242424);
+          margin-top: 14px;
+        }
+        a{
+          background: linear-gradient(270deg, #7E6AF3 0%, #6540CD 100%);
+          box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
+          border-radius: 17px;
+          padding: 10px 18px;
+          @include text(14px, 700, 17px, #fff);
+          position: absolute;
+          margin-top: 37px;
+          display: flex;
+          align-items: center;
+          &:hover{
+            background: linear-gradient(90deg, #867CFC 0%, #6929F3 94.5%);
+          }
+          svg{
+            margin-left: 12.5px;
+          }
+        }
+      }
+    }
+  }
+  .newsSection{
+    display: flex;
+    margin-bottom: 109px;
+    .textBlock{
+      width: 50vw;
+      .header{
+        strong{
+          background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          @include text(14px, 600, 17px, #000);
+        }
+        p{
+          margin-top: 15px;
+          @include text(25px, 700, 30px, #1E2123);
+        }
+      }
+      .body{
+        margin-top: 33px;
+        position: relative;
+        display: flex;
+        .yellowPoints{
+          position: absolute;
+          z-index: 2;
+          bottom: -20px;
+          left: 37%;
+        }
+        .bodyImg{
+          filter: drop-shadow(0px 15px 30px rgba(39, 95, 158, 0.1));
+          border-radius: 20px;
+        }
+        .bodyText{
+          margin-left: 24px;
+          p{
+            @include text(14px, 600, 21px, #1E2123);
+            &:first-child{
+              margin-bottom: 33px;
+            }
+            b{
+              line-height: 24px;
+            }
+          }
+
+        }
+      }
+      .footer{
+        @include text(16px, 400, 21px, #1E2123);
+        margin-top: 31px;
+      }
+    }
+    .newsBlock{
+      background: #FFFEFE;
+      box-shadow: 0 20px 40px rgba(135, 124, 202, 0.15);
+      border-radius: 10px;
+      padding: 33px 23px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+      .title{
+        margin-bottom: 16px;
+        @include text(25px, 700, 30px, #1E2123);
+      }
+      .post{
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(102, 78, 249, 0.1);
+        &:last-of-type{
+          border: none;
+        }
+        a{
+          @include text(14px, 600, 17px, #1E2123);
+          &:hover{
+            color: #664EF9;
+          }
+        }
+      }
+      .toNewsLink{
+        display: flex;
+        align-items: center;
+        margin-top: 22px;
+        @include text(14px, 700, 17px, #664EF9);
+        svg{
+          margin-left: 12.5px;
+        }
+      }
+
+    }
+  }
+}

@@ -94,7 +94,7 @@ const Registration = () => {
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <input value={loginValue} onChange={(e)=>setLoginValue(e.target.value.toLowerCase())}  placeholder={'Логин'} type="text" name={'login'} id={'login'} minLength={3} maxLength={10} required/>
+                                    <input value={loginValue} onChange={(e)=>setLoginValue(e.target.value.toLowerCase())}  placeholder={'Логин'} type="text" name={'register'} id={'login'} minLength={3} maxLength={10} required/>
                                     <svg className={classes.registerErrorIcon} width="23" height="23" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.5 0C7.875 0 0 7.875 0 17.5C0 27.125 7.875 35 17.5 35C27.125 35 35 27.125 35 17.5C35 7.875 27.125 0 17.5 0ZM17.5 3.5C19.425 3.5 20.825 5.075 20.65 7L19.25 21H15.75L15.05 14L14.35 7C14.175 5.075 15.575 3.5 17.5 3.5ZM17.5 31.5C15.575 31.5 14 29.925 14 28C14 26.075 15.575 24.5 17.5 24.5C19.425 24.5 21 26.075 21 28C21 29.925 19.425 31.5 17.5 31.5Z" fill="#EB5757"/>
                                     </svg>
@@ -112,7 +112,7 @@ const Registration = () => {
                                             </clipPath>
                                         </defs>
                                     </svg>
-                                    <input value={loginValue} onChange={(e)=>setLoginValue(e.target.value.toLowerCase())}  placeholder={'Логин'} type="text" name={'login'} id={'login'} minLength={3} maxLength={10} required/>
+                                    <input value={loginValue} onChange={(e)=>setLoginValue(e.target.value.toLowerCase())}  placeholder={'Логин'} type="text" name={'register'} id={'login'} minLength={3} maxLength={10} required/>
                                 </div>
                     }
                     {
@@ -125,7 +125,7 @@ const Registration = () => {
                                         <path d="M14.1632 5.13653C13.0231 5.90822 12.0541 6.57255 11.2561 7.12988L15.0003 10.8742V4.4082C14.7602 4.67621 14.4812 4.91886 14.1632 5.13653Z" fill="#6868684C"/>
                                         <path d="M13.6607 0.607422H1.33944C0.909593 0.607422 0.579117 0.752576 0.347606 1.04258C0.115904 1.33273 0.000244141 1.69559 0.000244141 2.13075C0.000244141 2.48225 0.153731 2.86311 0.46057 3.27343C0.767408 3.68359 1.09391 4.00576 1.43991 4.24011C1.62959 4.37412 2.2016 4.77178 3.15594 5.43296C3.67111 5.78996 4.11913 6.10113 4.50413 6.36965C4.83229 6.5983 5.1153 6.79631 5.34896 6.96064C5.37578 6.97946 5.41797 7.00963 5.47396 7.04966C5.53428 7.09299 5.61062 7.14798 5.70479 7.21598C5.88614 7.34713 6.03679 7.45315 6.15678 7.53415C6.27661 7.61516 6.42179 7.70566 6.59211 7.80615C6.76229 7.90651 6.9228 7.98197 7.07346 8.03216C7.22414 8.08233 7.36363 8.10749 7.49195 8.10749H7.50029H7.50862C7.63691 8.10749 7.77643 8.08233 7.92714 8.03216C8.07777 7.98197 8.23815 7.90667 8.40846 7.80615C8.57862 7.70566 8.72361 7.61497 8.84382 7.53415C8.96381 7.45315 9.11446 7.34716 9.29584 7.21598C9.38982 7.14798 9.46615 7.09297 9.52647 7.0498C9.58249 7.0096 9.62465 6.97962 9.65164 6.96064C9.83367 6.83398 10.1173 6.63678 10.4987 6.37196C11.1927 5.8898 12.2147 5.18012 13.569 4.24011C13.9764 3.9556 14.3167 3.61227 14.5902 3.2106C14.8632 2.80894 15.0001 2.38761 15.0001 1.94676C15.0001 1.57843 14.8674 1.26326 14.6025 1.00075C14.3374 0.738578 14.0234 0.607422 13.6607 0.607422Z" fill="#6868684C"/>
                                     </svg>
-                                    <input value={emailValue} onChange={(e)=> setEmailValue(e.target.value.toLowerCase())} placeholder={'Электронная почта'} type="email" name={'email'} id={'email'} minLength={8} maxLength={20} required/>
+                                    <input value={emailValue} onChange={(e)=> setEmailValue(e.target.value.toLowerCase())} placeholder={'Электронная почта'} type="email" name={'register'} id={'email'} minLength={8} maxLength={20} required/>
                                     <svg className={classes.registerErrorIcon} width="23" height="23" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.5 0C7.875 0 0 7.875 0 17.5C0 27.125 7.875 35 17.5 35C27.125 35 35 27.125 35 17.5C35 7.875 27.125 0 17.5 0ZM17.5 3.5C19.425 3.5 20.825 5.075 20.65 7L19.25 21H15.75L15.05 14L14.35 7C14.175 5.075 15.575 3.5 17.5 3.5ZM17.5 31.5C15.575 31.5 14 29.925 14 28C14 26.075 15.575 24.5 17.5 24.5C19.425 24.5 21 26.075 21 28C21 29.925 19.425 31.5 17.5 31.5Z" fill="#EB5757"/>
                                     </svg>
@@ -138,7 +138,7 @@ const Registration = () => {
                                         <path d="M14.1632 5.13653C13.0231 5.90822 12.0541 6.57255 11.2561 7.12988L15.0003 10.8742V4.4082C14.7602 4.67621 14.4812 4.91886 14.1632 5.13653Z" fill="#6868684C"/>
                                         <path d="M13.6607 0.607422H1.33944C0.909593 0.607422 0.579117 0.752576 0.347606 1.04258C0.115904 1.33273 0.000244141 1.69559 0.000244141 2.13075C0.000244141 2.48225 0.153731 2.86311 0.46057 3.27343C0.767408 3.68359 1.09391 4.00576 1.43991 4.24011C1.62959 4.37412 2.2016 4.77178 3.15594 5.43296C3.67111 5.78996 4.11913 6.10113 4.50413 6.36965C4.83229 6.5983 5.1153 6.79631 5.34896 6.96064C5.37578 6.97946 5.41797 7.00963 5.47396 7.04966C5.53428 7.09299 5.61062 7.14798 5.70479 7.21598C5.88614 7.34713 6.03679 7.45315 6.15678 7.53415C6.27661 7.61516 6.42179 7.70566 6.59211 7.80615C6.76229 7.90651 6.9228 7.98197 7.07346 8.03216C7.22414 8.08233 7.36363 8.10749 7.49195 8.10749H7.50029H7.50862C7.63691 8.10749 7.77643 8.08233 7.92714 8.03216C8.07777 7.98197 8.23815 7.90667 8.40846 7.80615C8.57862 7.70566 8.72361 7.61497 8.84382 7.53415C8.96381 7.45315 9.11446 7.34716 9.29584 7.21598C9.38982 7.14798 9.46615 7.09297 9.52647 7.0498C9.58249 7.0096 9.62465 6.97962 9.65164 6.96064C9.83367 6.83398 10.1173 6.63678 10.4987 6.37196C11.1927 5.8898 12.2147 5.18012 13.569 4.24011C13.9764 3.9556 14.3167 3.61227 14.5902 3.2106C14.8632 2.80894 15.0001 2.38761 15.0001 1.94676C15.0001 1.57843 14.8674 1.26326 14.6025 1.00075C14.3374 0.738578 14.0234 0.607422 13.6607 0.607422Z" fill="#6868684C"/>
                                     </svg>
-                                    <input value={emailValue} onChange={(e)=> setEmailValue(e.target.value.toLowerCase())} placeholder={'Электронная почта'} type="email" name={'email'} id={'email'} minLength={8} maxLength={20} required/>
+                                    <input value={emailValue} onChange={(e)=> setEmailValue(e.target.value.toLowerCase())} placeholder={'Электронная почта'} type="email" name={'register'} id={'email'} minLength={8} maxLength={20} required/>
                                 </div>
                     }
                     {
@@ -148,7 +148,7 @@ const Registration = () => {
                                     <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.625 7.5H13V5C13 2.2425 10.7575 0 8 0C5.2425 0 3 2.2425 3 5V7.5H2.375C1.34167 7.5 0.5 8.34083 0.5 9.375V18.125C0.5 19.1592 1.34167 20 2.375 20H13.625C14.6583 20 15.5 19.1592 15.5 18.125V9.375C15.5 8.34083 14.6583 7.5 13.625 7.5ZM4.66667 5C4.66667 3.16167 6.16167 1.66667 8 1.66667C9.83833 1.66667 11.3333 3.16167 11.3333 5V7.5H4.66667V5ZM8.83333 13.935V15.8333C8.83333 16.2933 8.46083 16.6667 8 16.6667C7.53917 16.6667 7.16667 16.2933 7.16667 15.8333V13.935C6.67083 13.6458 6.33333 13.1142 6.33333 12.5C6.33333 11.5808 7.08083 10.8333 8 10.8333C8.91917 10.8333 9.66667 11.5808 9.66667 12.5C9.66667 13.1142 9.32917 13.6458 8.83333 13.935Z" fill="#6868684C"/>
                                     </svg>
-                                    <input value={passwordValue} onChange={e=> setPasswordValue(e.target.value.toLowerCase())}  placeholder={'Пароль'} type="password" name={'password'} id={'password'} minLength={3} maxLength={10} required/>
+                                    <input value={passwordValue} onChange={e=> setPasswordValue(e.target.value.toLowerCase())}  placeholder={'Пароль'} type="password" name={'register'} id={'password'} minLength={3} maxLength={10} required/>
                                     <svg className={classes.registerErrorIcon} width="23" height="23" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.5 0C7.875 0 0 7.875 0 17.5C0 27.125 7.875 35 17.5 35C27.125 35 35 27.125 35 17.5C35 7.875 27.125 0 17.5 0ZM17.5 3.5C19.425 3.5 20.825 5.075 20.65 7L19.25 21H15.75L15.05 14L14.35 7C14.175 5.075 15.575 3.5 17.5 3.5ZM17.5 31.5C15.575 31.5 14 29.925 14 28C14 26.075 15.575 24.5 17.5 24.5C19.425 24.5 21 26.075 21 28C21 29.925 19.425 31.5 17.5 31.5Z" fill="#EB5757"/>
                                     </svg>
@@ -158,7 +158,7 @@ const Registration = () => {
                                     <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.625 7.5H13V5C13 2.2425 10.7575 0 8 0C5.2425 0 3 2.2425 3 5V7.5H2.375C1.34167 7.5 0.5 8.34083 0.5 9.375V18.125C0.5 19.1592 1.34167 20 2.375 20H13.625C14.6583 20 15.5 19.1592 15.5 18.125V9.375C15.5 8.34083 14.6583 7.5 13.625 7.5ZM4.66667 5C4.66667 3.16167 6.16167 1.66667 8 1.66667C9.83833 1.66667 11.3333 3.16167 11.3333 5V7.5H4.66667V5ZM8.83333 13.935V15.8333C8.83333 16.2933 8.46083 16.6667 8 16.6667C7.53917 16.6667 7.16667 16.2933 7.16667 15.8333V13.935C6.67083 13.6458 6.33333 13.1142 6.33333 12.5C6.33333 11.5808 7.08083 10.8333 8 10.8333C8.91917 10.8333 9.66667 11.5808 9.66667 12.5C9.66667 13.1142 9.32917 13.6458 8.83333 13.935Z" fill="#6868684C"/>
                                     </svg>
-                                    <input value={passwordValue} onChange={e=> setPasswordValue(e.target.value.toLowerCase())}  placeholder={'Пароль'} type="password" name={'password'} id={'password'} minLength={3} maxLength={10} required/>
+                                    <input value={passwordValue} onChange={e=> setPasswordValue(e.target.value.toLowerCase())}  placeholder={'Пароль'} type="password" name={'register'} id={'password'} minLength={3} maxLength={10} required/>
                                 </div>
                     }
                     {
@@ -168,7 +168,7 @@ const Registration = () => {
                                     <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.625 7.5H13V5C13 2.2425 10.7575 0 8 0C5.2425 0 3 2.2425 3 5V7.5H2.375C1.34167 7.5 0.5 8.34083 0.5 9.375V18.125C0.5 19.1592 1.34167 20 2.375 20H13.625C14.6583 20 15.5 19.1592 15.5 18.125V9.375C15.5 8.34083 14.6583 7.5 13.625 7.5ZM4.66667 5C4.66667 3.16167 6.16167 1.66667 8 1.66667C9.83833 1.66667 11.3333 3.16167 11.3333 5V7.5H4.66667V5ZM8.83333 13.935V15.8333C8.83333 16.2933 8.46083 16.6667 8 16.6667C7.53917 16.6667 7.16667 16.2933 7.16667 15.8333V13.935C6.67083 13.6458 6.33333 13.1142 6.33333 12.5C6.33333 11.5808 7.08083 10.8333 8 10.8333C8.91917 10.8333 9.66667 11.5808 9.66667 12.5C9.66667 13.1142 9.32917 13.6458 8.83333 13.935Z" fill="#6868684C"/>
                                     </svg>
-                                    <input value={repeatPasswordValue} onChange={e => setRepeatPasswordValue(e.target.value.toLowerCase())}  placeholder={'Повторите пароль'} type="password" name={'repeat-password'} id={'repeat-password'} minLength={3} maxLength={10} required/>
+                                    <input value={repeatPasswordValue} onChange={e => setRepeatPasswordValue(e.target.value.toLowerCase())}  placeholder={'Повторите пароль'} type="password" name={'register'} id={'repeat-password'} minLength={3} maxLength={10} required/>
                                     <svg className={classes.registerErrorIcon} width="23" height="23" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M17.5 0C7.875 0 0 7.875 0 17.5C0 27.125 7.875 35 17.5 35C27.125 35 35 27.125 35 17.5C35 7.875 27.125 0 17.5 0ZM17.5 3.5C19.425 3.5 20.825 5.075 20.65 7L19.25 21H15.75L15.05 14L14.35 7C14.175 5.075 15.575 3.5 17.5 3.5ZM17.5 31.5C15.575 31.5 14 29.925 14 28C14 26.075 15.575 24.5 17.5 24.5C19.425 24.5 21 26.075 21 28C21 29.925 19.425 31.5 17.5 31.5Z" fill="#EB5757"/>
                                     </svg>
@@ -178,7 +178,7 @@ const Registration = () => {
                                     <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M13.625 7.5H13V5C13 2.2425 10.7575 0 8 0C5.2425 0 3 2.2425 3 5V7.5H2.375C1.34167 7.5 0.5 8.34083 0.5 9.375V18.125C0.5 19.1592 1.34167 20 2.375 20H13.625C14.6583 20 15.5 19.1592 15.5 18.125V9.375C15.5 8.34083 14.6583 7.5 13.625 7.5ZM4.66667 5C4.66667 3.16167 6.16167 1.66667 8 1.66667C9.83833 1.66667 11.3333 3.16167 11.3333 5V7.5H4.66667V5ZM8.83333 13.935V15.8333C8.83333 16.2933 8.46083 16.6667 8 16.6667C7.53917 16.6667 7.16667 16.2933 7.16667 15.8333V13.935C6.67083 13.6458 6.33333 13.1142 6.33333 12.5C6.33333 11.5808 7.08083 10.8333 8 10.8333C8.91917 10.8333 9.66667 11.5808 9.66667 12.5C9.66667 13.1142 9.32917 13.6458 8.83333 13.935Z" fill="#6868684C"/>
                                     </svg>
-                                    <input value={repeatPasswordValue} onChange={e => setRepeatPasswordValue(e.target.value.toLowerCase())}  placeholder={'Повторите пароль'} type="password" name={'repeat-password'} id={'repeat-password'} minLength={3} maxLength={10} required/>
+                                    <input value={repeatPasswordValue} onChange={e => setRepeatPasswordValue(e.target.value.toLowerCase())}  placeholder={'Повторите пароль'} type="password" name={'register'} id={'repeat-password'} minLength={3} maxLength={10} required/>
                                 </div>
                     }
                     {
