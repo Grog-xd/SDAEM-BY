@@ -19,6 +19,8 @@ a{
 
 body{
 }
+
+//post animation
 .post-enter {
   opacity: 0;
 }
@@ -34,6 +36,7 @@ body{
   transition: opacity 500ms ease-in;
 }
 
+//modal
 .modalTitle{
   @include text(25px, 700, 30px, #000000);
 }
@@ -52,3 +55,72 @@ body{
 
 }
 
+//tabs
+.react-tabs__tab-list{
+  display: flex;
+}
+.react-tabs__tab{
+  background: rgba(45, 57, 136, 0.5);
+  @include text(14px, 600, 17px, #fff);
+  padding: 13px 20px;
+  cursor: pointer;
+  outline: none;
+
+  &:last-of-type{
+    border-radius: 0 10px 0 0;
+  }
+  &--selected{
+    background-color: #fff;
+    color: #664EF9;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.react-tabs__tab-panel{
+  background: #FFFFFF;
+  border-radius: 0 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+//swiper
+.swiper{
+  position: relative;
+  overflow-x: clip;
+}
+.swiper-wrapper{
+  display: flex;
+  margin-bottom: 80px;
+}
+.swiper-button-prev{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #664EF9;
+  background: transparent;
+  border-radius: 50%;
+  background:  url("./assets/img/arrowDown.svg") center center/cover no-repeat;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: -10%;
+  left: 48%;
+  cursor: pointer;
+  &:hover{
+    background: url("./assets/img/arrowDown.svg") center center/cover no-repeat rgba(102, 78, 249, 0.1);
+  }
+}
+.swiper-button-next{
+  position: absolute;
+  bottom: -10%;
+  left: 52%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #664EF9;
+  background: transparent;
+  border-radius: 50%;
+  background:  url("./assets/img/arrowDown.svg") center center/cover no-repeat;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  &:hover{
+    background: url("./assets/img/arrowDown.svg") center center/cover no-repeat rgba(102, 78, 249, 0.1);
+  }
+}

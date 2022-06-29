@@ -5,16 +5,20 @@ import {Link} from "react-router-dom";
 import {exit} from "../../redux/toolkitSlice";
 
 
-const ProfileCard = ({profile, setActive}) => {
+const ProfileCard = ({profile, setActive, style}) => {
     const dispatch = useDispatch()
 
     function exitAuth(){
         dispatch(exit())
         setActive(false)
     }
+    const cls =[
+        classes.profileCardActive,
+        style
+    ]
 
     return (
-        <div className={classes.profileCardActive}>
+        <div className={cls.join(' ')}>
             {
                 profile.avatar
                     ?

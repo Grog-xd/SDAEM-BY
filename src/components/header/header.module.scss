@@ -68,6 +68,8 @@
       position: relative;
       img{
         border-radius: 50%;
+        width: 30px;
+        height: 30px;
       }
       p{
         margin-right: 15px;
@@ -86,19 +88,8 @@
       display: flex;
       justify-content: space-between;
       min-width: 750px;
-      li{
-        cursor: pointer;
-        @include text(14px, 600, 17px, #1E2123);
-        border-bottom: 3px solid white;
-        &:hover{
-          border-bottom: 3px solid #FFD54F;
-        }
-        svg{
-          margin-left: 15px;
-        }
-      }
     }
-    a{
+    .newCardLink{
       background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
       box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
       border-radius: 17px;

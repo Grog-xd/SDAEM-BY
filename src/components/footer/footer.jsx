@@ -9,9 +9,17 @@ import msCard from '../../assets/img/ms-card.png'
 import msCardV2 from '../../assets/img/ms-card-v2.png'
 import belCard from '../../assets/img/belcart.png'
 
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {setCity} from "../../redux/mainPage";
 
 const Footer = () => {
+
+    const dispatch = useDispatch()
+
+    const cityOption = useSelector(state => state.main.cityOption)
+    const tabs = useSelector(state => state.main.tabs)
+
     return (
         <footer className={classes.footer}>
             <div className={classes.container}>
@@ -30,16 +38,12 @@ const Footer = () => {
                 <div className={classes.mainSection}>
                     <nav>
                         <ul className={classes.filterNav}>
-                            <li><b>Коттеджи и усадьбы</b></li>
-                            <li><b>Бани и сауны</b></li>
-                            <li><b>Авто на прокат</b></li>
-                            <li><b>Квартиры</b></li>
-                            <li>Квартиры в Минске</li>
-                            <li>Квартиры в Гомеле</li>
-                            <li>Квартиры в Бресте</li>
-                            <li>Квартиры в Витебске</li>
-                            <li>Квартиры в Гродно</li>
-                            <li>Квартиры в Могилеве</li>
+                            {tabs.map(tab =>
+                                <li key={tab.id}><Link to={`/catalog/${tab.id}`}><b>{tab.value}</b></Link></li>
+                            )}
+                            {cityOption.map(city =>
+                                <li key={city.id}><Link  onClick={()=> dispatch(setCity(city.value))} to={`/catalog/flats`}>Квартиры в {city.value}</Link></li>
+                            )}
                         </ul>
                         <ul className={classes.pageNav}>
                             <li>

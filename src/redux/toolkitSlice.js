@@ -1,16 +1,16 @@
 import {createSlice} from "@reduxjs/toolkit";
 import avatar from '../assets/img/avatar.png'
-// import postImg from '../assets/img/post-img 1.png'
 import postImg from '../assets/img/new-img.png'
 
 const toolkitSlice = createSlice({
     name: 'toolkit',
     initialState:{
-        count:0,
         sortedPosts:[],
         limitNewsItems:9,
         currentPage:1,
         bookMarkActive:false,
+
+
         contactsInformation:{location:'220068, РБ, г. Минск, ул. Осипенко, 21, кв.23', tel:'+375 29 621-48-33', email:'sdaem@sdaem.by', timeWork:'08:00-22:00'},
         posts: [
             {id:1, img: postImg, title: 'test',  description: 'test description', body: 'Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...', date: '14 января 2008', },
@@ -222,17 +222,10 @@ const toolkitSlice = createSlice({
                     '\n' +
                     'Отличная усадьба в 10 км от "Линии Сталина".', body: 'Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...', date: '14 января 2008'},
         ],
-        rooms:[
-            {id:1, like:false, size:'179 м²',location:'Минск, б-р Мулявина, д. 10', cost: '65.00 BYN', metro:'Грушевка', district:'Шабаны', people:'4 (2+2)', title: '4-комн. апартаменты на Грушевке ', body: 'Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,  ...', profile: {name: 'Dmitriy', viber: 'https://www.viber.com/ru/', whatsUpp:'https://www.whatsapp.com/?lang=ru', avatar:avatar, phone:'+375 (29) 291-14-44', city:'Владимир', email: 'vladimir6234@tut.by'},},
-            {id:2, like:false, size:'179 м²',location:'Минск, б-р Мулявина, д. 10', cost: '65.00 BYN', metro:'Грушевка', district:'Шабаны', people:'4 (2+2)', title: '4-комн. апартаменты на Грушевке ', body: 'Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,  ...', profile: {name: 'Dmitriy', viber: 'https://www.viber.com/ru/', whatsUpp:'https://www.whatsapp.com/?lang=ru', avatar:avatar, phone:'+375 (29) 291-14-44', city:'Владимир', email: 'vladimir6234@tut.by'},},
-            {id:3, like:false, size:'179 м²',location:'Минск, б-р Мулявина, д. 10', cost: '65.00 BYN', metro:'Грушевка', district:'Шабаны', people:'4 (2+2)', title: '4-комн. апартаменты на Грушевке ', body: 'Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,  ...', profile: {name: 'Dmitriy', viber: 'https://www.viber.com/ru/', whatsUpp:'https://www.whatsapp.com/?lang=ru', avatar:avatar, phone:'+375 (29) 291-14-44', city:'Владимир', email: 'vladimir6234@tut.by'},},
-            {id:4, like:false, size:'179 м²',location:'Минск, б-р Мулявина, д. 10', cost: '65.00 BYN', metro:'Грушевка', district:'Шабаны', people:'4 (2+2)', title: '4-комн. апартаменты на Грушевке ', body: 'Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,  ...', profile: {name: 'Dmitriy', viber: 'https://www.viber.com/ru/', whatsUpp:'https://www.whatsapp.com/?lang=ru', avatar:avatar, phone:'+375 (29) 291-14-44', city:'Владимир', email: 'vladimir6234@tut.by'},},
-            {id:5, like:false, size:'179 м²',location:'Минск, б-р Мулявина, д. 10', cost: '65.00 BYN', metro:'Грушевка', district:'Шабаны', people:'4 (2+2)', title: '4-комн. апартаменты на Грушевке ', body: 'Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,  ...', profile: {name: 'Dmitriy', viber: 'https://www.viber.com/ru/', whatsUpp:'https://www.whatsapp.com/?lang=ru', avatar:avatar, phone:'+375 (29) 291-14-44', city:'Владимир', email: 'vladimir6234@tut.by'},},
-            {id:6, like:false, size:'179 м²',location:'Минск, б-р Мулявина, д. 10', cost: '65.00 BYN', metro:'Грушевка', district:'Шабаны', people:'4 (2+2)', title: '4-комн. апартаменты на Грушевке ', body: 'Большая четырехкомнатная студия! Большая джкакузи на двоих, на теливизоре есть приложение Megogo, YouTube, Smart TV, сможете выбрать фильм по вкусу!) Цена зависит от количества проживающих, уточняйте, пожалуйста, по телефону! В пяти минутах ходьбы Минск-Арена,  ...', profile: {name: 'Dmitriy', viber: 'https://www.viber.com/ru/', whatsUpp:'https://www.whatsapp.com/?lang=ru', avatar:avatar, phone:'+375 (29) 291-14-44', city:'Владимир', email: 'vladimir6234@tut.by'},},
-        ],
+
         isAuth: false,
-        profilesArr:[{name: 'dmitriy', avatar:'', phone:'', city:'', email: 'vladimir6234@tut.by', password: '123', viber: '', whatsUpp:''},{name: 'test', avatar:'', phone:'+test', city:'test', email: 'test@tut.by', password: 'test', viber: 'test', whatsUpp:'test'},],
-        profile: {name: 'dmitriy', avatar:'', phone:'', city:'', email: 'vladimir6234@tut.by', password: '123', viber: '', whatsUpp:''},
+        profilesArr:[{name: 'dmitriy', avatar:'', phone:'', city:'', email: 'vladimir6234@tut.by', password: '123', viber: '', whatsUpp:''},{name: 'test', avatar:avatar, phone:'+test', city:'test', email: 'test@tut.by', password: 'test', viber: 'test', whatsUpp:'test'},],
+        // profile: {name: 'dmitriy', avatar:'', phone:'', city:'', email: 'vladimir6234@tut.by', password: '123', viber: '', whatsUpp:''},
     },
     reducers:{
         setBookMarkActive(state){
