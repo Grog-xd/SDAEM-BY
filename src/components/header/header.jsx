@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import classes from './header.module.scss'
 import {Link, NavLink} from "react-router-dom";
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo.webp'
 import {useDispatch, useSelector} from "react-redux";
 import ProfileCard from "../profileCard/profileCard";
 import {setBookMarkActive} from "../../redux/toolkitSlice";

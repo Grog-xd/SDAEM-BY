@@ -16,7 +16,12 @@ ul li{
 a{
   text-decoration: none;
 }
-
+h2{
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  @include text(30px, 700, 30px, #1E2123)
+}
 body{
 }
 

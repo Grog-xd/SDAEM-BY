@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import classes from './mySelect.module.scss'
 
-
-// переписать select так чтобы он был не в виде селекта а в виде кнопки которая вызывает попап в котором options которые не options а просто кнопки меняющие состояние кнопки
-
 const MySelect = ({options, value, handler, children, style}) => {
     const [selectActive, setSelectActive] = useState(false)
     const clsSelect = [
@@ -25,7 +22,7 @@ const MySelect = ({options, value, handler, children, style}) => {
             <button type={"button"} onClick={()=> setSelectActive(!selectActive)}  className={selectActive ? clsChangeBlock.join(' ') : classes.changeBlock}>
                 <div>
                     {children}
-                    <p>{value}</p>
+                    <p className={classes.textValue}>{value}</p>
                 </div>
                 <svg width="20" height="10" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.5 1.38477L6 5.64152L10.5 1.38477" stroke="#4E64F9" />

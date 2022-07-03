@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "./profile.module.scss";
+import classes from "./profileCard.module.scss";
 import {useDispatch} from "react-redux";
 import {Link} from "react-router-dom";
 import {exit} from "../../redux/toolkitSlice";

@@ -1,4 +1,4 @@
-@import "src/style/mixins";
+@import "../../../style/mixins";
 
 
 .select{
@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     background: #F8F8F8;
-    border: 2px solid #F8F8F8;
+    border: 2px solid transparent;
     border-radius: 20px;
     padding: 9px 12px;
     cursor: pointer;
@@ -23,13 +23,12 @@
         margin-right: 8px;
       }
     }
-    p{
+    .textValue{
       @include text(14px, 500, 17px, #686868)
     }
   }
   .changeBlockActive{
     border: 2px solid rgba(102, 78, 249, 0.8);
-    background: rgba(102, 78, 249, 0.1);
   }
   .optionsBlock{
     position: absolute;

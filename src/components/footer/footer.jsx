@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from "./footer.module.scss";
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo.webp'
 
-import visa from '../../assets/img/visa.png'
-import webpay from '../../assets/img/webpay.png'
-import visaV2 from '../../assets/img/visa-v2.png'
-import msCard from '../../assets/img/ms-card.png'
-import msCardV2 from '../../assets/img/ms-card-v2.png'
-import belCard from '../../assets/img/belcart.png'
+import visa from '../../assets/img/visa.webp'
+import webpay from '../../assets/img/webpay.webp'
+import visaV2 from '../../assets/img/visa-v2.webp'
+import msCard from '../../assets/img/ms-card.webp'
+import msCardV2 from '../../assets/img/ms-card-v2.webp'
+import belCard from '../../assets/img/belcart.webp'
 
 import {Link, NavLink} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
@@ -42,7 +42,7 @@ const Footer = () => {
                                 <li key={tab.id}><Link to={`/catalog/${tab.id}`}><b>{tab.value}</b></Link></li>
                             )}
                             {cityOption.map(city =>
-                                <li key={city.id}><Link  onClick={()=> dispatch(setCity(city.value))} to={`/catalog/flats`}>Квартиры в {city.value}</Link></li>
+                                <li key={city.id}><Link  onClick={()=> dispatch(setCity(city.value))} to={`/catalog/flats`}>Квартиры в {city.value}е</Link></li>
                             )}
                         </ul>
                         <ul className={classes.pageNav}>

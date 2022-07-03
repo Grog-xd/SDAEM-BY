@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './paginationItem.module.scss'
-import {useDispatch, useSelector} from "react-redux";
-import {setNewsPage} from "../../../redux/toolkitSlice";
 
-const PaginationItem = ({children}) => {
-    const dispatch =  useDispatch()
-    const currentPage = useSelector(state => state.toolkit.currentPage)
+const PaginationItem = ({children, currentPage, handler}) => {
+
+    const [disabled, setDisabled] = useState(false)
+
+    useEffect(()=>{
+        if(children === '...'){
+            setDisabled(true)
+        }
+    }, [])
+
 
     return (
-        <button onClick={()=>dispatch(setNewsPage(children))} className={currentPage === children ? classes.paginationItemActive :classes.paginationItem}>
+        <button onClick={()=>handler(children)} className={currentPage === children ? classes.paginationItemActive :classes.paginationItem} disabled={disabled}>
             {children}
         </button>
     );

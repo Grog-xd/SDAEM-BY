@@ -41,7 +41,7 @@ const HeaderSelect = ({type, value, children}) => {
                     ?
                     <div className={classes.optionsBlock}>
                         {options.map(option =>
-                            <Link to={`/catalog/${type}`} onClick={()=>headerSelectHandler(option.value)} key={option.id}>{value} {option.value}е</Link>
+                            <Link to={`/catalog/${type}`} onClick={()=>headerSelectHandler(option.value)} key={option.id}>{value} в {option.value}е</Link>
                         )}
                     </div>
                     :
