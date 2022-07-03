@@ -4,9 +4,9 @@ import Footer from "../../components/footer/footer";
 import classes from './main.module.scss'
 import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import {useDispatch, useSelector} from "react-redux";
-import MySelect from "../../components/UI/mySelect";
-import {mainFilter, setCity,setMaxCost, setMinCost, setRooms} from "../../redux/mainPage";
-import {Link, useParams} from "react-router-dom";
+import MySelect from "../../components/UI/mySelect/mySelect";
+import {mainFilter, setCity, setLimit, setMaxCost, setMinCost, setRooms} from "../../redux/mainPage";
+import {Link, useNavigate} from "react-router-dom";
 import yellowPoints from '../../assets/img/yellow-points.png'
 import whitePoints from '../../assets/img/white-points.png'
 import bgPrimaryCard from '../../assets/img/primaryLastCard.svg'
@@ -14,14 +14,14 @@ import flatImg from '../../assets/img/flat-img.png'
 import {Swiper, SwiperSlide} from "swiper/react";
 import ProductsItem from "../../components/productsComponents/productsItem/productsItem";
 import {Navigation} from "swiper";
+import MoreOptions from "../../components/moreOptions/moreOptions";
 
 
 const Main = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const cityCurrentValue = useSelector(state=> state.main.cityCurrentValue)
     const roomsCurrentValue = useSelector(state=> state.main.roomsCurrentValue)
-    // const metroCurrentValue = useSelector(state=> state.main.metroCurrentValue)
-    // const districtCurrentValue = useSelector(state=> state.main.districtCurrentValue)
     const products = useSelector(state=> state.main.products[0])
     const roomsOption = useSelector(state=> state.main.roomsOption)
     const cityOption = useSelector(state=> state.main.cityOption)
@@ -38,6 +38,10 @@ const Main = () => {
 
     const [metroCurrentValue, setMetroCurrentValue] = useState('')
     const [districtCurrentValue, setDistrictCurrentValue] = useState('')
+
+
+    const [moreOptions, setMoreOptions] = useState(false)
+
 
 
 
@@ -64,10 +68,16 @@ const Main = () => {
         setNewsArr(res)
     }
 
+    function catalogFilterHandler(link){
+        dispatch(mainFilter(link))
+        navigate(`/catalog/${link}`)
+    }
+
 
     useEffect(()=>{
         flatsFilter()
         newsFilter()
+        dispatch(setLimit(6))
     }, [metroCurrentValue, districtCurrentValue])
 
     return (
@@ -103,7 +113,7 @@ const Main = () => {
                                         </div>
                                     </div>
                                     <div className={classes.inputBLock}>
-                                        <button type={"button"} className={classes.openMoreFilter}>
+                                        <button type={"button"} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                                             Больше опций
                                             <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5.91109 4.29814C5.91109 2.90551 4.937 1.73697 3.63453 1.4358V0.661897C3.63453 0.296309 3.33822 0 2.97264 0C2.60705 0 2.31074 0.296309 2.31074 0.661897V1.4358C1.00835 1.73689 0.0341797 2.90551 0.0341797 4.29814C0.0341797 5.69077 1.00827 6.85931 2.31074 7.16048V17.3381C2.31074 17.7037 2.60705 18 2.97264 18C3.33822 18 3.63453 17.7037 3.63453 17.3381V7.16048C4.937 6.85931 5.91109 5.69077 5.91109 4.29814ZM1.35805 4.29814C1.35805 3.40781 2.08238 2.68348 2.97271 2.68348C3.86303 2.68348 4.58737 3.40781 4.58737 4.29814C4.58737 5.18846 3.86303 5.9128 2.97271 5.9128C2.08238 5.9128 1.35805 5.18846 1.35805 4.29814Z" fill="#664EF9"/>
@@ -118,12 +128,12 @@ const Main = () => {
                                             <path d="M7.43806 1.74419C6.7055 0.627907 5.4962 0 4.13573 0C2.7869 0 1.5776 0.627907 0.821781 1.74419C0.0659671 2.83721 -0.108452 4.23256 0.356665 5.45349C0.484572 5.77907 0.682246 6.11628 0.93806 6.4186L3.87992 9.88372C3.94969 9.95349 4.01946 10 4.12411 10C4.22876 10 4.29853 9.95349 4.36829 9.88372L7.32178 6.4186C7.5776 6.11628 7.7869 5.7907 7.90318 5.45349C8.36829 4.23256 8.19387 2.83721 7.43806 1.74419ZM4.13573 5.86047C3.13573 5.86047 2.31015 5.03488 2.31015 4.03488C2.31015 3.03488 3.13573 2.2093 4.13573 2.2093C5.13574 2.2093 5.96132 3.03488 5.96132 4.03488C5.96132 5.03488 5.14736 5.86047 4.13573 5.86047Z" fill="#664EF9"/>
                                         </svg>
                                     </Link>
-                                    <Link to={'/catalog/flats'} onClick={()=> dispatch(mainFilter())} className={classes.filterButton}>
+                                    <button type={"button"} onClick={()=>catalogFilterHandler('flats')} className={classes.filterButton}>
                                         Показать
                                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 14.8574L7.57143 8.28599L0.999999 1.71456" stroke="#242424"/>
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </TabPanel>
                                 <TabPanel>
                                     <div className={classes.inputBLock}>
@@ -143,7 +153,7 @@ const Main = () => {
                                         </div>
                                     </div>
                                     <div className={classes.inputBLock}>
-                                        <button type={"button"} className={classes.openMoreFilter}>
+                                        <button type={"button"} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                                             Больше опций
                                             <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5.91109 4.29814C5.91109 2.90551 4.937 1.73697 3.63453 1.4358V0.661897C3.63453 0.296309 3.33822 0 2.97264 0C2.60705 0 2.31074 0.296309 2.31074 0.661897V1.4358C1.00835 1.73689 0.0341797 2.90551 0.0341797 4.29814C0.0341797 5.69077 1.00827 6.85931 2.31074 7.16048V17.3381C2.31074 17.7037 2.60705 18 2.97264 18C3.33822 18 3.63453 17.7037 3.63453 17.3381V7.16048C4.937 6.85931 5.91109 5.69077 5.91109 4.29814ZM1.35805 4.29814C1.35805 3.40781 2.08238 2.68348 2.97271 2.68348C3.86303 2.68348 4.58737 3.40781 4.58737 4.29814C4.58737 5.18846 3.86303 5.9128 2.97271 5.9128C2.08238 5.9128 1.35805 5.18846 1.35805 4.29814Z" fill="#664EF9"/>
@@ -158,12 +168,12 @@ const Main = () => {
                                             <path d="M7.43806 1.74419C6.7055 0.627907 5.4962 0 4.13573 0C2.7869 0 1.5776 0.627907 0.821781 1.74419C0.0659671 2.83721 -0.108452 4.23256 0.356665 5.45349C0.484572 5.77907 0.682246 6.11628 0.93806 6.4186L3.87992 9.88372C3.94969 9.95349 4.01946 10 4.12411 10C4.22876 10 4.29853 9.95349 4.36829 9.88372L7.32178 6.4186C7.5776 6.11628 7.7869 5.7907 7.90318 5.45349C8.36829 4.23256 8.19387 2.83721 7.43806 1.74419ZM4.13573 5.86047C3.13573 5.86047 2.31015 5.03488 2.31015 4.03488C2.31015 3.03488 3.13573 2.2093 4.13573 2.2093C5.13574 2.2093 5.96132 3.03488 5.96132 4.03488C5.96132 5.03488 5.14736 5.86047 4.13573 5.86047Z" fill="#664EF9"/>
                                         </svg>
                                     </Link>
-                                    <Link to={'/catalog/cottages'} onClick={()=> dispatch(mainFilter())} className={classes.filterButton}>
+                                    <button type={"button"} onClick={()=>catalogFilterHandler('cottages')} className={classes.filterButton}>
                                         Показать
                                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 14.8574L7.57143 8.28599L0.999999 1.71456" stroke="#242424"/>
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </TabPanel>
                                 <TabPanel>
                                     <div className={classes.inputBLock}>
@@ -183,7 +193,7 @@ const Main = () => {
                                         </div>
                                     </div>
                                     <div className={classes.inputBLock}>
-                                        <button type={"button"} className={classes.openMoreFilter}>
+                                        <button type={"button"} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                                             Больше опций
                                             <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M5.91109 4.29814C5.91109 2.90551 4.937 1.73697 3.63453 1.4358V0.661897C3.63453 0.296309 3.33822 0 2.97264 0C2.60705 0 2.31074 0.296309 2.31074 0.661897V1.4358C1.00835 1.73689 0.0341797 2.90551 0.0341797 4.29814C0.0341797 5.69077 1.00827 6.85931 2.31074 7.16048V17.3381C2.31074 17.7037 2.60705 18 2.97264 18C3.33822 18 3.63453 17.7037 3.63453 17.3381V7.16048C4.937 6.85931 5.91109 5.69077 5.91109 4.29814ZM1.35805 4.29814C1.35805 3.40781 2.08238 2.68348 2.97271 2.68348C3.86303 2.68348 4.58737 3.40781 4.58737 4.29814C4.58737 5.18846 3.86303 5.9128 2.97271 5.9128C2.08238 5.9128 1.35805 5.18846 1.35805 4.29814Z" fill="#664EF9"/>
@@ -198,12 +208,12 @@ const Main = () => {
                                             <path d="M7.43806 1.74419C6.7055 0.627907 5.4962 0 4.13573 0C2.7869 0 1.5776 0.627907 0.821781 1.74419C0.0659671 2.83721 -0.108452 4.23256 0.356665 5.45349C0.484572 5.77907 0.682246 6.11628 0.93806 6.4186L3.87992 9.88372C3.94969 9.95349 4.01946 10 4.12411 10C4.22876 10 4.29853 9.95349 4.36829 9.88372L7.32178 6.4186C7.5776 6.11628 7.7869 5.7907 7.90318 5.45349C8.36829 4.23256 8.19387 2.83721 7.43806 1.74419ZM4.13573 5.86047C3.13573 5.86047 2.31015 5.03488 2.31015 4.03488C2.31015 3.03488 3.13573 2.2093 4.13573 2.2093C5.13574 2.2093 5.96132 3.03488 5.96132 4.03488C5.96132 5.03488 5.14736 5.86047 4.13573 5.86047Z" fill="#664EF9"/>
                                         </svg>
                                     </Link>
-                                    <Link to={'/catalog/baths'} onClick={()=> dispatch(mainFilter())} className={classes.filterButton}>
+                                    <button type={"button"} onClick={()=>catalogFilterHandler('baths')} className={classes.filterButton}>
                                         Показать
                                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 14.8574L7.57143 8.28599L0.999999 1.71456" stroke="#242424"/>
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </TabPanel>
                                 <TabPanel>
                                     <div className={classes.inputBLock}>
@@ -222,30 +232,35 @@ const Main = () => {
                                             <input type="number" min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
                                         </div>
                                     </div>
-                                    <div className={classes.inputBLock}>
-                                        <button type={"button"} className={classes.openMoreFilter}>
-                                            Больше опций
-                                            <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.91109 4.29814C5.91109 2.90551 4.937 1.73697 3.63453 1.4358V0.661897C3.63453 0.296309 3.33822 0 2.97264 0C2.60705 0 2.31074 0.296309 2.31074 0.661897V1.4358C1.00835 1.73689 0.0341797 2.90551 0.0341797 4.29814C0.0341797 5.69077 1.00827 6.85931 2.31074 7.16048V17.3381C2.31074 17.7037 2.60705 18 2.97264 18C3.33822 18 3.63453 17.7037 3.63453 17.3381V7.16048C4.937 6.85931 5.91109 5.69077 5.91109 4.29814ZM1.35805 4.29814C1.35805 3.40781 2.08238 2.68348 2.97271 2.68348C3.86303 2.68348 4.58737 3.40781 4.58737 4.29814C4.58737 5.18846 3.86303 5.9128 2.97271 5.9128C2.08238 5.9128 1.35805 5.18846 1.35805 4.29814Z" fill="#664EF9"/>
-                                                <path d="M8.66188 8.89222V0.661897C8.66188 0.296309 8.36557 0 7.99998 0C7.63439 0 7.33808 0.296309 7.33808 0.661897V8.89222C6.03569 9.19331 5.06152 10.3619 5.06152 11.7546C5.06152 13.1472 6.03562 14.3157 7.33808 14.6169V17.3381C7.33808 17.7037 7.63439 18 7.99998 18C8.36557 18 8.66188 17.7037 8.66188 17.3381V14.6169C9.96427 14.3158 10.9384 13.1472 10.9384 11.7546C10.9384 10.3619 9.96434 9.19338 8.66188 8.89222ZM6.38539 11.7546C6.38539 10.8642 7.10973 10.1399 8.00005 10.1399C8.89038 10.1399 9.61471 10.8642 9.61471 11.7546C9.61471 12.6449 8.89038 13.3692 8.00005 13.3692C7.10973 13.3692 6.38539 12.6449 6.38539 11.7546Z" fill="#664EF9"/>
-                                                <path d="M15.9658 7.20151C15.9658 5.80888 14.9917 4.64034 13.6892 4.33918V0.661897C13.6892 0.296309 13.3929 0 13.0273 0C12.6617 0 12.3654 0.296309 12.3654 0.661897V4.33918C11.063 4.64027 10.0889 5.80888 10.0889 7.20151C10.0889 8.59415 11.063 9.76269 12.3654 10.0639V17.3381C12.3654 17.7037 12.6617 18 13.0273 18C13.3929 18 13.6892 17.7037 13.6892 17.3381V10.0639C14.9917 9.76269 15.9658 8.59415 15.9658 7.20151ZM11.4127 7.20151C11.4127 6.31119 12.1371 5.58685 13.0274 5.58685C13.9177 5.58685 14.6421 6.31119 14.6421 7.20151C14.6421 8.09184 13.9177 8.81618 13.0274 8.81618C12.1371 8.81618 11.4127 8.09184 11.4127 7.20151Z" fill="#664EF9"/>
-                                            </svg>
-                                        </button>
-                                    </div>
+                                    {/*<div className={classes.inputBLock}>*/}
+                                    {/*    <button type={"button"} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>*/}
+                                    {/*        Больше опций*/}
+                                    {/*        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
+                                    {/*            <path d="M5.91109 4.29814C5.91109 2.90551 4.937 1.73697 3.63453 1.4358V0.661897C3.63453 0.296309 3.33822 0 2.97264 0C2.60705 0 2.31074 0.296309 2.31074 0.661897V1.4358C1.00835 1.73689 0.0341797 2.90551 0.0341797 4.29814C0.0341797 5.69077 1.00827 6.85931 2.31074 7.16048V17.3381C2.31074 17.7037 2.60705 18 2.97264 18C3.33822 18 3.63453 17.7037 3.63453 17.3381V7.16048C4.937 6.85931 5.91109 5.69077 5.91109 4.29814ZM1.35805 4.29814C1.35805 3.40781 2.08238 2.68348 2.97271 2.68348C3.86303 2.68348 4.58737 3.40781 4.58737 4.29814C4.58737 5.18846 3.86303 5.9128 2.97271 5.9128C2.08238 5.9128 1.35805 5.18846 1.35805 4.29814Z" fill="#664EF9"/>*/}
+                                    {/*            <path d="M8.66188 8.89222V0.661897C8.66188 0.296309 8.36557 0 7.99998 0C7.63439 0 7.33808 0.296309 7.33808 0.661897V8.89222C6.03569 9.19331 5.06152 10.3619 5.06152 11.7546C5.06152 13.1472 6.03562 14.3157 7.33808 14.6169V17.3381C7.33808 17.7037 7.63439 18 7.99998 18C8.36557 18 8.66188 17.7037 8.66188 17.3381V14.6169C9.96427 14.3158 10.9384 13.1472 10.9384 11.7546C10.9384 10.3619 9.96434 9.19338 8.66188 8.89222ZM6.38539 11.7546C6.38539 10.8642 7.10973 10.1399 8.00005 10.1399C8.89038 10.1399 9.61471 10.8642 9.61471 11.7546C9.61471 12.6449 8.89038 13.3692 8.00005 13.3692C7.10973 13.3692 6.38539 12.6449 6.38539 11.7546Z" fill="#664EF9"/>*/}
+                                    {/*            <path d="M15.9658 7.20151C15.9658 5.80888 14.9917 4.64034 13.6892 4.33918V0.661897C13.6892 0.296309 13.3929 0 13.0273 0C12.6617 0 12.3654 0.296309 12.3654 0.661897V4.33918C11.063 4.64027 10.0889 5.80888 10.0889 7.20151C10.0889 8.59415 11.063 9.76269 12.3654 10.0639V17.3381C12.3654 17.7037 12.6617 18 13.0273 18C13.3929 18 13.6892 17.7037 13.6892 17.3381V10.0639C14.9917 9.76269 15.9658 8.59415 15.9658 7.20151ZM11.4127 7.20151C11.4127 6.31119 12.1371 5.58685 13.0274 5.58685C13.9177 5.58685 14.6421 6.31119 14.6421 7.20151C14.6421 8.09184 13.9177 8.81618 13.0274 8.81618C12.1371 8.81618 11.4127 8.09184 11.4127 7.20151Z" fill="#664EF9"/>*/}
+                                    {/*        </svg>*/}
+                                    {/*    </button>*/}
+                                    {/*</div>*/}
                                     <Link className={classes.openMapButton} to={'/404'}>
                                         На карте
                                         <svg width="15" height="15" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M7.43806 1.74419C6.7055 0.627907 5.4962 0 4.13573 0C2.7869 0 1.5776 0.627907 0.821781 1.74419C0.0659671 2.83721 -0.108452 4.23256 0.356665 5.45349C0.484572 5.77907 0.682246 6.11628 0.93806 6.4186L3.87992 9.88372C3.94969 9.95349 4.01946 10 4.12411 10C4.22876 10 4.29853 9.95349 4.36829 9.88372L7.32178 6.4186C7.5776 6.11628 7.7869 5.7907 7.90318 5.45349C8.36829 4.23256 8.19387 2.83721 7.43806 1.74419ZM4.13573 5.86047C3.13573 5.86047 2.31015 5.03488 2.31015 4.03488C2.31015 3.03488 3.13573 2.2093 4.13573 2.2093C5.13574 2.2093 5.96132 3.03488 5.96132 4.03488C5.96132 5.03488 5.14736 5.86047 4.13573 5.86047Z" fill="#664EF9"/>
                                         </svg>
                                     </Link>
-                                    <Link to={'/catalog/cars'} onClick={()=> dispatch(mainFilter())} className={classes.filterButton}>
+                                    <button type={"button"} onClick={()=>catalogFilterHandler('cars')} className={classes.filterButton}>
                                         Показать
                                         <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1 14.8574L7.57143 8.28599L0.999999 1.71456" stroke="#242424"/>
                                         </svg>
-                                    </Link>
+                                    </button>
                                 </TabPanel>
                             </Tabs>
+                            {
+                                moreOptions && tabIndex !== 3
+                                    ? <MoreOptions />
+                                    : null
+                            }
 
                         </form>
                     </section>
@@ -331,7 +346,7 @@ const Main = () => {
                                 <ul>
                                     {cityOption.map(city =>
                                         <li key={city.id}>
-                                            <Link to={'catalog/flats'} onClick={()=> dispatch(setCity(city.city))}>Квартиры в {city.value}</Link>
+                                            <Link to={'catalog/flats'} onClick={()=> dispatch(setCity(city.value))}>Квартиры в {city.value}е</Link>
                                             <p>{products.flats.length}</p>
                                         </li>
                                     )}
@@ -342,7 +357,7 @@ const Main = () => {
                                 <ul>
                                     {cityOption.map(city =>
                                         <li key={city.id}>
-                                            <Link to={'catalog/cottages'} onClick={()=> dispatch(setCity(city.city))}>Коттеджи и усадьбы в {city.value}</Link>
+                                            <Link to={'catalog/cottages'} onClick={()=> dispatch(setCity(city.value))}>Коттеджи и усадьбы в {city.value}е</Link>
                                             <p>{products.cottages.length}</p>
                                         </li>
                                     )}
@@ -357,7 +372,7 @@ const Main = () => {
                                                 <ul>
                                                     {cityOption.map(city =>
                                                         <li key={city.id}>
-                                                            <Link to={'catalog/baths'} onClick={()=> dispatch(setCity(city.city))}>Бани и сауны в {city.value}</Link>
+                                                            <Link to={'catalog/baths'} onClick={()=> dispatch(setCity(city.value))}>Бани и сауны в {city.value}е</Link>
                                                             <p>{products.baths.length}</p>
                                                         </li>
                                                     )}
@@ -368,7 +383,7 @@ const Main = () => {
                                                 <ul>
                                                     {cityOption.map(city =>
                                                         <li key={city.id}>
-                                                            <Link to={'catalog/cars'} onClick={()=> dispatch(setCity(city.city))}>Авто на прокат в {city.value}</Link>
+                                                            <Link to={'catalog/cars'} onClick={()=> dispatch(setCity(city.value))}>Авто на прокат в {city.value}е</Link>
                                                             <p>{products.cars.length}</p>
                                                         </li>
                                                     )}

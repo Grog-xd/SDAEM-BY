@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './newsItem.module.scss'
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const NewsItem = ({post}) => {
     const navigate = useNavigate()

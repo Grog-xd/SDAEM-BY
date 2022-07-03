@@ -7,8 +7,8 @@
     padding: 0 15px;
   }
   .filterSection{
-    background: url("../../assets/img/bg-404.png"), linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%) no-repeat;
-    height: 430px;
+    background: url("../../assets/img/bg-404.webp"), linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%) no-repeat;
+    padding-bottom: 120px;
     border-radius: 0 0 40px 40px;
     padding-top: 82.5px;
     h1{
@@ -91,6 +91,12 @@
         background: #FFD54F;
         border-radius: 22px;
         margin-right: 34px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        &:hover{
+          background: #FEC100;
+        }
         svg{
           margin-left: 12px;
         }
@@ -161,16 +167,16 @@
         }
 
         &:nth-child(1){
-          background: url("../../assets/img/mainBgCardsImg-1.png"), rgba(30, 33, 35, 0.4);
+          background: url("../../assets/img/mainBgCardsImg-1.webp"), rgba(30, 33, 35, 0.4);
         }
         &:nth-child(2){
-          background: url("../../assets/img/mainBgCardsImg-2.png"), rgba(30, 33, 35, 0.4);
+          background: url("../../assets/img/mainBgCardsImg-2.webp"), rgba(30, 33, 35, 0.4);
         }
         &:nth-child(3){
-          background: url("../../assets/img/mainBgCardsImg-3.png"), rgba(30, 33, 35, 0.4);
+          background: url("../../assets/img/mainBgCardsImg-3.webp"), rgba(30, 33, 35, 0.4);
         }
         &:nth-child(4){
-          background: url("../../assets/img/mainBgCardsImg-4.png"), rgba(30, 33, 35, 0.4);
+          background: url("../../assets/img/mainBgCardsImg-4.webp"), rgba(30, 33, 35, 0.4);
         }
         &:nth-child(1n){
           width: 21vw;
@@ -309,7 +315,7 @@
 
   }
   .advantagesSection{
-    background: url("../../assets/img/bg-404.png"), linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%) no-repeat;
+    background: url("../../assets/img/bg-404.webp"), linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%) no-repeat;
     display: flex;
     justify-content: center;
     height: 440px;
@@ -321,6 +327,7 @@
       flex-direction: column;
       align-items: center;
       h2{
+        margin-top: 0;
         @include text(25px, 700, 30px, #fff);
         margin-bottom: 20px;
       }

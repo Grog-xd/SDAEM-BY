@@ -1,26 +1,35 @@
 import React, {useEffect, useState} from 'react';
 import classes from './paginationList.module.scss'
-import {useSelector} from "react-redux";
 import PaginationItem from "../paginationItem/paginationItem";
 
-const PaginationList = ({posts, limit}) => {
+const PaginationList = ({posts, currentPage, handler}) => {
 
-    const totalPages = Math.ceil(posts.length/limit)
     const [pagesArr, setPageArr]=useState([])
 
-    useEffect(()=>{
+    function setPagesBtn(){
         let arr = []
-        for(let i = 0; i<totalPages; i++){
-            arr.push(i + 1)
+        for(let i = 0; i<posts.length; i++){
+
+            if(currentPage +6 > i || i+1 === posts.length){
+                if (i === posts.length-1 && currentPage +6 <= posts.length-1){
+                    arr.push('...')
+                }
+                arr.push(i + 1)
+            }
+
         }
         setPageArr(arr)
-    }, [])
+    }
+
+    useEffect(()=>{
+        setPagesBtn()
+    }, [posts, currentPage])
 
     return (
         <div className={classes.pagination}>
             {
                 pagesArr.map((page)=>
-                    <PaginationItem key={page}>{page}</PaginationItem>
+                    <PaginationItem key={page} currentPage={currentPage} handler={handler}>{page}</PaginationItem>
                 )
             }
         </div>

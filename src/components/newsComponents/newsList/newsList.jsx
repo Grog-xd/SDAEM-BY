@@ -6,16 +6,14 @@ import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 const NewsList = () => {
     let sortedPosts = useSelector(state => state.toolkit.sortedPosts)
-
-    // sortedPosts.length
-
+    let currentPage = useSelector(state => state.toolkit.currentPage)
 
     return (
         sortedPosts.length
                 ?
                     <div className={classes.newsList}>
                         <TransitionGroup>
-                            {sortedPosts.map((sortedPost)=>
+                            {sortedPosts[currentPage-1].map((sortedPost)=>
                                 <CSSTransition key={sortedPost.id} timeout={500} classNames='post'>
                                     <NewsItem  post={sortedPost}></NewsItem>
                                 </CSSTransition>
