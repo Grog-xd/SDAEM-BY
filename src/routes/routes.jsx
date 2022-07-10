@@ -16,7 +16,7 @@ export const publicRoutes =[
     {path: 'contacts', element: <Contacts/>},
     {path: 'news', element: <News/>},
     {path: 'news/:id', element: <NewIdPage/>},
-    {path: '404', element: <Page404/>},
+    {path: '*', element: <Page404/>},
 ]
 
 export const privateRoutes =[
@@ -26,7 +26,7 @@ export const privateRoutes =[
     {path: 'contacts', element: <Contacts/>},
     {path: 'news', element: <News/>},
     {path: 'news/:id', element: <NewIdPage/>},
-    {path: '404', element: <Page404/>},
+    {path: '*', element: <Page404/>},
 ]
 
 

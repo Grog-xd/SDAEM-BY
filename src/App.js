@@ -1,12 +1,12 @@
-import './App.scss';
-import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {enter} from "./redux/toolkitSlice";
-import AppRoutes from "./components/appRoutes";
+import {useDispatch, useSelector} from "react-redux";
+import {enter} from "./redux/loginPage";
+import AppRoutes from "./components/AppRoutes";
+import './App.scss';
 
 function App() {
 
-  const profilesArr = useSelector(state => state.toolkit.profilesArr)
+  const {profilesArr} = useSelector(state => state.login)
   const dispatch = useDispatch()
 
   useEffect(()=>{

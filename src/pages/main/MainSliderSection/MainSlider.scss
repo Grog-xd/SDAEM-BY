@@ -1,0 +1,42 @@
+.swiper{
+  position: relative;
+  overflow-x: clip;
+  margin: -30px;
+}
+.swiper-wrapper{
+  display: flex;
+  margin-bottom: 80px;
+  padding: 30px;
+}
+.swiper-button-prev{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #664EF9;
+  background: transparent;
+  border-radius: 50%;
+  background:  url("../../../assets/img/arrowDown.svg") center center/cover no-repeat;
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: -10%;
+  left: 48%;
+  cursor: pointer;
+  &:hover{
+    background: url("../../../assets/img/arrowDown.svg") center center/cover no-repeat rgba(102, 78, 249, 0.1);
+  }
+}
+.swiper-button-next{
+  position: absolute;
+  bottom: -10%;
+  left: 52%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #664EF9;
+  background: transparent;
+  border-radius: 50%;
+  background:  url("../../../assets/img/arrowDown.svg") center center/cover no-repeat;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  &:hover{
+    background: url("../../../assets/img/arrowDown.svg") center center/cover no-repeat rgba(102, 78, 249, 0.1);
+  }
+}

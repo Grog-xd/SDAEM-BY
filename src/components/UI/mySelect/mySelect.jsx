@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import SvgArrowDown from "../../svg/SvgArrowDown";
 import classes from './mySelect.module.scss'
 
 const MySelect = ({options, value, handler, children, style}) => {
@@ -24,9 +25,7 @@ const MySelect = ({options, value, handler, children, style}) => {
                     {children}
                     <p className={classes.textValue}>{value}</p>
                 </div>
-                <svg width="20" height="10" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.5 1.38477L6 5.64152L10.5 1.38477" stroke="#4E64F9" />
-                </svg>
+                <SvgArrowDown width={'14'} height={'16'} color={'#4E64F9'}/>
             </button>
             {
                 selectActive

@@ -1,0 +1,16 @@
+.catalogPage{
+  .container{
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .catalogPagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .socialsButtons{
+      margin-bottom: 60px;
+    }
+  }
+}

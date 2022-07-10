@@ -1,0 +1,33 @@
+@import "src/style/mixins";
+
+.textBlock{
+  margin-top: 50px;
+  h2{
+    margin-top: 0;
+    @include text(14px, 600, 21px, #686868);
+    margin-bottom: 0;
+    text-align: start;
+  }
+  ul{
+    max-width: 388px;
+    li{
+      list-style: inside;
+      @include text(14px, 400, 21px, #686868);
+      &::marker{
+        color: #686868;
+      }
+    }
+  }
+  .toLoginSection{
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    p{
+      @include text(14px, 400, 20px, #686868);
+    }
+    a{
+      @include text(14px, 500, 26px, #664EF9);
+      margin-left: 5px;
+    }
+  }
+}
