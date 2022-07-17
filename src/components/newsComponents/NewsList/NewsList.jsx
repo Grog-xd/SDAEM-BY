@@ -14,7 +14,7 @@ const NewsList = () => {
                         <TransitionGroup>
                             {sortedPosts[currentPage-1].map((sortedPost)=>
                                 <CSSTransition key={sortedPost.id} timeout={500} classNames='post'>
-                                    <NewsItem  post={sortedPost}></NewsItem>
+                                    <NewsItem  post={sortedPost} />
                                 </CSSTransition>
                             )}
                         </TransitionGroup>

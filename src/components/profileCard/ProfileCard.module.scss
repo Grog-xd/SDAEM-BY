@@ -27,11 +27,11 @@
     @include text(20px, 700, 20px, #1E2123);
     margin-top: 5px;
   }
-  p:nth-child(4){
+  .phoneLink{
     @include text(20px, 700, 20px, #1E2123);
     margin-top: 18px;
   }
-  strong{
+  .emailLink{
     @include text(16px, 500, 16px, #664EF9);
     border-bottom: 1px solid #664EF9;
     margin-top: 15px;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import SvgVk from "../../svg/SvgVk";
 import SvgFacebook from "../../svg/SvgFacebook";
 import SvgInst from "../../svg/SvgInst";
@@ -11,7 +11,7 @@ import belCard from "../../../assets/img/belcart.png";
 import classes from "./FooterSocialPaySection.module.scss";
 
 
-const FooterSocialPaySection = () => {
+const FooterSocialPaySection = memo(() => {
     return (
         <div className={classes.socialPaySection}>
             <div className={classes.socialBtns}>
@@ -36,6 +36,6 @@ const FooterSocialPaySection = () => {
             </div>
         </div>
     );
-};
+});
 
 export default FooterSocialPaySection;

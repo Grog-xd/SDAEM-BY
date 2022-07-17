@@ -11,9 +11,12 @@
   .imgBlock{
     position: relative;
     border-right: 10px;
+    height: 100%;
+    width: 600px;
     img{
       border-radius: 10px;
-      height: 100%;
+      width: 537px;
+      //height: 227px;
     }
     .typeProduct{
       position: absolute;

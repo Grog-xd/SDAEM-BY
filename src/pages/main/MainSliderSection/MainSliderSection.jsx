@@ -61,6 +61,7 @@ const MainSliderSection = () => {
                 cityValue.length
                     ?
                     <Swiper
+                        id={'main'}
                         modules={[Navigation]}
                         navigation
                         simulateTouch={false}

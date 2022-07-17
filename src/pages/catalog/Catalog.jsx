@@ -11,7 +11,7 @@ import PaginationList from "../../components/pagination/PaginationList/Paginatio
 import SocialButtonsBlock from "../../components/socialButtonsBlock/SocialButtonsBlock";
 import CatalogTitleSection from "./CatalogTitleSection/CatalogTitleSection";
 import CatalogFilterSection from "./CatalogFilterSection/CatalogFilterSection";
-import CatalogVisualFilter from "./CatalogVisualFilter/CatalogVisualFilter";
+import CatalogVisualFilterSection from "./CatalogVisualFilterSection/CatalogVisualFilterSection";
 import CatalogMapSection from "./CatalogMapSection/CatalogMapSection";
 import Loader from "../../components/loader/Loader";
 import classes from './Catalog.module.scss'
@@ -26,11 +26,11 @@ const Catalog = () => {
 
     useEffect(()=>{
         test404()
-        console.log('test')
-        axios.get(`api/${getProductsUrl}`)
+        axios.get(`../api/${getProductsUrl}`)
             .then(response => response.data.products)
             .then(response => dispatch(fetchProducts(response)))
             .then(()=>dispatch(mainFilter(params.type)))
+            .catch(e => console.log(e.message))
         window.scrollTo(0, 0)
     }, [params])
 
@@ -56,7 +56,7 @@ const Catalog = () => {
                 <CatalogTitleSection />
                 <CatalogFilterSection />
                 <div className={classes.container}>
-                    <CatalogVisualFilter />
+                    <CatalogVisualFilterSection />
                     {
                         products.length
                             ?

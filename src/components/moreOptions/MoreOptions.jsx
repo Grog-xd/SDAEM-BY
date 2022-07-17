@@ -16,10 +16,8 @@ const MoreOptions = () => {
         <div className={classes.moreOptions}>
             <div className={classes.selectSection}>
                 {
-                    params.type === 'cars'
-                        ?
-                            null
-                        :
+                    params.type !== 'cars'
+                        &&
                             <div className={classes.selectBlock}>
                                 <p className={classes.selectLabel}>Спальные места</p>
                                 <MySelect options={bedSumOptions} handler={(e)=> dispatch(setBedSum(e))} value={bedSumCurrentValue ? bedSumCurrentValue: 'Выберите'} style={classes.select}/>
@@ -36,9 +34,8 @@ const MoreOptions = () => {
                 </div>
             </div>
             {
-                params.type === 'cars'
-                    ?   null
-                    :   <CheckboxList checkboxList={checkboxsMoreOption} handler={(e)=>dispatch(checkboxHandler(e))}/>
+                params.type !== 'cars'
+                    &&  <CheckboxList checkboxList={checkboxsMoreOption} handler={(e)=>dispatch(checkboxHandler(e))}/>
             }
 
         </div>

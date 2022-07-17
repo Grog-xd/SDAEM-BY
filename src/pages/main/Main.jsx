@@ -23,6 +23,7 @@ const Main = () => {
         axios.get(`api/${getProductsUrl}`)
             .then(response => response.data.products)
             .then(response => dispatch(fetchProducts(response)))
+            .catch(e => console.log(e.message))
     }, [])
 
 

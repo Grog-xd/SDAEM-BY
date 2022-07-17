@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Link, useLocation} from "react-router-dom";
 import logo from "../../../assets/img/logo.png";
 import classes from "./FooterLogoSection.module.scss";
 
-const FooterLogoSection = () => {
+const FooterLogoSection = memo(() => {
     const {pathname} = useLocation()
 
     return (
@@ -29,6 +29,6 @@ const FooterLogoSection = () => {
             </p>
         </div>
     );
-};
+});
 
 export default FooterLogoSection;

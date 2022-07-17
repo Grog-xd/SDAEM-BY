@@ -13,9 +13,9 @@ const NewIdPageSeeAlso = ({params, posts}) => {
                         null
                         :
                         <div className={classes.seeAlsoPostsBlock}>
-                            <NewsItem post={posts[+params.id] ? posts[+params.id] : posts[+params.id - 2]}></NewsItem>
-                            <NewsItem post={posts[+params.id+1] ? posts[+params.id+1] : posts[+params.id - 3]}></NewsItem>
-                            <NewsItem post={posts[+params.id+2] ? posts[+params.id+2] : posts[+params.id - 4]}></NewsItem>
+                            <NewsItem post={posts[+params.id] ? posts[+params.id] : posts[+params.id - 2]} />
+                            <NewsItem post={posts[+params.id+1] ? posts[+params.id+1] : posts[+params.id - 3]} />
+                            <NewsItem post={posts[+params.id+2] ? posts[+params.id+2] : posts[+params.id - 4]} />
                         </div>
                 }
             </div>

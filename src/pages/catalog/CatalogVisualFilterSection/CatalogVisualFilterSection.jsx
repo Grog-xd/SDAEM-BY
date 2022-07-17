@@ -7,9 +7,9 @@ import SvgSort from "../../../components/svg/SvgSort";
 import SvgBurger from "../../../components/svg/SvgBurger";
 import SvgTiles from "../../../components/svg/SvgTiles";
 import SvgLocation from "../../../components/svg/SvgLocation";
-import classes from "./CatalogVisualFilter.module.scss";
+import classes from "./CatalogVisualFilterSection.module.scss";
 
-const CatalogVisualFilter = () => {
+const CatalogVisualFilterSection = () => {
     const dispatch = useDispatch()
     const params = useParams()
 
@@ -74,4 +74,4 @@ const CatalogVisualFilter = () => {
     );
 };
 
-export default CatalogVisualFilter;
+export default CatalogVisualFilterSection;

@@ -1,5 +1,7 @@
 import React from 'react';
+import axios from "axios";
 import {useForm} from "react-hook-form";
+import {postContactsUrl} from "../../../server";
 import MyInput from "../../../components/UI/myInput/myInput";
 import SvgUser from "../../../components/svg/SvgUser";
 import SvgEmail from "../../../components/svg/SvgEmail";
@@ -13,7 +15,7 @@ const ContactsForm = ({modalActive, handler}) => {
     function sendMessageHandler(data){
         handler(!modalActive)
         reset({name:'', email:'', message:''})
-        console.log(data)
+        axios.post(`/api/${postContactsUrl}`, data)
     }
 
 

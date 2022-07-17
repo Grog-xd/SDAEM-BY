@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Link, useLocation} from "react-router-dom";
 import HeaderSelect from "./headerSelect/headerSelect";
 import SvgLocation from "../../svg/SvgLocation";
 import logo from "../../../assets/img/logo.png";
 import classes from "./HeaderFilter.module.scss";
 
-const HeaderFilter = () => {
+const HeaderFilter = memo(() => {
     const {pathname} = useLocation()
     let navArr = [{type:'flats', value:'Квартиры на сутки', icon:true}, {type:'cottages', value:'Коттеджи и усадьбы', icon:false}, {type:'baths', value:'Бани и сауны', icon:false}, {type:'cars', value:'Авто напрокат', icon:false}]
 
@@ -37,6 +37,6 @@ const HeaderFilter = () => {
             </div>
         </div>
     );
-};
+});
 
 export default HeaderFilter;

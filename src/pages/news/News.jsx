@@ -25,6 +25,7 @@ const News = () => {
             .then(response => response.data.posts)
             .then(response => dispatch(fetchNews(response)))
             .then(()=>dispatch(getNews(inputValue)))
+            .catch(e => console.log(e.message))
         window.scrollTo(0, 0)
     }, [])
 
@@ -36,7 +37,7 @@ const News = () => {
 
     return (
         <React.Fragment>
-            <Header></Header>
+            <Header />
             <main className={classes.main}>
                 <div className={classes.headerBlock}>
                     <div className={classes.breadcrumbs}>
@@ -61,7 +62,7 @@ const News = () => {
 
                 <PaginationList posts={sortedPosts} currentPage={currentPage} handler={(value)=>dispatch(setNewsPage(value))}></PaginationList>
             </main>
-            <Footer></Footer>
+            <Footer />
         </React.Fragment>
     );
 };

@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
+import axios from "axios";
 import {registerUser} from "../../../redux/loginPage";
 import MyInput from "../../../components/UI/myInput/myInput";
 import SvgUser from "../../../components/svg/SvgUser";
 import SvgEmail from "../../../components/svg/SvgEmail";
 import SvgCastle from "../../../components/svg/SvgCastle";
 import SvgError from "../../../components/svg/SvgError";
+import {postRegisterUrl} from "../../../server";
 import classes from "./RegistrationForm.module.scss";
 
 const RegistrationForm = ({modalHandler}) => {
@@ -26,6 +28,8 @@ const RegistrationForm = ({modalHandler}) => {
         setLoginError(false)
         setEmailError(false)
         setPasswordError(false)
+
+        postRegistration(data)
 
         for(let i = 0; i<profilesArr.length; i++){
             if(profilesArr[i].name === data.login){
@@ -47,6 +51,10 @@ const RegistrationForm = ({modalHandler}) => {
         if(!registerError){
             registration(data)
         }
+    }
+
+    function postRegistration(data){
+        axios.post(`/api/${postRegisterUrl}`, data)
     }
 
     function registration({login, email, password}){

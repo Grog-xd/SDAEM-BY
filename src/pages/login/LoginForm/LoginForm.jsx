@@ -2,11 +2,13 @@ import React, {useState} from 'react';
 import {Link, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {useForm} from "react-hook-form";
+import axios from "axios";
 import {enter} from "../../../redux/loginPage";
 import MyInput from "../../../components/UI/myInput/myInput";
 import SvgUser from "../../../components/svg/SvgUser";
 import SvgCastle from "../../../components/svg/SvgCastle";
 import SvgError from "../../../components/svg/SvgError";
+import {postLoginUrl} from "../../../server";
 import classes from "./LoginForm.module.scss";
 
 const LoginForm = () => {
@@ -19,6 +21,9 @@ const LoginForm = () => {
 
 
     function loginHandler({login, password}){
+
+        postLogin(login, password)
+
         for(let i = 0; i<profilesArr.length; i++){
             if(profilesArr[i].name === login && profilesArr[i].password === password){
                 setLoginError(false)
@@ -31,6 +36,13 @@ const LoginForm = () => {
             }
         }
         setLoginError(true)
+    }
+
+    function postLogin(login, password){
+        axios.post(`/api/${postLoginUrl}`,{
+            login:login,
+            password:password
+        })
     }
 
     return (

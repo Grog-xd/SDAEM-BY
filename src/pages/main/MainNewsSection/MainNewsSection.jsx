@@ -31,6 +31,7 @@ const MainNewsSection = () => {
         axios.get(`api/${getPostUrl}`)
             .then(response => response.data.posts)
             .then(response => dispatch(fetchNews(response)))
+            .catch(e => console.log(e.message))
     }, [])
 
     useEffect(()=>{

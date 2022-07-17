@@ -7,6 +7,7 @@ import SvgMetro from "../../../svg/SvgMetro";
 import SvgPhone from "../../../svg/SvgPhone";
 import SvgHeartActive from "../../../svg/SvgHeartActive";
 import SvgHeart from "../../../svg/SvgHeart";
+import ProductSwiper from "../ProductSwiper/ProductSwiper";
 import classes from "./ProductItemList.module.scss";
 
 
@@ -16,7 +17,13 @@ const ProductItemList = ({params, likeActive, product, handler}) => {
     return (
         <div className={classes.productItemList}>
             <div className={classes.imgBlock}>
-                <img className={classes.img} src={product.img} alt="Изображение карточки"/>
+                {
+                    Array.isArray(product.img)
+                        ?
+                        <ProductSwiper imgArr={product.img}/>
+                        :
+                        <img className={classes.img} src={product.img} alt="Изображение карточки"/>
+                }
                 <div className={classes.typeProduct}>{product.type}</div>
             </div>
             <div className={classes.textBlock}>
@@ -37,8 +44,8 @@ const ProductItemList = ({params, likeActive, product, handler}) => {
                     <div className={classes.infoBlock}>
                         {
                             params.type === 'cars'
-                                ?   `${product.rooms} мест.`
-                                :   `${product.rooms} комн.`
+                                ? `${product.rooms} мест.`
+                                : `${product.rooms} комн.`
                         }
                     </div>
                     <div className={classes.infoBlock}>
@@ -55,7 +62,7 @@ const ProductItemList = ({params, likeActive, product, handler}) => {
                 </p>
                 <div className={classes.btnSection}>
                     <div className={classes.btnBlock}>
-                        <button className={classes.contacts} onClick={()=> setProfileActive(!profileActive)}>
+                        <button className={classes.contacts} onClick={() => setProfileActive(!profileActive)}>
                             <SvgPhone width={'16'} height={'16'} color={'#664EF9'}/>
                             Контакты
                         </button>

@@ -1,0 +1,45 @@
+.slider{
+  position: absolute;
+  margin: 0 !important;
+  // swiper-wrapper
+  div:nth-child(1){
+    padding: 0;
+    z-index: 0;
+    margin-bottom: 0;
+    width: 537px;
+  }
+  // swiper-button-prev
+  div:nth-child(2){
+    width: 29px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 23px;
+    border: none;
+    bottom: 50%;
+    left: 5%;
+    transform: rotate(0deg);
+    background:  url("../../../../assets/img/arrowSliderLeftSvg.svg") center center/auto no-repeat;
+  }
+  // swiper-button-next
+  div:nth-child(3){
+    width: 29px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 23px;
+    border: none;
+    bottom: 50%;
+    left: 90%;
+    transform: rotate(0);
+    background:  url("../../../../assets/img/arrowSliderRightSvg.svg") center center/auto no-repeat;
+  }
+  // pagination styles in MainSlider
+  img{
+    border-radius: 10px;
+  }
+}
+
+
+
+

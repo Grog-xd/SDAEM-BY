@@ -24,44 +24,38 @@ const ProfileCard = ({profile, setActive, style}) => {
         <div className={cls.join(' ')}>
             {
                 profile.avatar
-                    ?
-                        <img src={profile.avatar? profile.avatar:null} alt={'avatar'}/>
-                    : null
+                    && <img src={profile.avatar? profile.avatar:null} alt={'avatar'}/>
             }
 
             <p>Владелец</p>
-            <p>{profile.city ? profile.city : null}</p>
-            <p>{profile.phone ? profile.phone : null}</p>
-            <strong>{profile.email}</strong>
+            <p>{profile.city && profile.city}</p>
+            <a className={classes.phoneLink} href={`tel:${profile.phone}`}>{profile.phone && profile.phone}</a>
+            <a href={`mailto:${profile.email}`} className={classes.emailLink}>{profile.email}</a>
             <div className={classes.socialBtns}>
                 {
                     profile.viber
-                        ?
+                        &&
                             <a rel={"noreferrer"} target="_blank" href={`${profile.viber}`}>
                                 <SvgViberBtn />
                             </a>
-                        : null
                 }
                 {
                     profile.whatsUpp
-                        ?
+                        &&
                             <a rel={"noreferrer"} target="_blank" href={`${profile.whatsUpp}`}>
                                 <SvgWhatsappBtn />
                             </a>
-                        : null
                 }
-                <a  rel={"noreferrer"} target="_blank" href={profile.email}>
+                <a  rel={"noreferrer"} target="_blank" href={`mailto:${profile.email}`}>
                     <SvgEmailBtn />
                 </a>
             </div>
             { profile.password
-                ?
+                &&
                     <div className={classes.btnsProfile}>
                         <Link to={'/404'}>Редактировать профиль</Link>
                         <button onClick={exitAuth}>Выйти из акаунта</button>
                     </div>
-                : null
-
             }
         </div>
     );

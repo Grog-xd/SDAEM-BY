@@ -5,15 +5,17 @@ const PaginationItem = ({children, currentPage, handler}) => {
 
     const [disabled, setDisabled] = useState(false)
 
-    useEffect(()=>{
-        if(children === '...'){
+    useEffect(() => {
+        if (children === '...') {
             setDisabled(true)
         }
     }, [])
 
 
     return (
-        <button onClick={()=>handler(children)} className={currentPage === children ? classes.paginationItemActive :classes.paginationItem} disabled={disabled}>
+        <button onClick={() => handler(children)}
+                className={currentPage === children ? classes.paginationItemActive : classes.paginationItem}
+                disabled={disabled}>
             {children}
         </button>
     );

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {memo} from 'react';
 import {Link, NavLink} from "react-router-dom";
 import {setCity} from "../../../redux/mainPage";
 import {useDispatch, useSelector} from "react-redux";
 import classes from "./FooterNavSection.module.scss";
 
-const FooterNavSection = () => {
+const FooterNavSection = memo(() => {
     const dispatch = useDispatch()
 
     const {cityOption, tabs}= useSelector(state => state.main)
@@ -30,6 +30,6 @@ const FooterNavSection = () => {
             </ul>
         </nav>
     );
-};
+});
 
 export default FooterNavSection;

@@ -8,15 +8,23 @@ import SvgPoint from "../../../svg/SvgPoint";
 import SvgHeartActive from "../../../svg/SvgHeartActive";
 import SvgHeart from "../../../svg/SvgHeart";
 import SvgPhone from "../../../svg/SvgPhone";
+import ProductSwiper from "../ProductSwiper/ProductSwiper";
 import classes from './ProductItemTiles.module.scss'
 
 const ProductItemTiles = ({product, params, likeActive, handler}) => {
     const [profileActive, setProfileActive] = useState(false)
-
     return (
         <div className={classes.productItem}>
             <div className={classes.typeProduct}>{product.type}</div>
-            <img className={classes.img} src={product.img} alt="Изображение карточки"/>
+            {
+                Array.isArray(product.img)
+                    ?
+                    <ProductSwiper imgArr={product.img}/>
+                    :
+                    <img className={classes.img} src={product.img} alt="Изображение карточки"/>
+            }
+
+
             <div className={classes.textBlock}>
                 <div className={classes.infoSection}>
                     <div className={classes.cost}>
@@ -30,8 +38,8 @@ const ProductItemTiles = ({product, params, likeActive, handler}) => {
                     <div className={classes.infoBlock}>
                         {
                             params.type === 'cars'
-                                ?   `${product.rooms} мест.`
-                                :   `${product.rooms} комн.`
+                                ? `${product.rooms} мест.`
+                                : `${product.rooms} комн.`
                         }
                     </div>
                     {
@@ -67,7 +75,7 @@ const ProductItemTiles = ({product, params, likeActive, handler}) => {
                             }
                         </button>
                     }
-                    <button className={classes.contacts} onClick={()=> setProfileActive(!profileActive)}>
+                    <button className={classes.contacts} onClick={() => setProfileActive(!profileActive)}>
                         <SvgPhone width={'16'} height={'16'} color={'#664EF9'}/>
                         Контакты
                     </button>
