@@ -1,6 +1,7 @@
 import React from 'react';
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation, Pagination, Lazy} from "swiper";
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Navigation, Pagination, Lazy} from 'swiper';
+
 import classes from './ProductSwiper.module.scss'
 
 
@@ -16,7 +17,7 @@ const ProductSwiper = ({imgArr}) => {
         >
             {imgArr.map(img=>
                 <SwiperSlide id={img.id} key={img.id}>
-                    <img className={'swiper-lazy'} data-src={img.img} alt="Изображение карточки"/>
+                    <img className={'swiper-lazy'} data-src={img.img} alt='Изображение карточки'/>
                 </SwiperSlide>
             )}
         </Swiper>

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+
 import classes from './PaginationItem.module.scss'
 
 const PaginationItem = ({children, currentPage, handler}) => {
@@ -14,8 +15,8 @@ const PaginationItem = ({children, currentPage, handler}) => {
 
     return (
         <button onClick={() => handler(children)}
-                className={currentPage === children ? classes.paginationItemActive : classes.paginationItem}
-                disabled={disabled}>
+            className={currentPage === children ? classes.paginationItemActive : classes.paginationItem}
+            disabled={disabled}>
             {children}
         </button>
     );

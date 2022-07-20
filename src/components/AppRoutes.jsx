@@ -1,7 +1,8 @@
 import React from 'react';
-import {Route, Routes} from "react-router-dom";
-import {useSelector} from "react-redux";
-import {privateRoutes, publicRoutes} from "../routes/routes";
+import {Route, Routes} from 'react-router-dom';
+import {useSelector} from 'react-redux';
+
+import {privateRoutes, publicRoutes} from '../routes/routes';
 
 const AppRoutes = () => {
     const isAuth = useSelector(state => state.login.isAuth)

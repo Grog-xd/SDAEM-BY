@@ -1,14 +1,16 @@
 import React from 'react';
-import {useSelector} from "react-redux";
-import SvgLocation from "../../../components/svg/SvgLocation";
-import SvgPhone from "../../../components/svg/SvgPhone";
-import SvgViber from "../../../components/svg/SvgViber";
-import SvgTelegram from "../../../components/svg/SvgTelegram";
-import SvgWhatsapp from "../../../components/svg/SvgWhatsapp";
-import SvgEmail from "../../../components/svg/SvgEmail";
-import SvgClock from "../../../components/svg/SvgClock";
-import SvgError from "../../../components/svg/SvgError";
-import classes from "./ContactsTextBlock.module.scss";
+import {useSelector} from 'react-redux';
+
+import SvgLocation from '../../../components/svg/SvgLocation';
+import SvgPhone from '../../../components/svg/SvgPhone';
+import SvgViber from '../../../components/svg/SvgViber';
+import SvgTelegram from '../../../components/svg/SvgTelegram';
+import SvgWhatsapp from '../../../components/svg/SvgWhatsapp';
+import SvgEmail from '../../../components/svg/SvgEmail';
+import SvgClock from '../../../components/svg/SvgClock';
+import SvgError from '../../../components/svg/SvgError';
+
+import classes from './ContactsTextBlock.module.scss';
 
 const ContactsTextBlock = () => {
     const {contactsInformation} = useSelector(state => state.news)
@@ -28,13 +30,13 @@ const ContactsTextBlock = () => {
                     <SvgPhone width={'9'} height={'15'} color={'white'} />
                 </div>
                 <a className={classes.textLink}  href={`tel:${contactsInformation.tel}`}><b>{contactsInformation.tel}</b></a>
-                <a className={classes.svgBlock} target={'_blank'} rel={'noreferrer'} href="https://www.viber.com/ru/">
+                <a className={classes.svgBlock} target={'_blank'} rel={'noreferrer'} href='https://www.viber.com/ru/'>
                     <SvgViber width={'18'} height={'18'} color={'white'}/>
                 </a>
-                <a className={classes.svgBlock} target={'_blank'} rel={'noreferrer'} href="https://telegram.org">
+                <a className={classes.svgBlock} target={'_blank'} rel={'noreferrer'} href='https://telegram.org'>
                     <SvgTelegram width={'18'} height={'18'} color={'white'}/>
                 </a>
-                <a className={classes.svgBlock} target={'_blank'} rel={'noreferrer'} href="https://www.whatsapp.com">
+                <a className={classes.svgBlock} target={'_blank'} rel={'noreferrer'} href='https://www.whatsapp.com'>
                     <SvgWhatsapp width={'18'} height={'18'} color={'white'}/>
                 </a>
             </div>

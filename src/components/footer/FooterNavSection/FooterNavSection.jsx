@@ -1,8 +1,11 @@
 import React, {memo} from 'react';
-import {Link, NavLink} from "react-router-dom";
-import {setCity} from "../../../redux/mainPage";
-import {useDispatch, useSelector} from "react-redux";
-import classes from "./FooterNavSection.module.scss";
+import {Link, NavLink} from 'react-router-dom';
+
+import {useDispatch, useSelector} from 'react-redux';
+
+import {setCity} from '../../../redux/mainPage';
+
+import classes from './FooterNavSection.module.scss';
 
 const FooterNavSection = memo(() => {
     const dispatch = useDispatch()
@@ -18,7 +21,7 @@ const FooterNavSection = memo(() => {
                     <li key={tab.id}><Link to={`/catalog/${tab.id}`}><b>{tab.value}</b></Link></li>
                 )}
                 {cityOption.map(city =>
-                    <li key={city.id}><Link  onClick={()=> dispatch(setCity(city.value))} to={`/catalog/flats`}>Квартиры в {city.value}е</Link></li>
+                    <li key={city.id}><Link  onClick={()=> dispatch(setCity(city.value))} to={'/catalog/flats'}>Квартиры в {city.value}е</Link></li>
                 )}
             </ul>
             <ul className={classes.pageNav}>

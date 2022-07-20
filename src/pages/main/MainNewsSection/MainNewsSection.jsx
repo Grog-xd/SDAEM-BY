@@ -1,13 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import axios from "axios";
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchNews} from "../../../redux/newsPage";
-import {getPostUrl} from "../../../server";
-import SvgArrowRight from "../../../components/svg/SvgArrowRight";
-import yellowPoints from "../../../assets/img/yellow-points.png";
-import flatImg from "../../../assets/img/flat-img.png";
-import classes from "./MainNewsSection.module.scss";
+import axios from 'axios';
+import {Link} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+
+import {fetchNews} from '../../../redux/newsPage';
+import {getPostUrl} from '../../../server';
+import SvgArrowRight from '../../../components/svg/SvgArrowRight';
+import yellowPoints from '../../../assets/img/yellow-points.png';
+import flatImg from '../../../assets/img/flat-img.png';
+
+import classes from './MainNewsSection.module.scss';
 
 const MainNewsSection = () => {
     const dispatch = useDispatch()
@@ -47,8 +49,8 @@ const MainNewsSection = () => {
                     <p>Квартира на сутки в {cityMainName}е</p>
                 </div>
                 <div className={classes.body}>
-                    <img className={classes.yellowPoints} src={yellowPoints} alt="Желтые точки"/>
-                    <img className={classes.bodyImg} src={flatImg} alt="Изображение квартиры"/>
+                    <img className={classes.yellowPoints} src={yellowPoints} alt='Желтые точки'/>
+                    <img className={classes.bodyImg} src={flatImg} alt='Изображение квартиры'/>
                     <div className={classes.bodyText}>
                         <p>
                             <b>Нужна квартира на сутки в {cityMainName}е?</b><br/>

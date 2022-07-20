@@ -1,7 +1,9 @@
 import React from 'react';
-import {Link, useParams} from "react-router-dom";
-import SvgLocation from "../../../components/svg/SvgLocation";
-import classes from "./CatalogMapSection.module.scss";
+import {Link, useParams} from 'react-router-dom';
+
+import SvgLocation from '../../../components/svg/SvgLocation';
+
+import classes from './CatalogMapSection.module.scss';
 
 const CatalogMapSection = () => {
     const params = useParams()

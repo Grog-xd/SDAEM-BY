@@ -1,8 +1,9 @@
 import React, {memo} from 'react';
-import FooterLogoSection from "./FooterLogoSection/FooterLogoSection";
-import FooterNavSection from "./FooterNavSection/FooterNavSection";
-import FooterSocialPaySection from "./FooterSocialPaySection/FooterSocialPaySection";
-import classes from "./Footer.module.scss";
+
+import FooterLogoSection from './FooterLogoSection/FooterLogoSection';
+import FooterNavSection from './FooterNavSection/FooterNavSection';
+import FooterSocialPaySection from './FooterSocialPaySection/FooterSocialPaySection';
+import classes from './Footer.module.scss';
 
 const Footer = memo(() => {
     return (

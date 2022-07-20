@@ -1,16 +1,18 @@
 import React, {useState} from 'react';
-import SvgArrowDown from "../../svg/SvgArrowDown";
+
+import SvgArrowDown from '../../svg/SvgArrowDown';
+
 import classes from './mySelect.module.scss'
 
 const MySelect = ({options, value, handler, children, style}) => {
     const [selectActive, setSelectActive] = useState(false)
     const clsSelect = [
         classes.select,
-        style
+        style,
     ]
     const clsChangeBlock = [
         classes.changeBlock,
-        classes.changeBlockActive
+        classes.changeBlockActive,
     ]
 
     function selectHandler(value){
@@ -20,7 +22,7 @@ const MySelect = ({options, value, handler, children, style}) => {
 
     return (
         <div className={clsSelect.join(' ')}>
-            <button type={"button"} onClick={()=> setSelectActive(!selectActive)}  className={selectActive ? clsChangeBlock.join(' ') : classes.changeBlock}>
+            <button type={'button'} onClick={()=> setSelectActive(!selectActive)}  className={selectActive ? clsChangeBlock.join(' ') : classes.changeBlock}>
                 <div>
                     {children}
                     <p className={classes.textValue}>{value}</p>
@@ -30,13 +32,13 @@ const MySelect = ({options, value, handler, children, style}) => {
             {
                 selectActive
                     ?
-                        <div className={classes.optionsBlock}>
-                            {options.map(option =>
-                                <button onClick={()=>selectHandler(option.value)} key={option.id}>{option.value}</button>
-                            )}
-                        </div>
+                    <div className={classes.optionsBlock}>
+                        {options.map(option =>
+                            <button onClick={()=>selectHandler(option.value)} key={option.id}>{option.value}</button>
+                        )}
+                    </div>
                     :
-                        null
+                    null
             }
 
         </div>

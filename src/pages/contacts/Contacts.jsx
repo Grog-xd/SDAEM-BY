@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import Modal from "../../components/modal/Modal";
-import ContactsTextBlock from "./ContactsTextBlock/ContactsTextBlock";
-import ContactsForm from "./ContactsForm/ContactsForm";
-import ContactsSocialBlock from "./ContactsSocialBlock/ContactsSocialBlock";
+
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import Modal from '../../components/modal/Modal';
+
+import ContactsTextBlock from './ContactsTextBlock/ContactsTextBlock';
+import ContactsForm from './ContactsForm/ContactsForm';
+import ContactsSocialBlock from './ContactsSocialBlock/ContactsSocialBlock';
 import classes from './Contacts.module.scss'
 
 const Contacts = () => {

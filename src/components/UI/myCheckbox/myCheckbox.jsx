@@ -1,10 +1,11 @@
 import React from 'react';
+
 import classes from './myCheckbox.module.scss'
 
 const MyCheckbox = ({label, handler, value}) => {
     return (
         <div className={classes.checkbox}>
-            <input onChange={(e)=>handler(label)} name={label} id={label}  type="checkbox" checked={value}/>
+            <input onChange={(e)=>handler(label)} name={label} id={label}  type='checkbox' checked={value}/>
             <label htmlFor={label}>{label}</label>
         </div>
     );

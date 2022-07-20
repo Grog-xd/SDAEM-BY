@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import PaginationItem from "../PaginationItem/PaginationItem";
+
+import PaginationItem from '../PaginationItem/PaginationItem';
+
 import classes from './PaginationList.module.scss'
 
 const PaginationList = ({posts, currentPage, handler}) => {

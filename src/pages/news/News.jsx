@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import axios from "axios";
-import {fetchNews, getNews, setNewsPage} from "../../redux/newsPage";
-import {getPostUrl} from "../../server";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import NewsList from "../../components/newsComponents/NewsList/NewsList";
-import PaginationList from "../../components/pagination/PaginationList/PaginationList";
-import SvgHomeWithDot from "../../components/svg/SvgHomeWithDot";
-import SvgMagnifier from "../../components/svg/SvgMagnifier";
-import Loader from "../../components/loader/Loader";
+import {useDispatch, useSelector} from 'react-redux';
+import axios from 'axios';
+
+import {fetchNews, getNews, setNewsPage} from '../../redux/newsPage';
+import {getPostUrl} from '../../server';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import NewsList from '../../components/newsComponents/NewsList/NewsList';
+import PaginationList from '../../components/pagination/PaginationList/PaginationList';
+import SvgHomeWithDot from '../../components/svg/SvgHomeWithDot';
+import SvgMagnifier from '../../components/svg/SvgMagnifier';
+import Loader from '../../components/loader/Loader';
+
 import classes from './News.module.scss'
 
 
@@ -46,8 +48,8 @@ const News = () => {
                     </div>
                     <h1>Новости</h1>
                     <div className={classes.inputBlock}>
-                        <input value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type="text" placeholder='Поиск по статьям'/>
-                        <button type={"button"} onClick={searchQuery}>
+                        <input value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type='text' placeholder='Поиск по статьям'/>
+                        <button type={'button'} onClick={searchQuery}>
                             <SvgMagnifier width={'18'} height={'18'} color={'white'}/>
                         </button>
                     </div>
@@ -55,9 +57,9 @@ const News = () => {
                 </div>
                 {posts.length
                     ?
-                        <NewsList />
+                    <NewsList />
                     :
-                        <Loader />
+                    <Loader />
                 }
 
                 <PaginationList posts={sortedPosts} currentPage={currentPage} handler={(value)=>dispatch(setNewsPage(value))}></PaginationList>

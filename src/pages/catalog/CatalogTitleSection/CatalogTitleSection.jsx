@@ -1,9 +1,11 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {useParams} from "react-router-dom";
-import {mainFilter, setDistrict, setRooms} from "../../../redux/mainPage";
-import SvgHomeWithDot from "../../../components/svg/SvgHomeWithDot";
-import classes from "./CatalogTitleSection.module.scss";
+import {useDispatch, useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
+
+import {mainFilter, setDistrict, setRooms} from '../../../redux/mainPage';
+import SvgHomeWithDot from '../../../components/svg/SvgHomeWithDot';
+
+import classes from './CatalogTitleSection.module.scss';
 
 const CatalogTitleSection = () => {
     const params = useParams()

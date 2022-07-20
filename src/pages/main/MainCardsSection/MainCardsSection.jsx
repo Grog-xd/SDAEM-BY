@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {setCity} from "../../../redux/mainPage";
-import SvgArrowRight from "../../../components/svg/SvgArrowRight";
-import SvgArrowDown from "../../../components/svg/SvgArrowDown";
-import yellowPoints from "../../../assets/img/yellow-points.png";
-import classes from "./MainCardsSection.module.scss";
+import {Link} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+
+import {setCity} from '../../../redux/mainPage';
+import SvgArrowRight from '../../../components/svg/SvgArrowRight';
+import SvgArrowDown from '../../../components/svg/SvgArrowDown';
+import yellowPoints from '../../../assets/img/yellow-points.png';
+
+import classes from './MainCardsSection.module.scss';
 
 const MainCardsSection = () => {
     const [moreLinks, setMoreLinks] = useState(false)
@@ -15,7 +17,7 @@ const MainCardsSection = () => {
 
     return (
         <section className={classes.filterCardsSection}>
-            <img src={yellowPoints} alt="yellow points"/>
+            <img src={yellowPoints} alt='yellow points'/>
             <div className={classes.cardsBlock}>
                 <div className={classes.card}>
                     <strong>СНЯТЬ КВАРТИРУ</strong>

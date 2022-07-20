@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {Link, useParams} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {setCity} from "../../../../redux/mainPage";
+import {Link, useParams} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+
+import {setCity} from '../../../../redux/mainPage';
+
 import classes from './headerSelect.module.scss'
 
 const HeaderSelect = ({type, value, children}) => {
@@ -12,7 +14,7 @@ const HeaderSelect = ({type, value, children}) => {
 
     const clsChangeBlock = [
         classes.changeBlock,
-        classes.changeBlockActive
+        classes.changeBlockActive,
     ]
 
     function headerSelectHandler(value){
@@ -33,8 +35,8 @@ const HeaderSelect = ({type, value, children}) => {
     return (
         <div className={classes.select}>
             <button onClick={()=> setSelectActive(!selectActive)}  className={selectActive ? clsChangeBlock.join(' ') : classes.changeBlock}>
-                    {value}
-                    {children}
+                {value}
+                {children}
             </button>
             {
                 selectActive

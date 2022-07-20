@@ -1,16 +1,19 @@
 import React, {useEffect} from 'react';
-import axios from "axios";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchProducts} from "../../redux/mainPage";
-import {getProductsUrl} from "../../server";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import MainFilterSection from "./MainFilterSection/MainFilterSection";
-import MainCardsSection from "./MainCardsSection/MainCardsSection";
-import MainSliderSection from "./MainSliderSection/MainSliderSection";
-import MainAdvantagesSection from "./MainAdvantagesSection/MainAdvantagesSection";
-import MainNewsSection from "./MainNewsSection/MainNewsSection";
-import Loader from "../../components/loader/Loader";
+import axios from 'axios';
+import {useDispatch, useSelector} from 'react-redux';
+
+import {fetchProducts} from '../../redux/mainPage';
+import {getProductsUrl} from '../../server';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+
+import Loader from '../../components/loader/Loader';
+
+import MainFilterSection from './MainFilterSection/MainFilterSection';
+import MainCardsSection from './MainCardsSection/MainCardsSection';
+import MainSliderSection from './MainSliderSection/MainSliderSection';
+import MainAdvantagesSection from './MainAdvantagesSection/MainAdvantagesSection';
+import MainNewsSection from './MainNewsSection/MainNewsSection';
 import classes from './Main.module.scss'
 
 

@@ -1,9 +1,11 @@
 import React, {memo} from 'react';
-import {Link, useLocation} from "react-router-dom";
-import HeaderSelect from "./headerSelect/headerSelect";
-import SvgLocation from "../../svg/SvgLocation";
-import logo from "../../../assets/img/logo.png";
-import classes from "./HeaderFilter.module.scss";
+import {Link, useLocation} from 'react-router-dom';
+
+import SvgLocation from '../../svg/SvgLocation';
+import logo from '../../../assets/img/logo.png';
+
+import HeaderSelect from './headerSelect/headerSelect';
+import classes from './HeaderFilter.module.scss';
 
 const HeaderFilter = memo(() => {
     const {pathname} = useLocation()
@@ -15,10 +17,10 @@ const HeaderFilter = memo(() => {
                 {
                     pathname === '/'
                         ?
-                        <img src={logo} alt="logo"/>
+                        <img src={logo} alt='logo'/>
                         :
                         <Link to={'/'}>
-                            <img src={logo} alt="logo"/>
+                            <img src={logo} alt='logo'/>
                         </Link>
                 }
 
@@ -33,7 +35,7 @@ const HeaderFilter = memo(() => {
                         </li>
                     )}
                 </ul>
-                <Link className={classes.newCardLink} to="/404">+  Разместить объявление</Link>
+                <Link className={classes.newCardLink} to='/404'>+  Разместить объявление</Link>
             </div>
         </div>
     );

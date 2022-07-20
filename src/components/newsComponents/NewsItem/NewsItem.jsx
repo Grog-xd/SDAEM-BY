@@ -1,5 +1,6 @@
 import React from 'react';
-import {useNavigate} from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
+
 import classes from './NewsItem.module.scss'
 
 const NewsItem = ({post}) => {
@@ -7,7 +8,7 @@ const NewsItem = ({post}) => {
 
     return (
         <div className={classes.newsItem}>
-            <img src={post.img} alt="Изображение комнаты"/>
+            <img src={post.img} alt='Изображение комнаты'/>
             <div className={classes.textSection}>
                 <p><b>{post.title}</b></p>
                 <p>{post.body}</p>

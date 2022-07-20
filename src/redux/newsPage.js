@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
 
 const newsPage = createSlice({
     name: 'news',
@@ -38,7 +38,7 @@ const newsPage = createSlice({
             window.scrollTo(0, 0)
         },
 
-    }
+    },
 })
 
 export default newsPage.reducer

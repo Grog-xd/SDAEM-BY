@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {useParams} from "react-router-dom";
-import {mainFilter, resetFilter, setMaxCost, setMinCost, setRooms} from "../../../redux/mainPage";
-import MoreOptions from "../../../components/moreOptions/MoreOptions";
-import MySelect from "../../../components/UI/mySelect/mySelect";
-import SvgSettings from "../../../components/svg/SvgSettings";
-import SvgArrowRight from "../../../components/svg/SvgArrowRight";
-import classes from "./CatalogFilterSection.module.scss";
+import {useDispatch, useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
+
+import {mainFilter, resetFilter, setMaxCost, setMinCost, setRooms} from '../../../redux/mainPage';
+import MoreOptions from '../../../components/moreOptions/MoreOptions';
+import MySelect from '../../../components/UI/mySelect/mySelect';
+import SvgSettings from '../../../components/svg/SvgSettings';
+import SvgArrowRight from '../../../components/svg/SvgArrowRight';
+
+import classes from './CatalogFilterSection.module.scss';
 
 const CatalogFilterSection = () => {
     const dispatch = useDispatch()
@@ -38,20 +40,20 @@ const CatalogFilterSection = () => {
                     <div className={classes.inputBlock}>
                         <p className={classes.text}>Цена за сутки (BYN)</p>
                         <div className={classes.costBlock}>
-                            <input type="number" min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                            <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
                             -
-                            <input type="number" min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                            <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
                         </div>
                     </div>
                     <div className={classes.inputBlock}>
-                        <button type={"button"} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
+                        <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                             Больше опций
                             <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                         </button>
                     </div>
                     <div className={classes.buttonBlock}>
                         <button className={classes.resetBtn} onClick={reset}>Очистить</button>
-                        <button type={"button"} onClick={()=>dispatch(mainFilter(params.type))} className={classes.filterButton}>
+                        <button type={'button'} onClick={()=>dispatch(mainFilter(params.type))} className={classes.filterButton}>
                             Показать объекты
                             <SvgArrowRight width={'9'} height={'16'} color={'#fff'}/>
                         </button>

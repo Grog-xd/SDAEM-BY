@@ -1,15 +1,20 @@
 import React, {useEffect, useState} from 'react';
-import axios from "axios";
-import {useNavigate, useParams} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {getPostUrl} from "../../server";
-import {fetchNews} from "../../redux/newsPage";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import NewIdPageInfo from "./NewIdPageInfo/NewIdPageInfo";
-import NewIdPageSeeAlso from "./NewIdPageSeeAlso/NewIdPageSeeAlso";
-import Loader from "../../components/loader/Loader";
+import axios from 'axios';
+import {useNavigate, useParams} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+
+import {getPostUrl} from '../../server';
+import {fetchNews} from '../../redux/newsPage';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+
+import Loader from '../../components/loader/Loader';
+
 import yellowPoints from '../../assets/img/yellow-points.png'
+
+import NewIdPageInfo from './NewIdPageInfo/NewIdPageInfo';
+import NewIdPageSeeAlso from './NewIdPageSeeAlso/NewIdPageSeeAlso';
+
 import classes from './NewIdPage.module.scss'
 
 
@@ -49,7 +54,7 @@ const NewIdPage = () => {
                     ?
                     <main>
                         <div className={classes.purpleBg}></div>
-                        <img className={classes.yellowPoints} src={yellowPoints} alt="points"/>
+                        <img className={classes.yellowPoints} src={yellowPoints} alt='points'/>
                         <NewIdPageInfo post={post}/>
                         <NewIdPageSeeAlso params={params} posts={posts}/>
                     </main>

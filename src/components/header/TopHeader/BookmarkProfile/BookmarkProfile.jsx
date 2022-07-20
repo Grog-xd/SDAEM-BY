@@ -1,11 +1,13 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {useState} from "react";
-import {setBookMarkActive} from "../../../../redux/loginPage";
-import ProfileCard from "../../../profileCard/ProfileCard";
-import SvgHeart from "../../../svg/SvgHeart";
-import SvgArrowDown from "../../../svg/SvgArrowDown";
+import {Link} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import {useState} from 'react';
+
+import {setBookMarkActive} from '../../../../redux/loginPage';
+import ProfileCard from '../../../profileCard/ProfileCard';
+import SvgHeart from '../../../svg/SvgHeart';
+import SvgArrowDown from '../../../svg/SvgArrowDown';
+
 import classes from './BookmarkProfile.module.scss'
 
 const BookmarkProfile = () => {
@@ -39,13 +41,13 @@ const BookmarkProfile = () => {
             {
                 !isAuth
                     ?
-                    <Link className={classes.login} to={"/login"}>Вход и регистрация</Link>
+                    <Link className={classes.login} to={'/login'}>Вход и регистрация</Link>
                     :
                     <div className={classes.profile} onClick={() => setProfileActive(!profileActive)}>
                         {
                             profile.avatar
                                 ?
-                                <img src={profile.avatar} alt="avatar"/>
+                                <img src={profile.avatar} alt='avatar'/>
                                 :   null
                         }
                         <p>{profile.name}</p>

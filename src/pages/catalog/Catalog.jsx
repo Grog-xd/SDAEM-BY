@@ -1,19 +1,22 @@
 import React, {useEffect} from 'react';
-import axios from "axios";
-import {useDispatch, useSelector} from "react-redux";
-import {useNavigate, useParams} from "react-router-dom";
-import {getProductsUrl} from "../../server";
-import {fetchProducts, mainFilter, setCurrentPage} from "../../redux/mainPage";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import ProductsList from "../../components/productsComponents/ProductsList/ProductsList";
-import PaginationList from "../../components/pagination/PaginationList/PaginationList";
-import SocialButtonsBlock from "../../components/socialButtonsBlock/SocialButtonsBlock";
-import CatalogTitleSection from "./CatalogTitleSection/CatalogTitleSection";
-import CatalogFilterSection from "./CatalogFilterSection/CatalogFilterSection";
-import CatalogVisualFilterSection from "./CatalogVisualFilterSection/CatalogVisualFilterSection";
-import CatalogMapSection from "./CatalogMapSection/CatalogMapSection";
-import Loader from "../../components/loader/Loader";
+import axios from 'axios';
+import {useDispatch, useSelector} from 'react-redux';
+import {useNavigate, useParams} from 'react-router-dom';
+
+import {getProductsUrl} from '../../server';
+import {fetchProducts, mainFilter, setCurrentPage} from '../../redux/mainPage';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import ProductsList from '../../components/productsComponents/ProductsList/ProductsList';
+import PaginationList from '../../components/pagination/PaginationList/PaginationList';
+import SocialButtonsBlock from '../../components/socialButtonsBlock/SocialButtonsBlock';
+
+import Loader from '../../components/loader/Loader';
+
+import CatalogTitleSection from './CatalogTitleSection/CatalogTitleSection';
+import CatalogFilterSection from './CatalogFilterSection/CatalogFilterSection';
+import CatalogVisualFilterSection from './CatalogVisualFilterSection/CatalogVisualFilterSection';
+import CatalogMapSection from './CatalogMapSection/CatalogMapSection';
 import classes from './Catalog.module.scss'
 
 const Catalog = () => {

@@ -1,6 +1,8 @@
 import React from 'react';
-import NewsItem from "../../../components/newsComponents/NewsItem/NewsItem";
-import classes from "./NewIdPageSeeAlso.module.scss";
+
+import NewsItem from '../../../components/newsComponents/NewsItem/NewsItem';
+
+import classes from './NewIdPageSeeAlso.module.scss';
 
 const NewIdPageSeeAlso = ({params, posts}) => {
     return (

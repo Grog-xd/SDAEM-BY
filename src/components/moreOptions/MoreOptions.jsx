@@ -1,9 +1,11 @@
 import React from 'react';
-import {useDispatch, useSelector} from "react-redux";
-import {useParams} from "react-router-dom";
-import {checkboxHandler, setBedSum, setDistrict, setMetro} from "../../redux/mainPage";
-import MySelect from "../UI/mySelect/mySelect";
-import CheckboxList from "./checkboxList/CheckboxList";
+import {useDispatch, useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
+
+import {checkboxHandler, setBedSum, setDistrict, setMetro} from '../../redux/mainPage';
+import MySelect from '../UI/mySelect/mySelect';
+
+import CheckboxList from './checkboxList/CheckboxList';
 import classes from './MoreOptions.module.scss'
 
 

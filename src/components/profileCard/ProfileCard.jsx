@@ -1,11 +1,13 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import {useDispatch} from "react-redux";
-import {exit} from "../../redux/loginPage";
-import SvgViberBtn from "../svg/SvgViberBtn";
-import SvgWhatsappBtn from "../svg/SvgWhatsappBtn";
-import SvgEmailBtn from "../svg/SvgEmailBtn";
-import classes from "./ProfileCard.module.scss";
+import {Link} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+
+import {exit} from '../../redux/loginPage';
+import SvgViberBtn from '../svg/SvgViberBtn';
+import SvgWhatsappBtn from '../svg/SvgWhatsappBtn';
+import SvgEmailBtn from '../svg/SvgEmailBtn';
+
+import classes from './ProfileCard.module.scss';
 
 
 const ProfileCard = ({profile, setActive, style}) => {
@@ -17,7 +19,7 @@ const ProfileCard = ({profile, setActive, style}) => {
     }
     const cls =[
         classes.profileCardActive,
-        style
+        style,
     ]
 
     return (
@@ -35,18 +37,18 @@ const ProfileCard = ({profile, setActive, style}) => {
                 {
                     profile.viber
                         &&
-                            <a rel={"noreferrer"} target="_blank" href={`${profile.viber}`}>
+                            <a rel={'noreferrer'} target='_blank' href={`${profile.viber}`}>
                                 <SvgViberBtn />
                             </a>
                 }
                 {
                     profile.whatsUpp
                         &&
-                            <a rel={"noreferrer"} target="_blank" href={`${profile.whatsUpp}`}>
+                            <a rel={'noreferrer'} target='_blank' href={`${profile.whatsUpp}`}>
                                 <SvgWhatsappBtn />
                             </a>
                 }
-                <a  rel={"noreferrer"} target="_blank" href={`mailto:${profile.email}`}>
+                <a  rel={'noreferrer'} target='_blank' href={`mailto:${profile.email}`}>
                     <SvgEmailBtn />
                 </a>
             </div>

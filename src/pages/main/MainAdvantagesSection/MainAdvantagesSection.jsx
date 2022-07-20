@@ -1,19 +1,21 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import SvgLocation from "../../../components/svg/SvgLocation";
-import SvgAdvantagesCard1 from "../../../components/svg/SvgAdvantagesCard1";
-import SvgAdvantagesCard2 from "../../../components/svg/SvgAdvantagesCard2";
-import SvgArrowRight from "../../../components/svg/SvgArrowRight";
-import whitePoints from "../../../assets/img/white-points.png";
-import yellowPoints from "../../../assets/img/yellow-points.png";
-import bgPrimaryCard from "../../../assets/img/primaryLastCard.svg";
-import classes from "./MainAdvantagesSection.module.scss";
+import {Link} from 'react-router-dom';
+
+import SvgLocation from '../../../components/svg/SvgLocation';
+import SvgAdvantagesCard1 from '../../../components/svg/SvgAdvantagesCard1';
+import SvgAdvantagesCard2 from '../../../components/svg/SvgAdvantagesCard2';
+import SvgArrowRight from '../../../components/svg/SvgArrowRight';
+import whitePoints from '../../../assets/img/white-points.png';
+import yellowPoints from '../../../assets/img/yellow-points.png';
+import bgPrimaryCard from '../../../assets/img/primaryLastCard.svg';
+
+import classes from './MainAdvantagesSection.module.scss';
 
 const MainAdvantagesSection = () => {
     return (
         <section className={classes.advantagesSection}>
-            <img className={classes.whitePoints} src={whitePoints} alt="Белые точки"/>
-            <img className={classes.yellowPoints} src={yellowPoints} alt="Желтые точки"/>
+            <img className={classes.whitePoints} src={whitePoints} alt='Белые точки'/>
+            <img className={classes.yellowPoints} src={yellowPoints} alt='Желтые точки'/>
             <div className={classes.textBlock}>
                 <h2>Поиск квартир на карте</h2>
                 <p>Ищите квартиры на сутки в центре города, возле парка или в живописном районе</p>
@@ -46,7 +48,7 @@ const MainAdvantagesSection = () => {
                     </Link>
                 </div>
                 <div className={classes.primaryCard}>
-                    <img src={bgPrimaryCard} alt="Задний фон"/>
+                    <img src={bgPrimaryCard} alt='Задний фон'/>
                     <p className={classes.title}>Приоритет Gold </p>
                     <p className={classes.body}>Приоритетное размещение <b>Gold</b> позволяет <b>закрепить ваше объявление</b> в верхней части каталога!</p>
                     <p className={classes.body}>Gold объявления <b>перемещаются

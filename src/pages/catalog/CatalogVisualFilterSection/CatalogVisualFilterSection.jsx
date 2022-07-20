@@ -1,13 +1,15 @@
 import React from 'react';
-import {Link, useParams} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {mainFilter, setLimit, setSortedValue} from "../../../redux/mainPage";
-import MySelect from "../../../components/UI/mySelect/mySelect";
-import SvgSort from "../../../components/svg/SvgSort";
-import SvgBurger from "../../../components/svg/SvgBurger";
-import SvgTiles from "../../../components/svg/SvgTiles";
-import SvgLocation from "../../../components/svg/SvgLocation";
-import classes from "./CatalogVisualFilterSection.module.scss";
+import {Link, useParams} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+
+import {mainFilter, setLimit, setSortedValue} from '../../../redux/mainPage';
+import MySelect from '../../../components/UI/mySelect/mySelect';
+import SvgSort from '../../../components/svg/SvgSort';
+import SvgBurger from '../../../components/svg/SvgBurger';
+import SvgTiles from '../../../components/svg/SvgTiles';
+import SvgLocation from '../../../components/svg/SvgLocation';
+
+import classes from './CatalogVisualFilterSection.module.scss';
 
 const CatalogVisualFilterSection = () => {
     const dispatch = useDispatch()

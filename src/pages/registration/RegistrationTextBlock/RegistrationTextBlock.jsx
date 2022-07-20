@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import classes from "./RegistrationTextBlock.module.scss";
+import {Link} from 'react-router-dom';
+
+import classes from './RegistrationTextBlock.module.scss';
 
 const RegistrationTextBlock = () => {
     return (

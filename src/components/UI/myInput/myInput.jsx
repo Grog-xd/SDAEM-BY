@@ -1,5 +1,6 @@
 import React from 'react';
-import SvgError from "../../svg/SvgError";
+
+import SvgError from '../../svg/SvgError';
 
 
 const MyInput = ({style, type, label, placeholder, name, id, children, styleIconError,  maxLength, register, validation, errors}) => {

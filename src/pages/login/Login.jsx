@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import LoginForm from "./LoginForm/LoginForm";
+import {Link} from 'react-router-dom';
+
+import LoginForm from './LoginForm/LoginForm';
 import classes from './Login.module.scss'
 
 

@@ -1,6 +1,8 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
-import SvgLocation from "../../../svg/SvgLocation";
+import {NavLink} from 'react-router-dom';
+
+import SvgLocation from '../../../svg/SvgLocation';
+
 import classes from './PageNavigation.module.scss'
 
 const PageNavigation = () => {

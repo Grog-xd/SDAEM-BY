@@ -1,7 +1,9 @@
 import React, {memo} from 'react';
-import {Link, useLocation} from "react-router-dom";
-import logo from "../../../assets/img/logo.png";
-import classes from "./FooterLogoSection.module.scss";
+import {Link, useLocation} from 'react-router-dom';
+
+import logo from '../../../assets/img/logo.png';
+
+import classes from './FooterLogoSection.module.scss';
 
 const FooterLogoSection = memo(() => {
     const {pathname} = useLocation()
@@ -12,12 +14,12 @@ const FooterLogoSection = memo(() => {
                 pathname === '/'
                     ?
                     <div>
-                        <img src={logo} alt="logo"/>
+                        <img src={logo} alt='logo'/>
                         <p>СДАЁМ БАЙ</p>
                     </div>
                     :
                     <Link to={'/'}>
-                        <img src={logo} alt="logo"/>
+                        <img src={logo} alt='logo'/>
                         <p>СДАЁМ БАЙ</p>
                     </Link>
             }

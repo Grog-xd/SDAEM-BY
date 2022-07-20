@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
 
 const main = createSlice({
     name: 'main',
@@ -24,10 +24,10 @@ const main = createSlice({
         sortedValue:'',
 
 
-        bedSumOptions:[{id:1, value:'1'}, {id:2, value:'2'}, {id:3, value:'3'}, {id:4, value:'4'}, {id:5, value:'5'},],
+        bedSumOptions:[{id:1, value:'1'}, {id:2, value:'2'}, {id:3, value:'3'}, {id:4, value:'4'}, {id:5, value:'5'}],
         bedSumCurrentValue:'',
 
-        checkboxsMoreOption:[{id:1, value:'Газовая плита', bol:false},  {id:2, value:'Духовка', bol:false}, {id:3, value:'Кофеварка', bol:false}, {id:4, value:'Микроволновая печь ', bol:false}, {id:5, value:'Посуда', bol:false}, {id:6, value:'Посудомоечная машина', bol:false},],
+        checkboxsMoreOption:[{id:1, value:'Газовая плита', bol:false},  {id:2, value:'Духовка', bol:false}, {id:3, value:'Кофеварка', bol:false}, {id:4, value:'Микроволновая печь ', bol:false}, {id:5, value:'Посуда', bol:false}, {id:6, value:'Посудомоечная машина', bol:false}],
 
         minCost:'',
         maxCost:'',
@@ -40,7 +40,6 @@ const main = createSlice({
     reducers: {
         fetchProducts(state, action){
             state.products = action.payload
-            console.log(state.products)
         },
         setBedSum(state, action){
             state.bedSumCurrentValue = action.payload
@@ -165,18 +164,18 @@ const main = createSlice({
 
             // Сортировка массива
             switch (state.sortedValue) {
-                case 'Сначала дешевые':
-                    sortedRes.sort((a, b)=>{
-                        return a.cost - b.cost
-                    })
-                    break
-                case 'Сначала дорогие':
-                    sortedRes.sort((a, b)=>{
-                        return b.cost - a.cost
-                    })
-                    break
-                default:
-                    break
+            case 'Сначала дешевые':
+                sortedRes.sort((a, b)=>{
+                    return a.cost - b.cost
+                })
+                break
+            case 'Сначала дорогие':
+                sortedRes.sort((a, b)=>{
+                    return b.cost - a.cost
+                })
+                break
+            default:
+                break
             }
 
             // Фильтрация по страницам
@@ -195,9 +194,9 @@ const main = createSlice({
             }
             state.sortedProducts = res
             state.currentPage = 1
-        }
+        },
 
-    }
+    },
 })
 
 export default main.reducer

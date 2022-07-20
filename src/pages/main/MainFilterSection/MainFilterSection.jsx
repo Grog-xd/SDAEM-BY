@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
-import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
-import {Link, useNavigate} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {mainFilter, setCity, setMaxCost, setMinCost, setRooms} from "../../../redux/mainPage";
-import MySelect from "../../../components/UI/mySelect/mySelect";
-import MoreOptions from "../../../components/moreOptions/MoreOptions";
-import SvgSettings from "../../../components/svg/SvgSettings";
-import SvgLocation from "../../../components/svg/SvgLocation";
-import SvgArrowRight from "../../../components/svg/SvgArrowRight";
-import classes from "./MainFilterSection.module.scss";
+import {Tab, TabList, TabPanel, Tabs} from 'react-tabs';
+import {Link, useNavigate} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+
+import {mainFilter, setCity, setMaxCost, setMinCost, setRooms} from '../../../redux/mainPage';
+import MySelect from '../../../components/UI/mySelect/mySelect';
+import MoreOptions from '../../../components/moreOptions/MoreOptions';
+import SvgSettings from '../../../components/svg/SvgSettings';
+import SvgLocation from '../../../components/svg/SvgLocation';
+import SvgArrowRight from '../../../components/svg/SvgArrowRight';
+
+import classes from './MainFilterSection.module.scss';
 
 const MainFilterSection = () => {
     const dispatch = useDispatch()
@@ -45,13 +47,13 @@ const MainFilterSection = () => {
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Цена за сутки (BYN)</p>
                             <div className={classes.costBlock}>
-                                <input type="number" min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
                                 -
-                                <input type="number" min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
-                            <button type={"button"} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
+                            <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                                 Больше опций
                                 <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                             </button>
@@ -60,7 +62,7 @@ const MainFilterSection = () => {
                             На карте
                             <SvgLocation width={'15'} height={'15'} color={'#664EF9'}/>
                         </Link>
-                        <button type={"button"} onClick={()=>catalogFilterHandler('flats')} className={classes.filterButton}>
+                        <button type={'button'} onClick={()=>catalogFilterHandler('flats')} className={classes.filterButton}>
                             Показать
                             <SvgArrowRight width={'9'} height={'16'} color={'#242424'}/>
                         </button>
@@ -77,13 +79,13 @@ const MainFilterSection = () => {
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Цена за сутки (BYN)</p>
                             <div className={classes.costBlock}>
-                                <input type="number" min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
                                 -
-                                <input type="number" min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
-                            <button type={"button"} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
+                            <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                                 Больше опций
                                 <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                             </button>
@@ -92,7 +94,7 @@ const MainFilterSection = () => {
                             На карте
                             <SvgLocation width={'15'} height={'15'} color={'#664EF9'}/>
                         </Link>
-                        <button type={"button"} onClick={()=>catalogFilterHandler('cottages')} className={classes.filterButton}>
+                        <button type={'button'} onClick={()=>catalogFilterHandler('cottages')} className={classes.filterButton}>
                             Показать
                             <SvgArrowRight width={'9'} height={'16'} color={'#242424'}/>
                         </button>
@@ -109,13 +111,13 @@ const MainFilterSection = () => {
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Цена за сутки (BYN)</p>
                             <div className={classes.costBlock}>
-                                <input type="number" min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
                                 -
-                                <input type="number" min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
-                            <button type={"button"} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
+                            <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                                 Больше опций
                                 <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                             </button>
@@ -124,7 +126,7 @@ const MainFilterSection = () => {
                             На карте
                             <SvgLocation width={'15'} height={'15'} color={'#664EF9'}/>
                         </Link>
-                        <button type={"button"} onClick={()=>catalogFilterHandler('baths')} className={classes.filterButton}>
+                        <button type={'button'} onClick={()=>catalogFilterHandler('baths')} className={classes.filterButton}>
                             Показать
                             <SvgArrowRight width={'9'} height={'16'} color={'#242424'}/>
                         </button>
@@ -141,9 +143,9 @@ const MainFilterSection = () => {
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Цена за сутки (BYN)</p>
                             <div className={classes.costBlock}>
-                                <input type="number" min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
                                 -
-                                <input type="number" min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
                             </div>
                         </div>
                         {/*<div className={classes.inputBLock}>*/}
@@ -160,7 +162,7 @@ const MainFilterSection = () => {
                             На карте
                             <SvgLocation width={'15'} height={'15'} color={'#664EF9'}/>
                         </Link>
-                        <button type={"button"} onClick={()=>catalogFilterHandler('cars')} className={classes.filterButton}>
+                        <button type={'button'} onClick={()=>catalogFilterHandler('cars')} className={classes.filterButton}>
                             Показать
                             <SvgArrowRight width={'9'} height={'16'} color={'#242424'}/>
                         </button>

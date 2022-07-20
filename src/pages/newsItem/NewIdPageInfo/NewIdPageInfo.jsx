@@ -1,9 +1,11 @@
 import React from 'react';
-import {Link} from "react-router-dom";
-import SocialButtonsBlock from "../../../components/socialButtonsBlock/SocialButtonsBlock";
-import SvgHome from "../../../components/svg/SvgHome";
-import SvgPoint from "../../../components/svg/SvgPoint";
-import classes from "./NewIdPageInfo.module.scss";
+import {Link} from 'react-router-dom';
+
+import SocialButtonsBlock from '../../../components/socialButtonsBlock/SocialButtonsBlock';
+import SvgHome from '../../../components/svg/SvgHome';
+import SvgPoint from '../../../components/svg/SvgPoint';
+
+import classes from './NewIdPageInfo.module.scss';
 
 const NewIdPageInfo = ({post}) => {
     return (
@@ -20,7 +22,7 @@ const NewIdPageInfo = ({post}) => {
                 <SocialButtonsBlock />
             </div>
             <div className={classes.imgBlock}>
-                <img src={post.bigImg} alt="Изображение комнаты"/>
+                <img src={post.bigImg} alt='Изображение комнаты'/>
             </div>
             <p className={classes.description}>{post.description}</p>
         </div>

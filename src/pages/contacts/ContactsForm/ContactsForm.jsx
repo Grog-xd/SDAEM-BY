@@ -1,11 +1,13 @@
 import React from 'react';
-import axios from "axios";
-import {useForm} from "react-hook-form";
-import {postContactsUrl} from "../../../server";
-import MyInput from "../../../components/UI/myInput/myInput";
-import SvgUser from "../../../components/svg/SvgUser";
-import SvgEmail from "../../../components/svg/SvgEmail";
-import classes from "./ContactsForm.module.scss";
+import axios from 'axios';
+import {useForm} from 'react-hook-form';
+
+import {postContactsUrl} from '../../../server';
+import MyInput from '../../../components/UI/myInput/myInput';
+import SvgUser from '../../../components/svg/SvgUser';
+import SvgEmail from '../../../components/svg/SvgEmail';
+
+import classes from './ContactsForm.module.scss';
 
 const ContactsForm = ({modalActive, handler}) => {
 
@@ -31,7 +33,7 @@ const ContactsForm = ({modalActive, handler}) => {
                 </MyInput>
             </div>
             <div className={errors.message ? classes.inputBlockError : classes.inputBlock}>
-                <label htmlFor="message">Ваше сообщение</label>
+                <label htmlFor='message'>Ваше сообщение</label>
                 <textarea {...register('message', {required:true, minLength:5})} maxLength={800}  placeholder={'Сообщение'}  name={'message'} id={'message'}></textarea>
             </div>
             <button>Отправить</button>

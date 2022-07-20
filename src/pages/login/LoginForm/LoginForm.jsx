@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
-import {Link, useNavigate} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {useForm} from "react-hook-form";
-import axios from "axios";
-import {enter} from "../../../redux/loginPage";
-import MyInput from "../../../components/UI/myInput/myInput";
-import SvgUser from "../../../components/svg/SvgUser";
-import SvgCastle from "../../../components/svg/SvgCastle";
-import SvgError from "../../../components/svg/SvgError";
-import {postLoginUrl} from "../../../server";
-import classes from "./LoginForm.module.scss";
+import {Link, useNavigate} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import {useForm} from 'react-hook-form';
+import axios from 'axios';
+
+import {enter} from '../../../redux/loginPage';
+import MyInput from '../../../components/UI/myInput/myInput';
+import SvgUser from '../../../components/svg/SvgUser';
+import SvgCastle from '../../../components/svg/SvgCastle';
+import SvgError from '../../../components/svg/SvgError';
+import {postLoginUrl} from '../../../server';
+
+import classes from './LoginForm.module.scss';
 
 const LoginForm = () => {
     const { register, formState: {errors}, handleSubmit} = useForm()
@@ -28,7 +30,7 @@ const LoginForm = () => {
             if(profilesArr[i].name === login && profilesArr[i].password === password){
                 setLoginError(false)
                 dispatch(enter(profilesArr[i]))
-                navigate(`/news`)
+                navigate('/news')
                 if(saveData){
                     localStorage.setItem('profile', `${login} ${password}`)
                 }
@@ -41,7 +43,7 @@ const LoginForm = () => {
     function postLogin(login, password){
         axios.post(`/api/${postLoginUrl}`,{
             login:login,
-            password:password
+            password:password,
         })
     }
 
@@ -56,7 +58,7 @@ const LoginForm = () => {
             <div className={classes.rememberMeAndForgetPasswordSection}>
                 <div className={classes.rememberMeBlock}>
                     <label onChange={() => setSaveData(!saveData)} className={saveData ? classes.switchActive : classes.switch}>
-                        <input type="checkbox"/>
+                        <input type='checkbox'/>
                         <div></div>
                     </label>
                     <p>Запомнить меня</p>

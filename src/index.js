@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter} from "react-router-dom";
-import {Provider} from "react-redux";
-import {store} from "./redux";
-import reportWebVitals from './reportWebVitals';
-import { makeServer } from "./server"
-import './index.css';
-import App from './App';
+import {BrowserRouter} from 'react-router-dom';
+import {Provider} from 'react-redux';
 
-if (process.env.NODE_ENV === "development") {
-    makeServer({ environment: "development" })
+import {store} from './redux';
+import reportWebVitals from './reportWebVitals';
+import { makeServer } from './server'
+import App from './App';
+import './index.css';
+
+if (process.env.NODE_ENV === 'development') {
+    makeServer({ environment: 'development' })
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

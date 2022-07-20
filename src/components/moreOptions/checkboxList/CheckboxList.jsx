@@ -1,5 +1,7 @@
 import React from 'react';
-import MyCheckbox from "../../UI/myCheckbox/myCheckbox";
+
+import MyCheckbox from '../../UI/myCheckbox/myCheckbox';
+
 import classes from './CheckboxList.module.scss'
 
 const CheckboxList = ({checkboxList, handler}) => {

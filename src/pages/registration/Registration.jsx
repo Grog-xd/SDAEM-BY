@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import Modal from "../../components/modal/Modal";
-import RegistrationForm from "./RegistrationForm/RegistrationForm";
-import RegistrationTextBlock from "./RegistrationTextBlock/RegistrationTextBlock";
+import {Link} from 'react-router-dom';
+
+import Modal from '../../components/modal/Modal';
+
+import RegistrationForm from './RegistrationForm/RegistrationForm';
+import RegistrationTextBlock from './RegistrationTextBlock/RegistrationTextBlock';
 import classes from './Registration.module.scss'
 
 const Registration = () => {

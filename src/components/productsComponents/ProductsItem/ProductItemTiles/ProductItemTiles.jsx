@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import ProfileCard from "../../../profileCard/ProfileCard";
-import SvgUser from "../../../svg/SvgUser";
-import SvgLocation from "../../../svg/SvgLocation";
-import SvgMetro from "../../../svg/SvgMetro";
-import SvgPoint from "../../../svg/SvgPoint";
-import SvgHeartActive from "../../../svg/SvgHeartActive";
-import SvgHeart from "../../../svg/SvgHeart";
-import SvgPhone from "../../../svg/SvgPhone";
-import ProductSwiper from "../ProductSwiper/ProductSwiper";
+import {Link} from 'react-router-dom';
+
+import ProfileCard from '../../../profileCard/ProfileCard';
+import SvgUser from '../../../svg/SvgUser';
+import SvgLocation from '../../../svg/SvgLocation';
+import SvgMetro from '../../../svg/SvgMetro';
+import SvgPoint from '../../../svg/SvgPoint';
+import SvgHeartActive from '../../../svg/SvgHeartActive';
+import SvgHeart from '../../../svg/SvgHeart';
+import SvgPhone from '../../../svg/SvgPhone';
+import ProductSwiper from '../ProductSwiper/ProductSwiper';
+
 import classes from './ProductItemTiles.module.scss'
 
 const ProductItemTiles = ({product, params, likeActive, handler}) => {
@@ -21,7 +23,7 @@ const ProductItemTiles = ({product, params, likeActive, handler}) => {
                     ?
                     <ProductSwiper imgArr={product.img}/>
                     :
-                    <img className={classes.img} src={product.img} alt="Изображение карточки"/>
+                    <img className={classes.img} src={product.img} alt='Изображение карточки'/>
             }
 
 

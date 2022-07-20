@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import ProfileCard from "../../../profileCard/ProfileCard";
-import SvgLocation from "../../../svg/SvgLocation";
-import SvgUser from "../../../svg/SvgUser";
-import SvgMetro from "../../../svg/SvgMetro";
-import SvgPhone from "../../../svg/SvgPhone";
-import SvgHeartActive from "../../../svg/SvgHeartActive";
-import SvgHeart from "../../../svg/SvgHeart";
-import ProductSwiper from "../ProductSwiper/ProductSwiper";
-import classes from "./ProductItemList.module.scss";
+import {Link} from 'react-router-dom';
+
+import ProfileCard from '../../../profileCard/ProfileCard';
+import SvgLocation from '../../../svg/SvgLocation';
+import SvgUser from '../../../svg/SvgUser';
+import SvgMetro from '../../../svg/SvgMetro';
+import SvgPhone from '../../../svg/SvgPhone';
+import SvgHeartActive from '../../../svg/SvgHeartActive';
+import SvgHeart from '../../../svg/SvgHeart';
+import ProductSwiper from '../ProductSwiper/ProductSwiper';
+
+import classes from './ProductItemList.module.scss';
 
 
 const ProductItemList = ({params, likeActive, product, handler}) => {
@@ -22,7 +24,7 @@ const ProductItemList = ({params, likeActive, product, handler}) => {
                         ?
                         <ProductSwiper imgArr={product.img}/>
                         :
-                        <img className={classes.img} src={product.img} alt="Изображение карточки"/>
+                        <img className={classes.img} src={product.img} alt='Изображение карточки'/>
                 }
                 <div className={classes.typeProduct}>{product.type}</div>
             </div>

@@ -1,4 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
+
 import avatar from '../assets/img/avatar.png'
 
 const loginPage = createSlice({
@@ -6,7 +7,7 @@ const loginPage = createSlice({
     initialState:{
         // bookMarkActive:false,
         isAuth: false,
-        profilesArr:[{name: 'dmitriy', avatar:'', phone:'', city:'', email: 'vladimir6234@tut.by', password: '12345', viber: '', whatsUpp:''},{name: 'test', avatar:avatar, phone:'+test', city:'test', email: 'test@tut.by', password: 'test1', viber: 'test', whatsUpp:'test'},],
+        profilesArr:[{name: 'dmitriy', avatar:'', phone:'', city:'', email: 'vladimir6234@tut.by', password: '12345', viber: '', whatsUpp:''},{name: 'test', avatar:avatar, phone:'+test', city:'test', email: 'test@tut.by', password: 'test1', viber: 'test', whatsUpp:'test'}],
     },
     reducers:{
         // setBookMarkActive(state){
@@ -23,7 +24,7 @@ const loginPage = createSlice({
         registerUser(state, action){
             state.profilesArr = [...state.profilesArr, action.payload]
         },
-    }
+    },
 })
 
 export default loginPage.reducer

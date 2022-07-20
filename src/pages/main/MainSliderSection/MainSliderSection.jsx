@@ -1,15 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation} from "swiper";
-import {setCity} from "../../../redux/mainPage";
-import MySelect from "../../../components/UI/mySelect/mySelect";
-import ProductsItem from "../../../components/productsComponents/ProductsItem/ProductsItem";
-import SvgMetro from "../../../components/svg/SvgMetro";
-import SvgArrowRight from "../../../components/svg/SvgArrowRight";
+import {Link} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Navigation} from 'swiper';
+
+import {setCity} from '../../../redux/mainPage';
+import MySelect from '../../../components/UI/mySelect/mySelect';
+import ProductsItem from '../../../components/productsComponents/ProductsItem/ProductsItem';
+import SvgMetro from '../../../components/svg/SvgMetro';
+import SvgArrowRight from '../../../components/svg/SvgArrowRight';
+
 import './MainSlider.scss'
-import classes from "./MainSliderSection.module.scss";
+import classes from './MainSliderSection.module.scss';
 
 const MainSliderSection = () => {
     const dispatch = useDispatch()
