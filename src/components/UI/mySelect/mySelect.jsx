@@ -32,14 +32,12 @@ const MySelect = ({options, value, handler, children, style}) => {
             </button>
             {
                 selectActive
-                    ?
+                    &&
                     <div className={classes.optionsBlock}>
                         {options.map(option =>
                             <button onClick={()=>selectHandler(option.value)} key={option.id}>{option.value}</button>
                         )}
                     </div>
-                    :
-                    null
             }
 
         </div>

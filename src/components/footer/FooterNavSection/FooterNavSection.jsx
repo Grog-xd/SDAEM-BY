@@ -18,15 +18,15 @@ const FooterNavSection = memo(() => {
         <nav>
             <ul className={classes.filterNav}>
                 {tabs.map(tab =>
-                    <li key={tab.id}><Link to={`/catalog/${tab.id}`}><b>{tab.value}</b></Link></li>
+                    <li className={classes.footerLink} key={tab.id}><Link to={`/catalog/${tab.id}`}><b>{tab.value}</b></Link></li>
                 )}
                 {cityOption.map(city =>
-                    <li key={city.id}><Link  onClick={()=> dispatch(setCity(city.value))} to={'/catalog/flats'}>Квартиры в {city.value}е</Link></li>
+                    <li className={classes.footerLink} key={city.id}><Link  onClick={()=> dispatch(setCity(city.value))} to={'/catalog/flats'}>Квартиры в {city.value}е</Link></li>
                 )}
             </ul>
             <ul className={classes.pageNav}>
                 {navArr.map(nav=>
-                    <li key={nav.value}>
+                    <li className={classes.footerLink} key={nav.value}>
                         <NavLink to={nav.link}>{nav.value}</NavLink>
                     </li>
                 )}

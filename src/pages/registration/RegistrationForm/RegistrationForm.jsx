@@ -66,7 +66,7 @@ const RegistrationForm = ({modalHandler}) => {
     }
 
     return (
-        <form onSubmit={handleSubmit(registrationHandler)}>
+        <form className={classes.registrationForm} onSubmit={handleSubmit(registrationHandler)}>
             <h1 className={classes.registrationTitle}>Регистрация</h1>
             <MyInput register={register} validation={{required:true}} errors={errors} styleIconError={classes.registerErrorIcon} id={'login'} name={'login'} type={'text'} placeholder={'Логин'}   style={errors.login || loginError ? classes.inputBlockError : classes.inputBlock} maxLength={20}>
                 <SvgUser width={'20'} height={'20'} color={'#6868684C'}/>

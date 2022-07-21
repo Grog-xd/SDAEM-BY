@@ -7,24 +7,24 @@
   p{
     @include text(14px,400, 17px,#1E2123);
   }
-  a{
-    background: #F4F5FA;
-    border-radius: 19px;
-    width: 34px;
-    height: 34px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
-    margin-left: 20px;
-    &:hover{
-      background: rgba(102, 78, 249, 0.1);
-      svg{
-        path{
-          fill: #664EF9;
-        }
+}
+.socialBtn{
+  background: #F4F5FA;
+  border-radius: 19px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
+  margin-left: 20px;
+  &:hover{
+    background: rgba(102, 78, 249, 0.1);
+    svg{
+      path{
+        fill: #664EF9;
       }
-
     }
+
   }
 }

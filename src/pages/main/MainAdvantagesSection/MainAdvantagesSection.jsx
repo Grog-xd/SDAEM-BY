@@ -26,7 +26,7 @@ const MainAdvantagesSection = () => {
             </div>
             <div className={classes.advantagesBlocks}>
                 <div className={classes.card}>
-                    <div className={classes.title}>
+                    <div className={classes.titleCard}>
                         <SvgAdvantagesCard1 width={'190'} height={'139'}/>
                         <p><b>Начните привлекать
                             клиентов бесплатно!</b></p>
@@ -35,7 +35,7 @@ const MainAdvantagesSection = () => {
                     <Link to={'/404'}>+  Разместить объявление</Link>
                 </div>
                 <div className={classes.card}>
-                    <div className={classes.title}>
+                    <div className={classes.titleCard}>
                         <SvgAdvantagesCard2 width={'139'} height={'139'}/>
                         <p><b>Поднимайте
                             объявления</b></p>
@@ -49,8 +49,8 @@ const MainAdvantagesSection = () => {
                 </div>
                 <div className={classes.primaryCard}>
                     <img src={bgPrimaryCard} alt='Задний фон'/>
-                    <p className={classes.title}>Приоритет Gold </p>
-                    <p className={classes.body}>Приоритетное размещение <b>Gold</b> позволяет <b>закрепить ваше объявление</b> в верхней части каталога!</p>
+                    <p className={classes.titlePrimaryCard}>Приоритет Gold </p>
+                    <p className={classes.bodyPrimaryCard}>Приоритетное размещение <b>Gold</b> позволяет <b>закрепить ваше объявление</b> в верхней части каталога!</p>
                     <p className={classes.body}>Gold объявления <b>перемещаются
                         каждые 5 мин</b> на 1 позицию, что делает размещение одинаковым для всех.</p>
                     <Link to={'/404'}>

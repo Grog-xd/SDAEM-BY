@@ -17,19 +17,19 @@ const SocialButtonsBlock = ({style}) => {
     return (
         <div className={cls.join(' ')}>
             <p>Поделиться</p>
-            <a target={'_blank'} rel={'noreferrer'} href='https://vk.com'>
+            <a className={classes.socialBtn} target={'_blank'} rel={'noreferrer'} href='https://vk.com'>
                 <SvgVk width={'17'} height={'10'} color={'#1E2123'}/>
             </a>
-            <a target={'_blank'} rel={'noreferrer'} href='https://www.facebook.com'>
+            <a className={classes.socialBtn} target={'_blank'} rel={'noreferrer'} href='https://www.facebook.com'>
                 <SvgFacebook width={'9'} height={'17'} color={'#1E2123'}/>
             </a>
-            <a target={'_blank'} rel={'noreferrer'} href='https://www.viber.com/ru/'>
+            <a className={classes.socialBtn} target={'_blank'} rel={'noreferrer'} href='https://www.viber.com/ru/'>
                 <SvgViber width={'17'} height={'18'} color={'#1E2123'}/>
             </a>
-            <a target={'_blank'} rel={'noreferrer'} href='https://telegram.org'>
+            <a className={classes.socialBtn} target={'_blank'} rel={'noreferrer'} href='https://telegram.org'>
                 <SvgTelegram width={'17'} height={'14'} color={'#1E2123'}/>
             </a>
-            <a target={'_blank'} rel={'noreferrer'} href='https://www.whatsapp.com'>
+            <a className={classes.socialBtn} target={'_blank'} rel={'noreferrer'} href='https://www.whatsapp.com'>
                 <SvgWhatsapp width={'17'} height={'16'} color={'#1E2123'}/>
             </a>
         </div>

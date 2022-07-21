@@ -40,7 +40,7 @@ const News = () => {
     return (
         <React.Fragment>
             <Header />
-            <main className={classes.main}>
+            <main className={classes.mainNews}>
                 <div className={classes.headerBlock}>
                     <div className={classes.breadcrumbs}>
                         <SvgHomeWithDot width={'22'} height={'12'} color={'#664EF9'}/>

@@ -9,7 +9,7 @@ import classes from './NewIdPageInfo.module.scss';
 
 const NewIdPageInfo = ({post}) => {
     return (
-        <div className={classes.mainContainer}>
+        <div className={classes.mainNewPage}>
             <div className={classes.breadcrumbs}>
                 <SvgHome width={'12'} height={'12'} color={'#664EF9'}/>
                 <Link to='/news'>Новости</Link>

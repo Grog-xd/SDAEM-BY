@@ -3,34 +3,6 @@
 .sliderSection{
   margin-top: 150px;
   position: relative;
-  .sliderTitle{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 60px;
-    .textBlock{
-      strong{
-        @include text(14px, 600, 17px, #000);
-        background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      p{
-        margin-top: 15px;
-        b{
-          @include text(25px, 700, 30px, #000);
-        }
-      }
-    }
-    .sliderFilter{
-      display: flex;
-      align-items: center;
-      .sliderSelect{
-        width: 185px;
-        margin-left: 30px;
-      }
-    }
-  }
   .sliderBgItem{
     width: 848px;
     height: 970px;
@@ -42,48 +14,80 @@
     top: -1%;
     z-index: -1;
   }
-  .productLength{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 23vw;
-    margin-top: 20px;
-    margin-bottom: 90px;
-    .textBlock{
-      padding-right: 40px;
-      border-right: 2px solid rgba(148, 175, 255, 0.1);
-      p{
-        b{
-          @include text(60px, 700, 73px, #1E2123);
-        }
-        strong{
-          @include text(60px, 700, 73px, #664EF9);
-        }
-      }
-      .text{
-        @include text(14px, 500, 17px, #8291A3);
-        opacity: 0.6;
-      }
-    }
-    a{
-      background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
-      box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
-      border-radius: 17px;
-      padding: 10px 18px;
-      display: flex;
-      align-items: center;
-      margin-left: 25px;
-      @include text(14px, 700, 17px, #fff);
-      svg{
-        margin-left: 12px;
-      }
-      &:hover{
-        background: linear-gradient(90deg, #867CFC 0%, #6929F3 94.5%);
-      }
-    }
-  }
-
 }
 h2{
   text-align: center;
+}
+
+.sliderTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.title{
+  strong{
+    @include text(14px, 600, 17px, #000);
+    background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p{
+    margin-top: 15px;
+    b{
+      @include text(25px, 700, 30px, #000);
+    }
+  }
+}
+
+.sliderFilter{
+  display: flex;
+  align-items: center;
+  .sliderSelect{
+    width: 185px;
+    margin-left: 30px;
+  }
+}
+
+.productLength{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 23vw;
+  margin-top: 20px;
+  margin-bottom: 90px;
+  a{
+    background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+    box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
+    border-radius: 17px;
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    @include text(14px, 700, 17px, #fff);
+    svg{
+      margin-left: 12px;
+    }
+    &:hover{
+      background: linear-gradient(90deg, #867CFC 0%, #6929F3 94.5%);
+    }
+  }
+}
+
+.valueBlock{
+  padding-right: 40px;
+  border-right: 2px solid rgba(148, 175, 255, 0.1);
+  p{
+    b{
+      @include text(60px, 700, 73px, #1E2123);
+    }
+    strong{
+      @include text(60px, 700, 73px, #664EF9);
+    }
+  }
+  .text{
+    @include text(14px, 500, 17px, #8291A3);
+    opacity: 0.6;
+  }
 }

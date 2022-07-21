@@ -27,7 +27,7 @@ const MainFilterSection = () => {
     return (
         <section className={classes.filterSection}>
             <h1>Sdaem.by - у нас живут <b>ваши объявления</b></h1>
-            <form>
+            <form className={classes.mainForm}>
                 <Tabs  defaultIndex={tabIndex} onSelect={( index) => setTabIndex(index)}>
                     <TabList>
                         <Tab>Квартиры на сутки</Tab>

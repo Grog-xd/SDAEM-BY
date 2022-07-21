@@ -4,18 +4,18 @@
   padding: 20px 20px 30px 20px;
   background: #fff;
   border-top: 1px solid rgba(78, 100, 249, 0.1);
-  .selectSection{
-    display: flex;
-    align-items: center;
-    .selectBlock{
-      margin-right: 48px;
-      .selectLabel{
-        margin-bottom: 11px;
-        @include text(14px, 500, 17px, #664EF9)
-      }
-      .select{
-        width: 200px;
-      }
-    }
+}
+.selectSection{
+  display: flex;
+  align-items: center;
+}
+.selectBlock{
+  margin-right: 48px;
+  .selectLabel{
+    margin-bottom: 11px;
+    @include text(14px, 500, 17px, #664EF9)
+  }
+  .select{
+    width: 200px;
   }
 }

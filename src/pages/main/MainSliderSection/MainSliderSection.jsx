@@ -47,7 +47,7 @@ const MainSliderSection = () => {
     return (
         <section className={classes.sliderSection}>
             <div className={classes.sliderTitle}>
-                <div className={classes.textBlock}>
+                <div className={classes.title}>
                     <strong>КВАРТИРЫ НА СУТКИ</strong>
                     <p><b>Аренда квартир в {cityMainName}е</b></p>
                 </div>
@@ -80,7 +80,7 @@ const MainSliderSection = () => {
                     <h2>По вашему запросу ни чего не найдено</h2>
             }
             <div className={classes.productLength}>
-                <div className={classes.textBlock}>
+                <div className={classes.valueBlock}>
                     <p><b>{cityValue.length}</b> <strong>+</strong></p>
                     <p className={classes.text}>Предложений по {cityMainName}у</p>
                 </div>

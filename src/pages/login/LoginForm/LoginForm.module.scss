@@ -1,138 +1,5 @@
 @import "src/style/mixins";
 .loginForm{
-  .inputBlock {
-    position: relative;
-    margin-bottom: 20px;
-    input {
-      width: 306px;
-      height: 47px;
-      background: #F8F8F8;
-      border-radius: 30px;
-      border: 1px solid transparent;
-      outline-color: #664EF9;
-      padding-left: 55px;
-      @include text(14px, 500, 17px, #686868);
-      //.inputBlock svg path &:focus {
-      //  fill: #664EF9;
-      //}
-    }
-    svg {
-      position: absolute;
-      top: 25%;
-      left: 7%;
-    }
-    .registerErrorIcon{
-      left: 85%;
-      opacity: 0;
-    }
-  }
-  .inputBlockError {
-    position: relative;
-    margin-bottom: 20px;
-    label {
-      cursor: pointer;
-      position: absolute;
-      top: -35px;
-      @include text(14px, 500, 17px, #686868)
-    }
-    input {
-      width: 306px;
-      height: 47px;
-      background: #F8F8F8;
-      border-radius: 30px;
-      border: 1px solid red;
-      outline-color: #664EF9;
-      padding-left: 55px;
-      @include text(14px, 500, 17px, #686868);
-      //.inputBlock svg path &:focus {
-      //  fill: #664EF9;
-      //}
-    }
-
-    svg {
-      position: absolute;
-      top: 25%;
-      left: 7%;
-    }
-
-    .registerErrorIcon {
-      left: 85%;
-      opacity: 1;
-    }
-  }
-  .rememberMeAndForgetPasswordSection{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 38px;
-    width: 100%;
-    .rememberMeBlock{
-      display: flex;
-      p{
-        @include text(14px, 400, 20px, #686868)
-      }
-      .switch {
-        margin-right: 8px;
-        display: flex;
-        border-radius: 100px;
-        height: 20px;
-        width: 34px;
-        cursor: pointer;
-        background: rgba(189, 189, 189, 0.47);
-        align-items: center;
-        padding: 3px;
-        input{
-          display: none;
-        }
-        div{
-          border-radius: 50%;
-          width: 14px;
-          height: 14px;
-          background: #FFFFFF;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-        }
-      }
-      .switchActive {
-        margin-right: 8px;
-        display: flex;
-        border-radius: 100px;
-        height: 20px;
-        width: 34px;
-        cursor: pointer;
-        align-items: center;
-        padding: 3px;
-        background-color: #664EF9;
-        justify-content: flex-end;
-        input{
-          display: none;
-        }
-        div{
-          border-radius: 50%;
-          width: 14px;
-          height: 14px;
-          background: #FFFFFF;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-        }
-      }
-    }
-    a{
-      @include text(14px, 500, 20px, #664EF9);
-    }
-  }
-  .errorBlock{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #EB5757;
-    border-radius: 33px;
-    padding: 12px;
-    width: 100%;
-    @include text(16px, 700, 24px, #fff);
-    margin-bottom: 20px;
-    svg{
-      margin-left: 10px;
-    }
-  }
   button{
     background: #FFD54F;
     border-radius: 33px;
@@ -144,5 +11,151 @@
     &:hover{
       background-color: #FEC100;
     }
+  }
+}
+
+
+
+.inputBlock {
+  position: relative;
+  margin-bottom: 20px;
+  input {
+    width: 306px;
+    height: 47px;
+    background: #F8F8F8;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    outline-color: #664EF9;
+    padding-left: 55px;
+    @include text(14px, 500, 17px, #686868);
+    //.inputBlock svg path &:focus {
+    //  fill: #664EF9;
+    //}
+  }
+  svg {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+  }
+  .registerErrorIcon{
+    left: 85%;
+    opacity: 0;
+  }
+}
+
+
+
+.inputBlockError {
+  position: relative;
+  margin-bottom: 20px;
+  label {
+    cursor: pointer;
+    position: absolute;
+    top: -35px;
+    @include text(14px, 500, 17px, #686868)
+  }
+  input {
+    width: 306px;
+    height: 47px;
+    background: #F8F8F8;
+    border-radius: 30px;
+    border: 1px solid red;
+    outline-color: #664EF9;
+    padding-left: 55px;
+    @include text(14px, 500, 17px, #686868);
+    //.inputBlock svg path &:focus {
+    //  fill: #664EF9;
+    //}
+  }
+
+  svg {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+  }
+
+  .registerErrorIcon {
+    left: 85%;
+    opacity: 1;
+  }
+}
+
+
+
+.rememberMeAndForgetPasswordSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+  width: 100%;
+  a{
+    @include text(14px, 500, 20px, #664EF9);
+  }
+}
+
+.rememberMeBlock{
+  display: flex;
+  p{
+    @include text(14px, 400, 20px, #686868)
+  }
+}
+
+.switch {
+  margin-right: 8px;
+  display: flex;
+  border-radius: 100px;
+  height: 20px;
+  width: 34px;
+  cursor: pointer;
+  background: rgba(189, 189, 189, 0.47);
+  align-items: center;
+  padding: 3px;
+  input{
+    display: none;
+  }
+  div{
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.switchActive {
+  margin-right: 8px;
+  display: flex;
+  border-radius: 100px;
+  height: 20px;
+  width: 34px;
+  cursor: pointer;
+  align-items: center;
+  padding: 3px;
+  background-color: #664EF9;
+  justify-content: flex-end;
+  input{
+    display: none;
+  }
+  div{
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.errorBlock{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EB5757;
+  border-radius: 33px;
+  padding: 12px;
+  width: 100%;
+  @include text(16px, 700, 24px, #fff);
+  margin-bottom: 20px;
+  svg{
+    margin-left: 10px;
   }
 }

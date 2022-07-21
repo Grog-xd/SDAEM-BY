@@ -13,7 +13,7 @@ const PageNavigation = () => {
             <ul>
                 {navArr.map(nav =>
                     <li key={nav.value}>
-                        <NavLink to={nav.link} className={classes.pageNavigationItem}>
+                        <NavLink to={nav.link} className={({isActive}) => isActive ? classes.pageNavigationItemActive : classes.pageNavigationItem} >
                             {nav.icon &&
                                 <SvgLocation width={'9'} height={'10'} color={'#1E2123'}/>
                             }

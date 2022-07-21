@@ -23,88 +23,97 @@
     border-radius: 10px;
     width: 100%;
   }
-  .textBlock{
-    padding: 20px 20px 15px 20px;
-    .infoSection{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-      .cost{
-        strong{
-          @include text(20px, 700, 24px, #664EF9)
-        }
-        p{
-          @include text(14px, 400, 17px,#BDBDBD )
-        }
-      }
-      .infoBlock{
-        background: #F8F8F8;
-        border-radius: 18px;
-        padding: 8px;
-        svg{
-          margin-right: 6px;
-        }
-      }
+}
+
+
+
+.textBlock{
+  padding: 20px 20px 15px 20px;
+}
+
+.infoSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  .cost{
+    strong{
+      @include text(20px, 700, 24px, #664EF9)
     }
-    .location{
-      display: flex;
-      align-items: center;
-      margin-top: 12px;
-      svg{
-        margin-right: 6px;
-      }
-      p{
-        margin-right: 30px;
-        @include text(16px, 500, 19px, #000)
-      }
-    }
-    .bodyText{
-      @include text(12px, 400, 18px, #686868);
-      margin-top: 20px;
-      margin-bottom: 13px;
-    }
-    .buttonSection{
-      display: flex;
-      border-top: 1px solid rgba(78, 100, 249, 0.1);
-      padding-top: 13px;
-      justify-content: space-between;
-      align-items: center;
-      .heartButton{
-        background: rgba(235, 87, 87, 0.1);
-        border-radius: 22px;
-        padding: 9px;
-        border: none;
-        cursor: pointer;
-      }
-      .contacts{
-        background: #F8F8F8;
-        border-radius: 18px;
-        padding: 10px 15px;
-        cursor: pointer;
-        border: none;
-        align-items: center;
-        display: flex;
-        @include text(14px, 700, 17px, #664EF9);
-        svg{
-          margin-right: 13px;
-        }
-        &:hover{
-          background: #F5F3FF;
-        }
-      }
-      a{
-        padding: 10px 15px;
-        background: rgba(255, 213, 79, 0.1);
-        border-radius: 17px;
-        @include text(14px, 700, 17px, #FEC100);
-        &:hover{
-          background: rgba(255, 213, 79, 0.2);
-        }
-      }
-    }
-    .profile{
-      top: 30%;
+    p{
+      @include text(14px, 400, 17px,#BDBDBD )
     }
   }
+  .infoBlock{
+    background: #F8F8F8;
+    border-radius: 18px;
+    padding: 8px;
+    svg{
+      margin-right: 6px;
+    }
+  }
+}
+
+
+.location{
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  svg{
+    margin-right: 6px;
+  }
+  p{
+    margin-right: 30px;
+    @include text(16px, 500, 19px, #000)
+  }
+}
+
+.bodyText{
+  @include text(12px, 400, 18px, #686868);
+  margin-top: 20px;
+  margin-bottom: 13px;
+}
+
+.buttonSection{
+  display: flex;
+  border-top: 1px solid rgba(78, 100, 249, 0.1);
+  padding-top: 13px;
+  justify-content: space-between;
+  align-items: center;
+  .heartButton{
+    background: rgba(235, 87, 87, 0.1);
+    border-radius: 22px;
+    padding: 9px;
+    border: none;
+    cursor: pointer;
+  }
+  .contacts{
+    background: #F8F8F8;
+    border-radius: 18px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    display: flex;
+    @include text(14px, 700, 17px, #664EF9);
+    svg{
+      margin-right: 13px;
+    }
+    &:hover{
+      background: #F5F3FF;
+    }
+  }
+  a{
+    padding: 10px 15px;
+    background: rgba(255, 213, 79, 0.1);
+    border-radius: 17px;
+    @include text(14px, 700, 17px, #FEC100);
+    &:hover{
+      background: rgba(255, 213, 79, 0.2);
+    }
+  }
+}
+
+.profile{
+  top: 30%;
 }

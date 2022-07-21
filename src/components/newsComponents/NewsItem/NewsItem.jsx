@@ -9,10 +9,10 @@ const NewsItem = ({post}) => {
     return (
         <div className={classes.newsItem}>
             <img src={post.img} alt='Изображение комнаты'/>
-            <div className={classes.textSection}>
+            <div className={classes.newsItemTextSection}>
                 <p><b>{post.title}</b></p>
                 <p>{post.body}</p>
-                <div className={classes.btnsBlock}>
+                <div className={classes.newsItemBtnBlock}>
                     <p>{post.date}</p>
                     <button onClick={()=>navigate(`/news/${post.id}`)}>Читать</button>
                 </div>
