@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
 import SvgArrowDown from '../../svg/SvgArrowDown';
 
@@ -44,6 +45,14 @@ const MySelect = ({options, value, handler, children, style}) => {
         </div>
 
     );
+};
+
+MySelect.propTypes = {
+    options: PropTypes.array,
+    value: PropTypes.string,
+    handler: PropTypes.func,
+    children: PropTypes.node,
+    style: PropTypes.string,
 };
 
 export default MySelect;
