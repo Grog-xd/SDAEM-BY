@@ -12,8 +12,8 @@ import Loader from '../../components/loader/Loader';
 
 import yellowPoints from '../../assets/img/yellow-points.png'
 
-import NewIdPageInfo from './NewIdPageInfo/NewIdPageInfo';
-import NewIdPageSeeAlso from './NewIdPageSeeAlso/NewIdPageSeeAlso';
+import NewIdPageInfo from '../../components/newsItemComponents/NewIdPageInfo/NewIdPageInfo';
+import NewIdPageSeeAlso from '../../components/newsItemComponents/NewIdPageSeeAlso/NewIdPageSeeAlso';
 
 import classes from './NewIdPage.module.scss'
 

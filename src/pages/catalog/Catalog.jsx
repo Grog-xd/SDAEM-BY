@@ -13,10 +13,11 @@ import SocialButtonsBlock from '../../components/socialButtonsBlock/SocialButton
 
 import Loader from '../../components/loader/Loader';
 
-import CatalogTitleSection from './CatalogTitleSection/CatalogTitleSection';
-import CatalogFilterSection from './CatalogFilterSection/CatalogFilterSection';
-import CatalogVisualFilterSection from './CatalogVisualFilterSection/CatalogVisualFilterSection';
-import CatalogMapSection from './CatalogMapSection/CatalogMapSection';
+import CatalogTitleSection from '../../components/catalogComponents/CatalogTitleSection/CatalogTitleSection';
+import CatalogFilterSection from '../../components/catalogComponents/CatalogFilterSection/CatalogFilterSection';
+import CatalogVisualFilterSection from '../../components/catalogComponents/CatalogVisualFilterSection/CatalogVisualFilterSection';
+import CatalogMapSection from '../../components/catalogComponents/CatalogMapSection/CatalogMapSection';
+
 import classes from './Catalog.module.scss'
 
 const Catalog = () => {

@@ -9,11 +9,12 @@ import Footer from '../../components/footer/Footer';
 
 import Loader from '../../components/loader/Loader';
 
-import MainFilterSection from './MainFilterSection/MainFilterSection';
-import MainCardsSection from './MainCardsSection/MainCardsSection';
-import MainSliderSection from './MainSliderSection/MainSliderSection';
-import MainAdvantagesSection from './MainAdvantagesSection/MainAdvantagesSection';
-import MainNewsSection from './MainNewsSection/MainNewsSection';
+import MainFilterSection from '../../components/mainComponents/MainFilterSection/MainFilterSection';
+import MainCardsSection from '../../components/mainComponents/MainCardsSection/MainCardsSection';
+import MainSliderSection from '../../components/mainComponents/MainSliderSection/MainSliderSection';
+import MainAdvantagesSection from '../../components/mainComponents/MainAdvantagesSection/MainAdvantagesSection';
+import MainNewsSection from '../../components/mainComponents/MainNewsSection/MainNewsSection';
+
 import classes from './Main.module.scss'
 
 

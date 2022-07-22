@@ -3,8 +3,9 @@ import {Link} from 'react-router-dom';
 
 import Modal from '../../components/modal/Modal';
 
-import RegistrationForm from './RegistrationForm/RegistrationForm';
-import RegistrationTextBlock from './RegistrationTextBlock/RegistrationTextBlock';
+import RegistrationForm from '../../components/registrationComponents/RegistrationForm/RegistrationForm';
+import RegistrationTextBlock from '../../components/registrationComponents/RegistrationTextBlock/RegistrationTextBlock';
+
 import classes from './Registration.module.scss'
 
 const Registration = () => {
