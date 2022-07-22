@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
 import {mainFilter, setDistrict, setRooms} from '../../../redux/mainPage';
 import SvgHomeWithDot from '../../svg/SvgHomeWithDot';
+import RecommendationBtn from '../RecommendationBtn/RecommendationBtn';
 
 import classes from './CatalogTitleSection.module.scss';
 
@@ -11,14 +12,17 @@ const CatalogTitleSection = () => {
     const params = useParams()
     const dispatch = useDispatch()
     const {districtOption, roomsOption, cityCurrentValue} = useSelector(state=> state.main)
+    const [recommendationActive, setRecommendationActive] = useState(false)
 
     function roomsHandler(rooms){
         dispatch(setRooms(rooms))
         dispatch(mainFilter(params.type))
+        setRecommendationActive(!recommendationActive)
     }
     function districtHandler(district){
         dispatch(setDistrict(district))
         dispatch(mainFilter(params.type))
+        setRecommendationActive(!recommendationActive)
     }
 
     return (
@@ -45,10 +49,10 @@ const CatalogTitleSection = () => {
                             <p className={classes.recommendationsTitle}>Рекомендуем посмотреть</p>
                             <div className={classes.catalogRecommendations}>
                                 {roomsOption.map((room)=>
-                                    <button key={room.id} onClick={()=> roomsHandler(room.value)}>{room.value}-комнатные</button>
+                                    <RecommendationBtn recommendationActive={recommendationActive} handler={(e)=> roomsHandler(e)} value={room.value}>{room.value}-комнатные</RecommendationBtn>
                                 )}
                                 {districtOption.map((district)=>
-                                    <button key={district.id} onClick={()=> districtHandler(district.value)}>р. {district.value}</button>
+                                    <RecommendationBtn recommendationActive={recommendationActive} handler={(e)=> districtHandler(e)} value={district.value}>р. {district.value}</RecommendationBtn>
                                 )}
                             </div>
                         </React.Fragment>
@@ -75,10 +79,10 @@ const CatalogTitleSection = () => {
                                 <p className={classes.recommendationsTitle}>Рекомендуем посмотреть</p>
                                 <div className={classes.catalogRecommendations}>
                                     {roomsOption.map((room)=>
-                                        <button key={room.id} onClick={()=> roomsHandler(room.value)}>{room.value}-комнатные</button>
+                                        <RecommendationBtn recommendationActive={recommendationActive} handler={(e)=> roomsHandler(e)} value={room.value}>{room.value}-комнатные</RecommendationBtn>
                                     )}
                                     {districtOption.map((district)=>
-                                        <button key={district.id} onClick={()=> districtHandler(district.value)}>р. {district.value}</button>
+                                        <RecommendationBtn recommendationActive={recommendationActive} handler={(e)=> districtHandler(e)} value={district.value}>р. {district.value}</RecommendationBtn>
                                     )}
                                 </div>
                             </React.Fragment>
@@ -103,10 +107,10 @@ const CatalogTitleSection = () => {
                                     <p className={classes.recommendationsTitle}>Рекомендуем посмотреть</p>
                                     <div className={classes.catalogRecommendations}>
                                         {roomsOption.map((room)=>
-                                            <button key={room.id} onClick={()=> roomsHandler(room.value)}>{room.value}-комнатные</button>
+                                            <RecommendationBtn recommendationActive={recommendationActive} handler={(e)=> roomsHandler(e)} value={room.value}>{room.value}-комнатные</RecommendationBtn>
                                         )}
                                         {districtOption.map((district)=>
-                                            <button key={district.id} onClick={()=> districtHandler(district.value)}>р. {district.value}</button>
+                                            <RecommendationBtn recommendationActive={recommendationActive} handler={(e)=> districtHandler(e)} value={district.value}>р. {district.value}</RecommendationBtn>
                                         )}
                                     </div>
                                 </React.Fragment>
@@ -131,10 +135,10 @@ const CatalogTitleSection = () => {
                                         <p className={classes.recommendationsTitle}>Рекомендуем посмотреть</p>
                                         <div className={classes.catalogRecommendations}>
                                             {roomsOption.map((room)=>
-                                                <button key={room.id} onClick={()=> roomsHandler(room.value)}>{room.value}-местные</button>
+                                                <RecommendationBtn recommendationActive={recommendationActive} handler={(e)=> roomsHandler(e)} value={room.value}>{room.value}-местные</RecommendationBtn>
                                             )}
                                             {districtOption.map((district)=>
-                                                <button key={district.id} onClick={()=> districtHandler(district.value)}>р. {district.value}</button>
+                                                <RecommendationBtn recommendationActive={recommendationActive} handler={(e)=> districtHandler(e)} value={district.value}>р. {district.value}</RecommendationBtn>
                                             )}
                                         </div>
                                     </React.Fragment>
