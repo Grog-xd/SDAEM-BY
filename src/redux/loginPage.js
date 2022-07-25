@@ -8,6 +8,7 @@ const loginPage = createSlice({
         // bookMarkActive:false,
         isAuth: false,
         profilesArr:[{name: 'dmitriy', avatar:'', phone:'', city:'', email: 'vladimir6234@tut.by', password: '12345', viber: '', whatsUpp:''},{name: 'test', avatar:avatar, phone:'+test', city:'test', email: 'test@tut.by', password: 'test1', viber: 'test', whatsUpp:'test'}],
+        profile: {},
     },
     reducers:{
         // setBookMarkActive(state){

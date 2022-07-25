@@ -7,9 +7,13 @@
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.3.0",
     "@testing-library/user-event": "13.5.0",
+    "@types/jest": "28.1.6",
+    "@types/node": "18.0.6",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "@types/react-router-dom": "5.3.3",
     "axios": "0.27.2",
     "node-sass": "7.0.1",
-    "prop-types": "15.8.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-hook-form": "7.33.1",
@@ -20,6 +24,7 @@
     "react-transition-group": "4.4.2",
     "redux": "4.2.0",
     "swiper": "8.2.4",
+    "typescript": "4.7.3",
     "web-vitals": "2.1.4"
   },
   "scripts": {
@@ -27,7 +32,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint -c .eslintrc --ext .js,.jsx .",
+    "lint": "eslint -c .eslintrc --ext .js,.jsx,.tsx,.ts .",
     "lint:fix": "npm run lint -- --fix"
   },
   "browserslist": {
