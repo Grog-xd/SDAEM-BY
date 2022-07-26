@@ -19,12 +19,12 @@ const CatalogVisualFilterSection:FC = () => {
 
     const {productsLimit, sortedOptions, sortedValue} = useSelector((state:mainRedux)=> state.main)
 
-    function limitHandler(limit){
+    function limitHandler(limit:number){
         dispatch(setLimit(limit))
         dispatch(mainFilter(params.type))
     }
 
-    function sortHandler(value){
+    function sortHandler(value:string){
         dispatch(setSortedValue(value))
         dispatch(mainFilter(params.type))
     }

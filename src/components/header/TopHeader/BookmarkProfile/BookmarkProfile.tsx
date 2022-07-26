@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import {useState} from 'react';
 
-import {setBookMarkActive} from '../../../../redux/loginPage';
+
 import ProfileCard from '../../../profileCard/ProfileCard.tsx';
 import SvgHeart from '../../../svg/SvgHeart.tsx';
 import SvgArrowDown from '../../../svg/SvgArrowDown.tsx';

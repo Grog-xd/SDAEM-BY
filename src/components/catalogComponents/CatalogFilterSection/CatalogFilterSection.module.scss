@@ -15,14 +15,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 82px;
 }
 
 .inputBlock{
   display: flex;
+  height: 100%;
+  padding-right: 25px;
   align-items: center;
   border-right:  1px solid rgba(102, 78, 249, 0.1);
-  padding: 22px 25px 23px 0;
-  margin-right: 25px;
+  border-bottom: 3px solid transparent;
+  padding-left: 25px;
+  .text{
+    @include text(14px, 500, 17px, #664EF9);
+    margin-right: 20px;
+  }
+}
+
+.inputBlockActive{
+  display: flex;
+  height: 100%;
+  padding-right: 25px;
+  align-items: center;
+  border-right:  1px solid rgba(102, 78, 249, 0.1);
+  padding-left: 25px;
+  border-bottom: 3px solid #4E64F9;
   .text{
     @include text(14px, 500, 17px, #664EF9);
     margin-right: 20px;
@@ -65,14 +82,17 @@
   background: transparent;
   cursor: pointer;
   padding: 20px 0;
+  border-bottom: 3px solid transparent;
   svg{
     margin-left: 4px;
   }
 }
 
+
 .buttonBlock{
   display: flex;
   align-items: center;
+  padding-left: 25px;
 }
 
 .resetBtn{

@@ -29,8 +29,8 @@ const main = createSlice({
 
         checkboxsMoreOption:[{id:1, value:'Газовая плита', bol:false},  {id:2, value:'Духовка', bol:false}, {id:3, value:'Кофеварка', bol:false}, {id:4, value:'Микроволновая печь ', bol:false}, {id:5, value:'Посуда', bol:false}, {id:6, value:'Посудомоечная машина', bol:false}],
 
-        minCost:'',
-        maxCost:'',
+        minCost:undefined,
+        maxCost:undefined,
 
 
         productsLen: 0,
@@ -106,8 +106,8 @@ const main = createSlice({
         resetFilter(state){
             state.sortedValue = ''
             state.roomsCurrentValue = ''
-            state.minCost = ''
-            state.maxCost = ''
+            state.minCost = undefined
+            state.maxCost = undefined
             state.districtCurrentValue = ''
             state.metroCurrentValue = ''
             state.bedSumCurrentValue = ''
@@ -119,12 +119,12 @@ const main = createSlice({
         mainFilter(state, action){
             // Условия для высчитывания стоимости
             while(state.minCost > state.maxCost ){
-                state.maxCost = +state.maxCost + 100
+                state.maxCost = state.maxCost + 100
             }
-            if(state.minCost === ''){
-                state.minCost=0
+            if(state.minCost === undefined){
+                state.minCost = 0
             }
-            if(state.maxCost === ''){
+            if(state.maxCost === undefined){
                 state.maxCost = 1000
             }
 

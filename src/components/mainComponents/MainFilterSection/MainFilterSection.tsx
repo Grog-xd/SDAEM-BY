@@ -21,7 +21,7 @@ const MainFilterSection:FC = () => {
     const [moreOptions, setMoreOptions] = useState<boolean>(false)
     const {cityCurrentValue, roomsCurrentValue, roomsOption, cityOption, minCost, maxCost} = useSelector((state:mainRedux)=> state.main)
 
-    function catalogFilterHandler(link){
+    function catalogFilterHandler(link:string){
         dispatch(mainFilter(link))
         navigate(`/catalog/${link}`)
     }
@@ -49,13 +49,13 @@ const MainFilterSection:FC = () => {
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Цена за сутки (BYN)</p>
                             <div className={classes.costBlock}>
-                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(+e.target.value))}/>
                                 -
-                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(+e.target.value))}/>
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
-                            <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
+                            <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={!moreOptions ? classes.openMoreFilter : classes.openMoreFilterActive}>
                                 Больше опций
                                 <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                             </button>

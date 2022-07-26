@@ -19,6 +19,7 @@ interface RegistrationFormProps{
     modalHandler: (b: boolean) => void
 }
 
+
 const RegistrationForm:FC <RegistrationFormProps>= ({modalHandler}) => {
 
     const { register, formState: {errors}, handleSubmit} = useForm()

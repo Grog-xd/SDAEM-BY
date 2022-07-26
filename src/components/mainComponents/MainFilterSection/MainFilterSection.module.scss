@@ -37,6 +37,7 @@
 }
 
 
+
 .costBlock{
   display: flex;
   justify-content: space-between;
@@ -73,6 +74,20 @@
   background: transparent;
   cursor: pointer;
   padding: 20px 0;
+  border-bottom: 3px solid transparent;
+  svg{
+    margin-left: 4px;
+  }
+}
+.openMoreFilterActive{
+  display: flex;
+  align-items: center;
+  @include text(14px, 500, 17px, #1E2123);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 20px 0;
+  border-bottom: 3px solid #4E64F9;
   svg{
     margin-left: 4px;
   }

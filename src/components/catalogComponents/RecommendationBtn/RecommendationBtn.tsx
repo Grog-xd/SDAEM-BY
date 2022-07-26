@@ -14,7 +14,7 @@ interface RecommendationBtnProps {
 const RecommendationBtn:FC <RecommendationBtnProps>= ({recommendationActive, children, value, handler}) => {
     const [isActive, setIsActive] = useState<boolean>(false)
 
-    function recommendationHandler(value){
+    function recommendationHandler(value: string | number){
         setIsActive(!isActive)
         handler(value)
     }

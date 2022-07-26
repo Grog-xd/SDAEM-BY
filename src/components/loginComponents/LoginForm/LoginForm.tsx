@@ -26,7 +26,7 @@ const LoginForm:FC = () => {
     const [loginError, setLoginError] = useState<boolean>(false)
 
 
-    function loginHandler({login, password}){
+    function loginHandler({login, password}:{login:string, password:string}){
 
         postLogin(login, password)
 
@@ -44,7 +44,7 @@ const LoginForm:FC = () => {
         setLoginError(true)
     }
 
-    function postLogin(login, password){
+    function postLogin(login:string, password:string){
         axios.post(`/api/${postLoginUrl}`,{
             login:login,
             password:password,

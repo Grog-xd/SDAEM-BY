@@ -26,7 +26,7 @@ const MySelect:FC<SelectProps> = ({options, value, handler, children, style}) =>
         classes.changeBlockActive,
     ]
 
-    function selectHandler(value){
+    function selectHandler(value: string | number){
         setSelectActive(!selectActive)
         handler(value)
     }

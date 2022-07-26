@@ -19,7 +19,7 @@ const ContactsForm:FC <ContactsFormProps>= ({modalActive, handler}) => {
 
     const { register, formState: {errors}, handleSubmit, reset} = useForm()
 
-    function sendMessageHandler(data){
+    function sendMessageHandler(data: {name:string, email:string, message:string}){
         handler(!modalActive)
         reset({name:'', email:'', message:''})
         axios.post(`/api/${postContactsUrl}`, data)

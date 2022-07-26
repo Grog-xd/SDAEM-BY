@@ -42,12 +42,12 @@ const CatalogFilterSection:FC = () => {
                     <div className={classes.inputBlock}>
                         <p className={classes.text}>Цена за сутки (BYN)</p>
                         <div className={classes.costBlock}>
-                            <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                            <input type='number' min={0} max={1000} value={minCost || 0} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(+e.target.value))}/>
                             -
-                            <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                            <input type='number' min={0} max={1000} value={maxCost || 1000} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(+e.target.value))}/>
                         </div>
                     </div>
-                    <div className={classes.inputBlock}>
+                    <div className={!moreOptions ? classes.inputBlock : classes.inputBlockActive}>
                         <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                             Больше опций
                             <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>

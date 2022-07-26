@@ -29,5 +29,5 @@ const loginPage = createSlice({
 })
 
 export default loginPage.reducer
-export const {exit, enter, setBookMarkActive, registerUser} = loginPage.actions
+export const {exit, enter, registerUser} = loginPage.actions
 
