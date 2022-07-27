@@ -1,0 +1,15 @@
+@import "src/style/mixins";
+.contacts{
+  @supports (background: url("../../assets/img/bg-404.webp")) {
+    background: url("../../assets/img/bg-404.webp") center center/cover no-repeat, linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);
+  }
+  background: url("../../assets/img/bg-404.png") center center/cover no-repeat, linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);
+  .container{
+    max-width: 1410px;
+    padding: 77px 15px 95px 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+}

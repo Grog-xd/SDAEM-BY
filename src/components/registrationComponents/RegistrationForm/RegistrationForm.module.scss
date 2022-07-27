@@ -1,0 +1,93 @@
+@import "../../../style/mixins";
+.registrationForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .registrationTitle{
+    @include text(25px, 700, 30px, #000);
+    margin-bottom: 30px;
+  }
+  button{
+    background: #FFD54F;
+    border-radius: 33px;
+    padding: 12px 70px;
+    border: none;
+    @include text(16px, 700, 24px, #1E2123);
+    cursor: pointer;
+    &:hover{
+      background-color: #FEC100;
+    }
+  }
+}
+
+.inputBlock{
+  position: relative;
+  margin-bottom: 20px;
+
+  input {
+    width: 306px;
+    height: 47px;
+    background: #F8F8F8;
+    border-radius: 30px;
+    outline-color: #664EF9;
+    padding-left: 55px;
+    border: 1px solid #F8F8F8;
+    @include text(14px, 500, 17px, #686868);
+    //.inputBlock svg path &:focus {
+    //  fill: #664EF9;
+    //}
+  }
+
+  svg {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+  }
+  .registerErrorIcon{
+    left: 85%;
+    opacity: 0;
+  }
+}
+
+.inputBlockError{
+  position: relative;
+  margin-bottom: 20px;
+  input {
+    width: 306px;
+    height: 47px;
+    background: #F8F8F8;
+    border-radius: 30px;
+    outline-color: #664EF9;
+    padding-left: 55px;
+    @include text(14px, 500, 17px, #686868);
+    border: 1px solid red;
+    //.inputBlock svg path &:focus {
+    //  fill: #664EF9;
+    //}
+  }
+  svg {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+  }
+  .registerErrorIcon{
+    left: 85%;
+    opacity: 1;
+  }
+}
+
+.errorBlock{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EB5757;
+  border-radius: 33px;
+  padding: 12px 15px;
+  width: 306px;
+  text-align: center;
+  @include text(16px, 700, 24px, #fff);
+  margin-bottom: 20px;
+  svg{
+    margin-left: 10px;
+  }
+}
