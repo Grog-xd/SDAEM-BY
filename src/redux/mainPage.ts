@@ -1,4 +1,12 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+
+import {ProductProps} from '../types/types';
+
+
+interface likeActionProps{
+    id: number,
+    type:string
+}
 
 const main = createSlice({
     name: 'main',
@@ -41,11 +49,11 @@ const main = createSlice({
         fetchProducts(state, action){
             state.products = action.payload
         },
-        setBedSum(state, action){
+        setBedSum(state, action:PayloadAction<string>){
             state.bedSumCurrentValue = action.payload
         },
 
-        checkboxHandler(state, action){
+        checkboxHandler(state, action:PayloadAction<string>){
             state.checkboxsMoreOption.forEach(obj =>{
                 if(obj.value.includes(action.payload)){
                     obj.bol = !obj.bol
@@ -54,7 +62,7 @@ const main = createSlice({
             })
         },
 
-        likeHandler(state, action){
+        likeHandler(state, action:PayloadAction<likeActionProps>){
             state.products.forEach(obj=>{
                 Object.keys(obj).forEach(key=>{
                     if(key === action.payload.type){
@@ -67,40 +75,40 @@ const main = createSlice({
                 })
             })
         },
-        setCity(state, action){
+        setCity(state, action:PayloadAction<string>){
             state.cityCurrentValue = action.payload
 
         },
-        setRooms(state, action){
+        setRooms(state, action:PayloadAction<string>){
             state.roomsCurrentValue = action.payload
         },
-        setMinCost(state, action){
+        setMinCost(state, action:PayloadAction<number>){
             if(action.payload<0 || action.payload > 1000){
                 return
             }
             state.minCost = action.payload
         },
-        setMaxCost(state, action){
+        setMaxCost(state, action:PayloadAction<number>){
             if(action.payload<0 || action.payload > 1000){
                 return
             }
             state.maxCost = action.payload
         },
-        setDistrict(state, action){
+        setDistrict(state, action:PayloadAction<string>){
             state.districtCurrentValue = action.payload
         },
-        setMetro(state, action){
+        setMetro(state, action:PayloadAction<string>){
             state.metroCurrentValue = action.payload
         },
-        setCurrentPage(state, action){
+        setCurrentPage(state, action:PayloadAction<number>){
             state.currentPage = action.payload
             window.scrollTo(0, 0)
         },
-        setSortedValue(state, action){
+        setSortedValue(state, action:PayloadAction<string>){
             state.sortedValue = action.payload
         },
 
-        setLimit(state, action){
+        setLimit(state, action:PayloadAction<number>){
             state.productsLimit = action.payload
         },
         resetFilter(state){
@@ -116,7 +124,7 @@ const main = createSlice({
             })
         },
 
-        mainFilter(state, action){
+        mainFilter(state, action:PayloadAction<ProductProps>){
             // Условия для высчитывания стоимости
             while(state.minCost > state.maxCost ){
                 state.maxCost = state.maxCost + 100

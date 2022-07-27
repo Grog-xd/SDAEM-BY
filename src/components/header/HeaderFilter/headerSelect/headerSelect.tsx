@@ -25,7 +25,7 @@ const HeaderSelect:FC <HeaderSelectProps>= ({type, value, children}) => {
         classes.changeBlockActive,
     ]
 
-    function headerSelectHandler(value:string | number){
+    function headerSelectHandler(value:string){
         dispatch(setCity(value))
         setSelectActive(!selectActive)
     }

@@ -54,10 +54,10 @@ const MainSliderSection:FC = () => {
                     <p><b>Аренда квартир в {cityMainName}е</b></p>
                 </div>
                 <div className={classes.sliderFilter}>
-                    <MySelect options={metroOption} handler={e=>setMetroCurrentValue(e)} style={classes.sliderSelect} value={metroCurrentValue ? metroCurrentValue: 'Метро'}>
+                    <MySelect options={metroOption} handler={(e:string)=>setMetroCurrentValue(e)} style={classes.sliderSelect} value={metroCurrentValue ? metroCurrentValue: 'Метро'}>
                         <SvgMetro width={'20'} height={'13'} color={'#BDBDBD'}/>
                     </MySelect>
-                    <MySelect options={districtOption} handler={e=>setDistrictCurrentValue(e)} style={classes.sliderSelect} value={districtCurrentValue ? districtCurrentValue: 'Район'} />
+                    <MySelect options={districtOption} handler={(e:string)=>setDistrictCurrentValue(e)} style={classes.sliderSelect} value={districtCurrentValue ? districtCurrentValue: 'Район'} />
                 </div>
             </div>
             <div className={classes.sliderBgItem}></div>

@@ -54,7 +54,7 @@ const NewIdPage:FC = () => {
         <Fragment>
             <Header />
             {
-                post.id
+                post?.id
                     ?
                     <main>
                         <div className={classes.purpleBg}></div>

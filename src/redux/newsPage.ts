@@ -1,4 +1,6 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+
+import {newProps} from '../types/types';
 
 const newsPage = createSlice({
     name: 'news',
@@ -10,10 +12,10 @@ const newsPage = createSlice({
         posts:[],
     },
     reducers:{
-        fetchNews(state, action){
+        fetchNews(state, action:PayloadAction<newProps[]>){
             state.posts = action.payload
         },
-        getNews(state, action){
+        getNews(state, action:PayloadAction<string>){
             let sortedPosts = state.posts.filter(post=> post.title.toLowerCase().includes(action.payload.toLowerCase()))
 
             let res = []
@@ -33,7 +35,7 @@ const newsPage = createSlice({
             state.sortedPosts = res
             state.currentPage = 1
         },
-        setNewsPage(state, action){
+        setNewsPage(state, action:PayloadAction<number>){
             state.currentPage = action.payload
             window.scrollTo(0, 0)
         },

@@ -81,9 +81,9 @@ const MainFilterSection:FC = () => {
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Цена за сутки (BYN)</p>
                             <div className={classes.costBlock}>
-                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(+e.target.value))}/>
                                 -
-                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(+e.target.value))}/>
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
@@ -113,9 +113,9 @@ const MainFilterSection:FC = () => {
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Цена за сутки (BYN)</p>
                             <div className={classes.costBlock}>
-                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(+e.target.value))}/>
                                 -
-                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(+e.target.value))}/>
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
@@ -145,9 +145,9 @@ const MainFilterSection:FC = () => {
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Цена за сутки (BYN)</p>
                             <div className={classes.costBlock}>
-                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(+e.target.value))}/>
                                 -
-                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(e.target.value))}/>
+                                <input type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(+e.target.value))}/>
                             </div>
                         </div>
                         {/*<div className={classes.inputBLock}>*/}

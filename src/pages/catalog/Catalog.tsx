@@ -38,7 +38,7 @@ const Catalog:FC = () => {
             .then(()=>dispatch(mainFilter(params.type)))
             .catch(e => console.log(e.message))
         window.scrollTo(0, 0)
-    }, [params])
+    }, [])
 
     useEffect(()=>{
         test404()

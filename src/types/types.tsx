@@ -62,7 +62,7 @@ export interface newProps{
 
 export interface optionSelectProps{
     id:number,
-    value: string | number,
+    value: string,
     bol: boolean,
 }
 

@@ -1,6 +1,7 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 import avatar from '../assets/img/avatar.png'
+import {profilesArr} from '../types/types';
 
 const loginPage = createSlice({
     name: 'login',
@@ -14,7 +15,7 @@ const loginPage = createSlice({
         // setBookMarkActive(state){
         //     state.bookMarkActive = !state.bookMarkActive
         // },
-        enter(state, action){
+        enter(state, action:PayloadAction<profilesArr>){
             state.isAuth = true
             state.profile = action.payload
         },
@@ -22,7 +23,7 @@ const loginPage = createSlice({
             state.isAuth = false
             localStorage.clear()
         },
-        registerUser(state, action){
+        registerUser(state, action:PayloadAction<any>){
             state.profilesArr = [...state.profilesArr, action.payload]
         },
     },

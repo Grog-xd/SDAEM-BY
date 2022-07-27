@@ -16,12 +16,12 @@ const CatalogTitleSection:FC = () => {
     const {districtOption, roomsOption, cityCurrentValue} = useSelector((state:mainRedux)=> state.main)
     const [recommendationActive, setRecommendationActive] = useState<boolean>(false)
 
-    function roomsHandler(rooms:string | number){
+    function roomsHandler(rooms:string){
         dispatch(setRooms(rooms))
         dispatch(mainFilter(params.type))
         setRecommendationActive(!recommendationActive)
     }
-    function districtHandler(district:string | number){
+    function districtHandler(district:string){
         dispatch(setDistrict(district))
         dispatch(mainFilter(params.type))
         setRecommendationActive(!recommendationActive)

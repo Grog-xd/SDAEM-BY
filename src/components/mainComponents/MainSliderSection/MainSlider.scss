@@ -42,12 +42,11 @@
 }
 // swiper pagination for products slider
 .swiper-pagination {
-  position: absolute;
+  position: relative;
   z-index: 10;
-  left: 50%;
-  bottom: 5%;
+  bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .swiper-pagination-bullet{
   background-color: rgba(197, 197, 197, 0.5);
