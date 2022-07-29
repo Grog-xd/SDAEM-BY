@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 
-import {fetchNews} from '../../../redux/newsPage';
+import {fetchNews, getNews} from '../../../redux/newsPage';
 import {getPostUrl} from '../../../server';
 import SvgArrowRight from '../../svg/SvgArrowRight.tsx';
 import yellowPoints from '../../../assets/img/yellow-points.png';
@@ -35,6 +35,7 @@ const MainNewsSection:FC = () => {
         axios.get(`api/${getPostUrl}`)
             .then(response => response.data.posts)
             .then(response => dispatch(fetchNews(response)))
+            .then(()=>dispatch(getNews('')))
             .catch(e => console.log(e.message))
     }, [])
 

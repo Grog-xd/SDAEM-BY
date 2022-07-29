@@ -4,7 +4,7 @@ import {useNavigate, useParams} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {getPostUrl} from '../../server';
-import {fetchNews} from '../../redux/newsPage';
+import {fetchNews, getNews} from '../../redux/newsPage';
 import Header from '../../components/header/Header.tsx';
 import Footer from '../../components/footer/Footer.tsx';
 
@@ -39,6 +39,7 @@ const NewIdPage:FC = () => {
                     navigate('/404')
                 } else{
                     dispatch(fetchNews(response))
+                    dispatch(getNews(''))
                     // @ts-ignore
                     setPost(response[params.id-1])
                 }
