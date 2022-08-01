@@ -28,9 +28,11 @@
     outline-color: #664EF9;
     padding-left: 55px;
     @include text(14px, 500, 17px, #686868);
-    //.inputBlock svg path &:focus {
-    //  fill: #664EF9;
-    //}
+  }
+  input:focus-visible + svg{
+    path{
+      fill: #664EF9;
+    }
   }
   svg {
     position: absolute;
@@ -63,9 +65,11 @@
     outline-color: #664EF9;
     padding-left: 55px;
     @include text(14px, 500, 17px, #686868);
-    //.inputBlock svg path &:focus {
-    //  fill: #664EF9;
-    //}
+  }
+  input:focus-visible + svg{
+    path{
+      fill: #664EF9;
+    }
   }
 
   svg {

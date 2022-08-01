@@ -22,8 +22,8 @@ const MyInput:FC <MyInputProps>= ({style, type, label, placeholder, name, id, ch
     return (
         <div className={style}>
             {label && <label htmlFor={id}>{label}</label>}
-            {children}
             <input {...register(name, validation)} placeholder={placeholder}  type={type} name={name} id={id} maxLength={maxLength}/>
+            {children}
             {errors && <SvgError width={'23'} height={'23'} color={'#EB5757'} style={styleIconError}/>}
         </div>
     );

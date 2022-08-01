@@ -37,8 +37,8 @@ const PaginationList:FC <PaginationListProps>= ({posts, currentPage, handler}) =
     return (
         <div className={classes.pagination}>
             {
-                pagesArr.map((page)=>
-                    <PaginationItem key={page} currentPage={currentPage} handler={handler}>{page}</PaginationItem>,
+                pagesArr.map((page, index)=>
+                    <PaginationItem key={index} currentPage={currentPage} handler={handler}>{page}</PaginationItem>,
                 )
             }
         </div>

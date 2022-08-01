@@ -57,34 +57,34 @@
 
   &:nth-child(1){
     @supports (background:url("../../../assets/img/mainBgCardsImg-4.webp") ) {
-      background: url("../../../assets/img/mainBgCardsImg-1.webp"), rgba(30, 33, 35, 0.4);
+      background: url("../../../assets/img/mainBgCardsImg-1.webp") center center/cover no-repeat rgba(30, 33, 35, 0.4);
     }
-    background: url("../../../assets/img/mainBgCardsImg-1.png"), rgba(30, 33, 35, 0.4);
+    background: url("../../../assets/img/mainBgCardsImg-1.png") center center/cover no-repeat rgba(30, 33, 35, 0.4);
   }
   &:nth-child(2){
     @supports (background:url("../../../assets/img/mainBgCardsImg-4.webp") ) {
-      background: url("../../../assets/img/mainBgCardsImg-2.webp"), rgba(30, 33, 35, 0.4);
+      background: url("../../../assets/img/mainBgCardsImg-2.webp") center center/cover no-repeat rgba(30, 33, 35, 0.4);
     }
-    background: url("../../../assets/img/mainBgCardsImg-2.png"), rgba(30, 33, 35, 0.4);
+    background: url("../../../assets/img/mainBgCardsImg-2.png") center center/cover no-repeat rgba(30, 33, 35, 0.4);
   }
   &:nth-child(3){
     @supports (background:url("../../../assets/img/mainBgCardsImg-4.webp") ) {
-      background: url("../../../assets/img/mainBgCardsImg-3.webp"), rgba(30, 33, 35, 0.4);
+      background: url("../../../assets/img/mainBgCardsImg-3.webp") center center/cover no-repeat rgba(30, 33, 35, 0.4);
     }
-    background: url("../../../assets/img/mainBgCardsImg-3.png"), rgba(30, 33, 35, 0.4);
+    background: url("../../../assets/img/mainBgCardsImg-3.png") center center/cover no-repeat rgba(30, 33, 35, 0.4);
   }
   &:nth-child(4){
     @supports (background:url("../../../assets/img/mainBgCardsImg-4.webp") ) {
-      background: url("../../../assets/img/mainBgCardsImg-4.webp"), rgba(30, 33, 35, 0.4);
+      background: url("../../../assets/img/mainBgCardsImg-4.webp") center center/cover no-repeat rgba(30, 33, 35, 0.4);
     }
-    background: url("../../../assets/img/mainBgCardsImg-4.png"), rgba(30, 33, 35, 0.4);
+    background: url("../../../assets/img/mainBgCardsImg-4.png") center center/cover no-repeat rgba(30, 33, 35, 0.4);
   }
   &:nth-child(1n){
-    width: 21vw;
+    width: 400px;
 
   }
   &:nth-child(3n+1){
-    width: 26vw;
+    width: 500px;
   }
 }
 

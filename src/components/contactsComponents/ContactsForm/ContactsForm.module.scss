@@ -7,7 +7,7 @@
   background: #FFFEFE;
   box-shadow: 0 20px 40px rgba(39, 95, 158, 0.2);
   border-radius: 10px;
-  min-width: 34vw;
+  min-width: 652px;
   height: 537px;
   padding: 40px 37px 44px 38px;
   button{
@@ -41,7 +41,7 @@
     @include text(14px, 500, 17px, #686868)
   }
   input{
-    width: 14vw;
+    width: 268px;
     height: 47px;
     background: #F8F8F8;
     border-radius: 30px;
@@ -49,9 +49,11 @@
     outline-color: #664EF9;
     padding-left: 55px;
     @include text(14px, 500, 17px, #686868);
-    //.inputBlock svg path &:focus{
-    //  fill: #664EF9;
-    //}
+  }
+  input:focus-visible + svg{
+    path{
+      fill: #664EF9;
+    }
   }
   svg{
     position: absolute;
@@ -59,7 +61,7 @@
     left: 7%;
   }
   textarea {
-    width: 30vw;
+    width: 576px;
     height: 200px;
     padding: 15px 20px;
     @include text(14px, 500, 17px, #686868);
@@ -93,9 +95,11 @@
     padding-left: 55px;
     @include text(14px, 500, 17px, #686868);
     border: 1px solid red;
-    //.inputBlock svg path &:focus {
-    //  fill: #664EF9;
-    //}
+  }
+  input:focus-visible + svg{
+    path{
+      fill: #664EF9;
+    }
   }
   svg {
     position: absolute;
