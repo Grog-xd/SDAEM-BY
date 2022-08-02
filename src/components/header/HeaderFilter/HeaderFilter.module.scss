@@ -1,0 +1,31 @@
+@import "./src/style/mixins";
+
+.headerFilter{
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+  ul{
+    display: flex;
+    justify-content: space-between;
+    min-width: 750px;
+  }
+  .newCardLink{
+    background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+    box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
+    border-radius: 17px;
+    padding: 10px 18px;
+    @include text(14px, 700, 17px, white);
+    &:hover{
+      background: linear-gradient(90deg, #867CFC 0%, #6929F3 94.5%);
+    }
+  }
+}
+.container{
+  max-width: 1410px;
+  padding: 12px 15px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}

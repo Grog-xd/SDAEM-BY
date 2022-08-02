@@ -1,0 +1,46 @@
+@import "src/style/mixins";
+.mainLogin{
+  @supports (background: url("../../assets/img/bg-404.webp")) {
+    background: url("../../assets/img/bg-404.webp") center center/cover no-repeat, linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);
+  }
+  background: url("../../assets/img/bg-404.png") center center/cover no-repeat, linear-gradient(0deg, #7E6AF3 1.04%, #6540CD 100%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background: #FFFEFE;
+  box-shadow: 0 20px 40px rgba(39, 95, 158, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  max-width: 380px;
+  h1{
+    @include text(25px, 700, 30px, #000);
+    margin-bottom: 15px;
+  }
+  .description{
+    @include text(14px, 400, 17px, #686868);
+    margin-bottom: 35px;
+  }
+}
+
+.toRegisterSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p{
+    @include text(14px, 400, 20px, #686868);
+    margin-right: 5px;
+  }
+  a{
+    @include text(14px, 500, 26px, #664EF9)
+  }
+}
+

@@ -10,17 +10,11 @@
 .App{
   overflow: hidden;
 }
-ul li{
+li{
   list-style: none;
 }
 a{
   text-decoration: none;
-}
-h2{
-  text-align: center;
-  margin-bottom: 100px;
-  margin-top: 100px;
-  @include text(30px, 700, 30px, #1E2123)
 }
 body{
 }
@@ -41,24 +35,6 @@ body{
   transition: opacity 500ms ease-in;
 }
 
-//modal
-.modalTitle{
-  @include text(25px, 700, 30px, #000000);
-}
-.modalBody{
-  @include text(14px, 400, 17px, #686868);
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-.modalButton{
-  background: #FFD54F;
-  border-radius: 33px;
-  padding: 12px 24px;
-  @include text(16px, 700, 24px, #1E2123);
-  cursor: pointer;
-  border: none;
-
-}
 
 //tabs
 .react-tabs__tab-list{
@@ -87,45 +63,4 @@ body{
   align-items: center;
   justify-content: space-between;
 
-}
-//swiper
-.swiper{
-  position: relative;
-  overflow-x: clip;
-}
-.swiper-wrapper{
-  display: flex;
-  margin-bottom: 80px;
-}
-.swiper-button-prev{
-  width: 40px;
-  height: 40px;
-  border: 1px solid #664EF9;
-  background: transparent;
-  border-radius: 50%;
-  background:  url("./assets/img/arrowDown.svg") center center/cover no-repeat;
-  transform: rotate(90deg);
-  position: absolute;
-  bottom: -10%;
-  left: 48%;
-  cursor: pointer;
-  &:hover{
-    background: url("./assets/img/arrowDown.svg") center center/cover no-repeat rgba(102, 78, 249, 0.1);
-  }
-}
-.swiper-button-next{
-  position: absolute;
-  bottom: -10%;
-  left: 52%;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #664EF9;
-  background: transparent;
-  border-radius: 50%;
-  background:  url("./assets/img/arrowDown.svg") center center/cover no-repeat;
-  transform: rotate(-90deg);
-  cursor: pointer;
-  &:hover{
-    background: url("./assets/img/arrowDown.svg") center center/cover no-repeat rgba(102, 78, 249, 0.1);
-  }
 }

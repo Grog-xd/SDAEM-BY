@@ -1,0 +1,50 @@
+@import "../../../../style/mixins";
+
+
+.select{
+  position: relative;
+}
+
+.changeBlock{
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 3px solid #fff;
+  cursor: pointer;
+  @include text(14px, 600, 17px, #1E2123);
+  svg{
+    margin-left: 15px;
+  }
+  &:hover{
+    border-bottom: 3px solid #FFD54F;
+  }
+}
+.changeBlockActive{
+  border-bottom: 3px solid #FFD54F;
+}
+
+.optionsBlock{
+  position: absolute;
+  top: 47px;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  padding: 3px;
+  //width: 242px;
+
+  a{
+    width: max-content;
+    //width: 100%;
+    padding: 10px 15px;
+    text-align: start;
+    background: #FFFFFF;
+    border: none;
+    @include text(14px, 500, 17px, #1E2123);
+    &:hover{
+      background: #F8F8F8;
+    }
+  }
+}

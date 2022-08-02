@@ -1,0 +1,82 @@
+@import "../../../style/mixins";
+
+.visualFilter{
+  margin-top: 21.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sortedSelect{
+  width: 232px;
+  background: #FFFFFF;
+  box-shadow: 0 5px 20px rgba(0, 96, 206, 0.1);
+  border-radius: 18px;
+  p{
+    font-weight: 600;
+  }
+}
+
+.btnsBlock{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setLimitBtns{
+  display: flex;
+  align-items: center;
+}
+
+
+.btnActive{
+  margin-right: 21.5px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background: #FFFFFF;
+  box-shadow: 0 5px 20px rgba(0, 96, 206, 0.1);
+  border-radius: 18px;
+  padding: 10px 15px;
+  @include text(14px, 600, 17px, #1E2123);
+  svg{
+    margin-right: 10px;
+  }
+}
+
+
+.btn{
+  margin-right: 21.5px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  filter: drop-shadow(0px 5px 20px rgba(0, 96, 206, 0.1));
+  border-radius: 18px;
+  padding: 10px 15px;
+  @include text(14px, 500, 17px, #1E2123);
+  &:hover{
+    background: #F8F8F8;
+  }
+  svg{
+    margin-right: 10px;
+  }
+}
+
+.map{
+  background: #FFFFFF;
+  margin-left: 43.5px;
+  box-shadow: 0 5px 20px rgba(0, 96, 206, 0.1);
+  border-radius: 18px;
+  padding: 10px 15px;
+  @include text(14px, 600, 17px, #1E2123);
+  &:hover{
+    color: #664EF9;
+  }
+  svg{
+    margin-right: 10px;
+  }
+}
