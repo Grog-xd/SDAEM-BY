@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Publish to Register
-        uses: elgohr/Publish-Docker-Github-Actions@v4
+        uses: elgohr/Publish-Docker-Github-Action@v4
         with:
           registry: docker.pkg.github.com
           name: https://github.com/Grog-xd/SDAEM-BY/sdaem-by
