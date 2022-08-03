@@ -9,7 +9,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: Grog-xd/SDAEM-BY:latest
+          tags: Grog-xd/sdaem-by:latest
 
       - name: Starting Node js
         uses: actions/setup-node@v3
