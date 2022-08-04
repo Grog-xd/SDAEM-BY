@@ -4,14 +4,15 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
       - name: Publish to Register
         uses: elgohr/Publish-Docker-Github-Action@v4
         with:
-          registry: ghcr.io
+          registry: docker.pkg.github.com
           name: grog-xd/SDAEM-BY/sdaem-by
-          username: ${{secrets.DOCKER_USERNAME}}
+          username: ${{github.actor}}
           password: ${{secrets.DOCKER_PASSWORD}}
           tags: 'develop'
 
