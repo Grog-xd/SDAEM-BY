@@ -17,6 +17,7 @@
   .description{
     @include text(16px, 400, 24px, #1E2123);
     margin-bottom: 65px;
+    white-space: pre-line;
   }
 }
 
