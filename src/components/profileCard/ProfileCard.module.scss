@@ -1,0 +1,77 @@
+@import "src/style/mixins";
+.profileCardActive{
+  z-index: 10;
+  width: 274px;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(135, 124, 202, 0.3);
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 50px;
+  padding: 26px 30px;
+  img{
+    width: 60px;
+    height: 60px;
+    border: 5px solid #664EF9;
+    border-radius: 50%;
+
+  }
+  p:nth-child(2){
+    @include text(14px, 500, 14px, #BDBDBD);
+    margin-top: 15px;
+  }
+  p:nth-child(3){
+    @include text(20px, 700, 20px, #1E2123);
+    margin-top: 5px;
+  }
+  .phoneLink{
+    @include text(20px, 700, 20px, #1E2123);
+    margin-top: 18px;
+  }
+  .emailLink{
+    @include text(16px, 500, 16px, #664EF9);
+    border-bottom: 1px solid #664EF9;
+    margin-top: 15px;
+  }
+  .socialBtns{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 27px;
+  }
+}
+
+.btnsProfile{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  button{
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+    box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
+    border-radius: 17px;
+    @include text(14px, 700, 17px, #fff);
+    &:hover{
+      background: linear-gradient(90deg, #867CFC 0%, #6929F3 94.5%);
+    }
+  }
+  a{
+    padding: 12px;
+    margin-top: 5px;
+    border: none;
+    background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
+    box-shadow: 0 15px 40px rgba(0, 96, 206, 0.15);
+    border-radius: 17px;
+    @include text(14px, 700, 17px, #fff);
+    &:hover{
+      background: linear-gradient(90deg, #867CFC 0%, #6929F3 94.5%);
+    }
+  }
+}

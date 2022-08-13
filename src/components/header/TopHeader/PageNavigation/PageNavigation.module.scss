@@ -1,0 +1,25 @@
+@import "./src/style/mixins";
+
+.pageNavigation{
+  min-width: 726px;
+  ul{
+    display: flex;
+    justify-content: space-between;
+    svg{
+      margin-right: 5px;
+    }
+  }
+}
+.pageNavigationItem{
+  @include text(14px, 400, 17px, #8291A3);
+  border-bottom: 3px solid transparent;
+  padding-bottom: 16px;
+  &:hover{
+    border-bottom: 3px solid #FFD54F;
+  }
+}
+.pageNavigationItemActive{
+  @include text(14px, 400, 17px, #8291A3);
+  border-bottom: 3px solid #FFD54F;
+  padding-bottom: 16px;
+}
