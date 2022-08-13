@@ -18,7 +18,7 @@ const BookmarkProfile:FC = () => {
     const [profileActive, setProfileActive] = useState<boolean>(false)
 
     return (
-        <div className={classes.bookmarkProfile}>
+        <div data-testid={'bookmark-and-profile-section'} className={classes.bookmarkProfile}>
             {/*{bookMarkActive*/}
             {/*    ?*/}
             {/*    <div onClick={()=>dispatch(setBookMarkActive())} className={classes.bookmarkActive}>*/}

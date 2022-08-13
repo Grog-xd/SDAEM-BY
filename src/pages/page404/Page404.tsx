@@ -13,7 +13,7 @@ const Page404:FC = () => {
     return (
         <Fragment>
             <Header />
-            <main className={classes.page404}>
+            <main data-testid={'page-404'} className={classes.page404}>
                 <img src={yellowPoints} alt='yellow points'/>
                 <img src={whitePoints} alt='white points'/>
                 <div className={classes.container}>

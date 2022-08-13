@@ -25,7 +25,7 @@ const CatalogFilterSection:FC = () => {
     }
 
     return (
-        <section className={classes.filterSection}>
+        <section data-testid={'catalog-filter-section'} className={classes.filterSection}>
             <div className={classes.container}>
                 <div className={classes.filterBlock}>
                     <div className={classes.inputBlock}>
@@ -42,13 +42,13 @@ const CatalogFilterSection:FC = () => {
                     <div className={classes.inputBlock}>
                         <p className={classes.text}>Цена за сутки (BYN)</p>
                         <div className={classes.costBlock}>
-                            <input type='number' min={0} max={1000} value={minCost || 0} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(+e.target.value))}/>
+                            <input data-testid={'first-cost-input'} type='number' min={0} max={1000} value={minCost} placeholder={'От'} onChange={(e)=> dispatch(setMinCost(+e.target.value))}/>
                             -
-                            <input type='number' min={0} max={1000} value={maxCost || 1000} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(+e.target.value))}/>
+                            <input data-testid={'second-cost-input'} type='number' min={0} max={1000} value={maxCost} placeholder={'До'} onChange={(e)=> dispatch(setMaxCost(+e.target.value))}/>
                         </div>
                     </div>
                     <div className={!moreOptions ? classes.inputBlock : classes.inputBlockActive}>
-                        <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
+                        <button data-testid={'catalog-more-options-btn'} type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
                             Больше опций
                             <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                         </button>

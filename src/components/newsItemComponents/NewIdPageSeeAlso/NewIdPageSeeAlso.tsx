@@ -13,7 +13,7 @@ interface NewIdPageSeeAlsoProps{
 
 const NewIdPageSeeAlso:FC <NewIdPageSeeAlsoProps>= ({params, posts}) => {
     return (
-        <div className={classes.seeAlso}>
+        <div data-testid={'new-id-page-see-also-section'} className={classes.seeAlso}>
             <div className={classes.container}>
                 <h2>Читайте также</h2>
                 {

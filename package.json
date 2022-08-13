@@ -27,10 +27,12 @@
     "typescript": "4.7.3",
     "web-vitals": "2.1.4"
   },
+
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=false && react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --all --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint -c .eslintrc --ext .js,.jsx,.tsx,.ts .",
     "lint:fix": "npm run lint -- --fix"

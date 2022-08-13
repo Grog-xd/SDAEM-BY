@@ -15,7 +15,7 @@ import classes from './FooterSocialPaySection.module.scss';
 
 const FooterSocialPaySection:FC = () => {
     return (
-        <div className={classes.socialPaySection}>
+        <div data-testid={'footer-social-section'} className={classes.socialPaySection}>
             <div className={classes.socialBtns}>
                 <p>Мы в соцсетях</p>
                 <a rel='noreferrer' target='_blank' href='https://www.instagram.com/'>

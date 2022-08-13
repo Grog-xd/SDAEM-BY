@@ -28,7 +28,7 @@ const ContactsForm:FC <ContactsFormProps>= ({modalActive, handler}) => {
 
 
     return (
-        <form className={classes.contactsForm} onSubmit={handleSubmit(sendMessageHandler)}>
+        <form data-testid={'contacts-form'} className={classes.contactsForm} onSubmit={handleSubmit(sendMessageHandler)}>
             <div className={classes.nameAndEmailInputs}>
                 <MyInput style={errors.name ? classes.inputBlockError : classes.inputBlock} register={register} errors={errors} validation={{required:true, minLength:3}} maxLength={20}  id={'name'} name={'name'} type={'text'} placeholder={'Введите'}  label={'Ваше имя'} styleIconError={classes.registerErrorIcon}>
                     <SvgUser width={'20'} height={'20'} color={'#6868684C'}/>
@@ -41,7 +41,7 @@ const ContactsForm:FC <ContactsFormProps>= ({modalActive, handler}) => {
                 <label htmlFor='message'>Ваше сообщение</label>
                 <textarea {...register('message', {required:true, minLength:5})} maxLength={800}  placeholder={'Сообщение'}  name={'message'} id={'message'}></textarea>
             </div>
-            <button>Отправить</button>
+            <button data-testid={'contacts-form-btn'}>Отправить</button>
         </form>
     );
 };

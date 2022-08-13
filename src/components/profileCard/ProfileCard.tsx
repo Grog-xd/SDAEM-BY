@@ -23,6 +23,7 @@ interface ProfileProps{
     viber?: string,
     whatsUpp?: string,
     password?: string,
+    name?:string
 }
 
 const ProfileCard:FC <ProfileCardProps>= ({profile, setActive, style}) => {
@@ -38,7 +39,7 @@ const ProfileCard:FC <ProfileCardProps>= ({profile, setActive, style}) => {
     ]
 
     return (
-        <div className={cls.join(' ')}>
+        <div data-testid={'profile-card'} className={cls.join(' ')}>
             {
                 profile.avatar
                     && <img src={profile.avatar? profile.avatar:null} alt={'avatar'}/>

@@ -32,7 +32,7 @@ const CatalogVisualFilterSection:FC = () => {
     const defaultLimit = 6
 
     return (
-        <section className={classes.visualFilter}>
+        <section data-testid={'catalog-visual-filter-section'} className={classes.visualFilter}>
             <MySelect options={sortedOptions} style={classes.sortedSelect} value={sortedValue ? sortedValue: 'По умолчанию'} handler={(e)=>sortHandler(e) }>
                 {
                     sortedValue

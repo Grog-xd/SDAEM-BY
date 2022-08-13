@@ -10,7 +10,7 @@ const PageNavigation:FC = () => {
     let navArr = [{link:'/', value:'Главная', icon:false}, {link:'/news', value:'Новости', icon:false}, {link:'/404', value:'Размещение и тарифы', icon:false}, {link:'/404', value:'Объявления на карте', icon:true},{link:'/contacts', value:'Контакты', icon:false}]
 
     return (
-        <div className={classes.pageNavigation}>
+        <div data-testid={'page-navigation-section'} className={classes.pageNavigation}>
             <ul>
                 {navArr.map(nav =>
                     <li key={nav.value}>

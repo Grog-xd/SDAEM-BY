@@ -9,7 +9,7 @@ const FooterLogoSection:FC = () => {
     const {pathname} = useLocation()
 
     return (
-        <div className={classes.logoSection}>
+        <div data-testid={'footer-logo-section'} className={classes.logoSection}>
             {
                 pathname === '/'
                     ?
@@ -18,7 +18,7 @@ const FooterLogoSection:FC = () => {
                         <p>СДАЁМ БАЙ</p>
                     </div>
                     :
-                    <Link to={'/'}>
+                    <Link data-testid={'logo-link'} to={'/'}>
                         <img src={logo} alt='logo'/>
                         <p>СДАЁМ БАЙ</p>
                     </Link>

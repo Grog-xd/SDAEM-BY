@@ -12,14 +12,14 @@ const HeaderFilter:FC = () => {
     let navArr = [{type:'flats', value:'Квартиры на сутки', icon:true}, {type:'cottages', value:'Коттеджи и усадьбы', icon:false}, {type:'baths', value:'Бани и сауны', icon:false}, {type:'cars', value:'Авто напрокат', icon:false}]
 
     return (
-        <div className={classes.headerFilter}>
+        <div data-testid={'header-filter-section'} className={classes.headerFilter}>
             <div className={classes.container}>
                 {
                     pathname === '/'
                         ?
                         <img src={logo} alt='logo'/>
                         :
-                        <Link to={'/'}>
+                        <Link data-testid={'logo-link'} to={'/'}>
                             <img src={logo} alt='logo'/>
                         </Link>
                 }

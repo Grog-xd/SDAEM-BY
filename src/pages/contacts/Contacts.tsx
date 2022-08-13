@@ -23,7 +23,7 @@ const Contacts:FC = () => {
                         <Modal>
                             <p className={'modalTitle'}><b>Ваше письмо отправлено!</b></p>
                             <p className={'modalBody'}>Какое-то сообщение о том, что письмо отправлено, какое-то сообщение, что письмо отправлено.</p>
-                            <button onClick={()=> setModalActive(!modalActive)} className={'modalButton'}>Закрыть окно</button>
+                            <button data-testid={'close-modal-btn'} onClick={()=> setModalActive(!modalActive)} className={'modalButton'}>Закрыть окно</button>
                         </Modal>
                 }
                 <div className={classes.container}>

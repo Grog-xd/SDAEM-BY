@@ -52,7 +52,7 @@ const LoginForm:FC = () => {
     }
 
     return (
-        <form className={classes.loginForm} onSubmit={handleSubmit(loginHandler)}>
+        <form data-testid={'login-form'} className={classes.loginForm} onSubmit={handleSubmit(loginHandler)}>
             <MyInput register={register} validation={{required:true}} maxLength={30} errors={errors}  id={'login'} name={'login'} type={'login'} placeholder={'Логин'}  style={errors.login ? classes.inputBlockError :classes.inputBlock} styleIconError={classes.registerErrorIcon}>
                 <SvgUser width={'20'} height={'20'} color={'#6868684C'}/>
             </MyInput>

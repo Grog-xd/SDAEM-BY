@@ -15,7 +15,7 @@ const NewsItem:FC <NewsItemProps>= ({post}) => {
     const navigate = useNavigate()
 
     return (
-        <div className={classes.newsItem}>
+        <div data-testid={'news-item'} className={classes.newsItem}>
             <img src={post.img} alt='Изображение комнаты'/>
             <div className={classes.newsItemTextSection}>
                 <p><b>{post.title}</b></p>

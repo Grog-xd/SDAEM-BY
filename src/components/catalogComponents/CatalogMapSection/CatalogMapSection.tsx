@@ -9,7 +9,7 @@ const CatalogMapSection:FC = () => {
     const params = useParams()
 
     return (
-        <section className={classes.mapSection}>
+        <section data-testid={'catalog-map-section'} className={classes.mapSection}>
             <div className={classes.textBlock}>
                 {
                     params.type === 'flats' ?

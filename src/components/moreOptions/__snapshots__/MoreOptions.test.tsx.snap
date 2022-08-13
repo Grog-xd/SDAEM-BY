@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`more options tests snapshot test 1`] = `
+<div
+  class="moreOptions"
+  data-testid="more-options"
+>
+  <div
+    class="selectSection"
+  >
+    <div
+      class="selectBlock"
+    >
+      <p
+        class="selectLabel"
+      >
+        Спальные места
+      </p>
+      <div
+        class="select select"
+      >
+        <button
+          class="changeBlock"
+          type="button"
+        >
+          <div>
+            <p
+              class="textValue"
+            >
+              Выберите
+            </p>
+          </div>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 12 7"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 1.38477L6 5.64152L10.5 1.38477"
+              stroke="#4E64F9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="selectBlock"
+    >
+      <p
+        class="selectLabel"
+      >
+        Район
+      </p>
+      <div
+        class="select select"
+      >
+        <button
+          class="changeBlock"
+          type="button"
+        >
+          <div>
+            <p
+              class="textValue"
+            >
+              Выберите
+            </p>
+          </div>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 12 7"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 1.38477L6 5.64152L10.5 1.38477"
+              stroke="#4E64F9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div
+      class="selectBlock"
+    >
+      <p
+        class="selectLabel"
+      >
+        Метро
+      </p>
+      <div
+        class="select select"
+      >
+        <button
+          class="changeBlock"
+          type="button"
+        >
+          <div>
+            <p
+              class="textValue"
+            >
+              Выберите
+            </p>
+          </div>
+          <svg
+            fill="none"
+            height="16"
+            viewBox="0 0 12 7"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.5 1.38477L6 5.64152L10.5 1.38477"
+              stroke="#4E64F9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="checkboxSection"
+  >
+    <div
+      class="checkbox"
+    >
+      <input
+        id="Газовая плита"
+        name="Газовая плита"
+        type="checkbox"
+      />
+      <label
+        for="Газовая плита"
+      >
+        Газовая плита
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        id="Духовка"
+        name="Духовка"
+        type="checkbox"
+      />
+      <label
+        for="Духовка"
+      >
+        Духовка
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        id="Кофеварка"
+        name="Кофеварка"
+        type="checkbox"
+      />
+      <label
+        for="Кофеварка"
+      >
+        Кофеварка
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        id="Микроволновая печь "
+        name="Микроволновая печь "
+        type="checkbox"
+      />
+      <label
+        for="Микроволновая печь "
+      >
+        Микроволновая печь 
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        id="Посуда"
+        name="Посуда"
+        type="checkbox"
+      />
+      <label
+        for="Посуда"
+      >
+        Посуда
+      </label>
+    </div>
+    <div
+      class="checkbox"
+    >
+      <input
+        id="Посудомоечная машина"
+        name="Посудомоечная машина"
+        type="checkbox"
+      />
+      <label
+        for="Посудомоечная машина"
+      >
+        Посудомоечная машина
+      </label>
+    </div>
+  </div>
+</div>
+`;

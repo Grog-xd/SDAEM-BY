@@ -19,7 +19,7 @@ const SocialButtonsBlock:FC <SocialButtonsBlockProps>= ({style}) => {
     ]
 
     return (
-        <div className={cls.join(' ')}>
+        <div data-testid={'social-buttons-block'} className={cls.join(' ')}>
             <p>Поделиться</p>
             <a className={classes.socialBtn} target={'_blank'} rel={'noreferrer'} href='https://vk.com'>
                 <SvgVk width={'17'} height={'10'} color={'#1E2123'}/>

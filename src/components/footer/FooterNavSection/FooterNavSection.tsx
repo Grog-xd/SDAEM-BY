@@ -17,7 +17,7 @@ const FooterNavSection:FC = () => {
 
 
     return (
-        <nav>
+        <nav data-testid={'footer-nav-section'}>
             <ul className={classes.filterNav}>
                 {tabs.map(tab =>
                     <li className={classes.footerLink} key={tab.id}><Link to={`/catalog/${tab.id}`}><b>{tab.value}</b></Link></li>,

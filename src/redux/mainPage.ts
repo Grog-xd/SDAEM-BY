@@ -37,8 +37,8 @@ const main = createSlice({
 
         checkboxsMoreOption:[{id:1, value:'Газовая плита', bol:false},  {id:2, value:'Духовка', bol:false}, {id:3, value:'Кофеварка', bol:false}, {id:4, value:'Микроволновая печь ', bol:false}, {id:5, value:'Посуда', bol:false}, {id:6, value:'Посудомоечная машина', bol:false}],
 
-        minCost:undefined,
-        maxCost:undefined,
+        minCost:0,
+        maxCost:1000,
 
 
         productsLen: 0,

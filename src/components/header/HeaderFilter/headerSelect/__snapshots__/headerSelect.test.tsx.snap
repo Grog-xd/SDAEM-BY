@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header select tests snapshot test 1`] = `
+<div
+  class="select"
+  data-testid="header-select"
+>
+  <button
+    class="changeBlock"
+    data-testid="header-select-btn"
+  >
+    Квартиры на сутки
+  </button>
+</div>
+`;

@@ -18,7 +18,7 @@ const ContactsTextBlock:FC = () => {
     const {contactsInformation} = useSelector((state:newsRedux) => state.news)
 
     return (
-        <div className={classes.textBlock}>
+        <div data-testid={'contacts-text-block'} className={classes.textBlock}>
             <h1>Контакты</h1>
             <p className={classes.description}>Если у Вас есть пожелания, предложения или претензии по организации работы сайта мы всегда рады услышать Ваше мнение.</p>
             <div className={classes.informationSection}>

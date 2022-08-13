@@ -17,7 +17,7 @@ const MoreOptions:FC = () => {
     const {bedSumOptions, bedSumCurrentValue, metroOption, metroCurrentValue, districtOption, districtCurrentValue, checkboxsMoreOption} = useSelector((state:mainRedux)=> state.main)
 
     return (
-        <div className={classes.moreOptions}>
+        <div data-testid={'more-options'} className={classes.moreOptions}>
             <div className={classes.selectSection}>
                 {
                     params.type !== 'cars'

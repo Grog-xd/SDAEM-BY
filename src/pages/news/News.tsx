@@ -42,7 +42,7 @@ const News:FC = () => {
     return (
         <Fragment>
             <Header />
-            <main className={classes.mainNews}>
+            <main data-testid={'news-page'} className={classes.mainNews}>
                 <div className={classes.headerBlock}>
                     <div className={classes.breadcrumbs}>
                         <SvgHomeWithDot width={'22'} height={'12'} color={'#664EF9'}/>
@@ -50,8 +50,8 @@ const News:FC = () => {
                     </div>
                     <h1>Новости</h1>
                     <div className={classes.inputBlock}>
-                        <input value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type='text' placeholder='Поиск по статьям'/>
-                        <button type={'button'} onClick={searchQuery}>
+                        <input data-testid={'input-search'} value={inputValue} onChange={(e)=> setInputValue(e.target.value)} type='text' placeholder='Поиск по статьям'/>
+                        <button data-testid={'btn-search'} type={'button'} onClick={searchQuery}>
                             <SvgMagnifier width={'18'} height={'18'} color={'white'}/>
                         </button>
                     </div>

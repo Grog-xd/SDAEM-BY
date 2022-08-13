@@ -7,7 +7,7 @@ interface ModalProps{
 
 const Modal:FC <ModalProps>= ({children}) => {
     return (
-        <div className={'modal'}>
+        <div data-testid={'modal'} className={'modal'}>
             <div className={'modalDialog'}>
                 {children}
             </div>

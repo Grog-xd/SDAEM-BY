@@ -16,7 +16,7 @@ import {loginRedux} from '../../../types/types';
 import classes from './RegistrationForm.module.scss';
 
 interface RegistrationFormProps{
-    modalHandler: (b: boolean) => void
+    modalHandler?: (b: boolean) => void
 }
 
 
@@ -73,7 +73,7 @@ const RegistrationForm:FC <RegistrationFormProps>= ({modalHandler}) => {
     }
 
     return (
-        <form className={classes.registrationForm} onSubmit={handleSubmit(registrationHandler)}>
+        <form data-testid={'registration-form'} className={classes.registrationForm} onSubmit={handleSubmit(registrationHandler)}>
             <h1 className={classes.registrationTitle}>Регистрация</h1>
             <MyInput register={register} validation={{required:true}} errors={errors} styleIconError={classes.registerErrorIcon} id={'login'} name={'login'} type={'text'} placeholder={'Логин'}   style={errors.login || loginError ? classes.inputBlockError : classes.inputBlock} maxLength={20}>
                 <SvgUser width={'20'} height={'20'} color={'#6868684C'}/>

@@ -66,6 +66,7 @@ const MainSliderSection:FC = () => {
                     ?
                     <Swiper
                         id={'main'}
+
                         modules={[Navigation]}
                         navigation
                         simulateTouch={false}

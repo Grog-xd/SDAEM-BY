@@ -27,17 +27,17 @@ const MainFilterSection:FC = () => {
     }
 
     return (
-        <section className={classes.filterSection}>
+        <section data-testid={'main-filter-section'} className={classes.filterSection}>
             <h1>Sdaem.by - у нас живут <b>ваши объявления</b></h1>
             <form className={classes.mainForm}>
                 <Tabs  defaultIndex={tabIndex} onSelect={( index) => setTabIndex(index)}>
                     <TabList>
-                        <Tab>Квартиры на сутки</Tab>
-                        <Tab>Коттеджи и усадьбы</Tab>
-                        <Tab>Бани и сауны</Tab>
-                        <Tab>Авто напрокат</Tab>
+                        <Tab data-testid={'tab-btn'}>Квартиры на сутки</Tab>
+                        <Tab data-testid={'tab-btn'}>Коттеджи и усадьбы</Tab>
+                        <Tab data-testid={'tab-btn'}>Бани и сауны</Tab>
+                        <Tab data-testid={'tab-btn'}>Авто напрокат</Tab>
                     </TabList>
-                    <TabPanel>
+                    <TabPanel data-testid={'tab-panel'}>
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Город</p>
                             <MySelect options={cityOption} handler={(e)=>dispatch(setCity(e))} value={cityCurrentValue ? cityCurrentValue : 'Выберите'}/>
@@ -55,7 +55,7 @@ const MainFilterSection:FC = () => {
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
-                            <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={!moreOptions ? classes.openMoreFilter : classes.openMoreFilterActive}>
+                            <button data-testid={'open-more-options-btn'} type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={!moreOptions ? classes.openMoreFilter : classes.openMoreFilterActive}>
                                 Больше опций
                                 <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                             </button>
@@ -69,7 +69,7 @@ const MainFilterSection:FC = () => {
                             <SvgArrowRight width={'9'} height={'16'} color={'#242424'}/>
                         </button>
                     </TabPanel>
-                    <TabPanel>
+                    <TabPanel data-testid={'tab-panel'}>
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Город</p>
                             <MySelect options={cityOption} handler={(e)=>dispatch(setCity(e))} value={cityCurrentValue ? cityCurrentValue : 'Выберите'}/>
@@ -87,7 +87,7 @@ const MainFilterSection:FC = () => {
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
-                            <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
+                            <button data-testid={'open-more-options-btn'} type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={!moreOptions ? classes.openMoreFilter : classes.openMoreFilterActive}>
                                 Больше опций
                                 <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                             </button>
@@ -101,7 +101,7 @@ const MainFilterSection:FC = () => {
                             <SvgArrowRight width={'9'} height={'16'} color={'#242424'}/>
                         </button>
                     </TabPanel>
-                    <TabPanel>
+                    <TabPanel data-testid={'tab-panel'}>
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Город</p>
                             <MySelect options={cityOption} handler={(e)=>dispatch(setCity(e))} value={cityCurrentValue ? cityCurrentValue : 'Выберите'}/>
@@ -119,7 +119,7 @@ const MainFilterSection:FC = () => {
                             </div>
                         </div>
                         <div className={classes.inputBLock}>
-                            <button type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={classes.openMoreFilter}>
+                            <button data-testid={'open-more-options-btn'} type={'button'} onClick={()=>setMoreOptions(!moreOptions)} className={!moreOptions ? classes.openMoreFilter : classes.openMoreFilterActive}>
                                 Больше опций
                                 <SvgSettings width={'16'} height={'18'} color={'#664EF9'}/>
                             </button>
@@ -133,7 +133,7 @@ const MainFilterSection:FC = () => {
                             <SvgArrowRight width={'9'} height={'16'} color={'#242424'}/>
                         </button>
                     </TabPanel>
-                    <TabPanel>
+                    <TabPanel data-testid={'tab-panel'}>
                         <div className={classes.inputBLock}>
                             <p className={classes.inputBLockText}>Город</p>
                             <MySelect options={cityOption} handler={(e)=>dispatch(setCity(e))} value={cityCurrentValue ? cityCurrentValue : 'Выберите'}/>

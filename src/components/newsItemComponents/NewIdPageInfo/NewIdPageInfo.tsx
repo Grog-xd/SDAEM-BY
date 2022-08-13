@@ -14,7 +14,7 @@ interface NewIdPageInfoProps{
 
 const NewIdPageInfo:FC <NewIdPageInfoProps>= ({post}) => {
     return (
-        <div className={classes.mainNewPage}>
+        <div data-testid={'new-id-page-info'} className={classes.mainNewPage}>
             <div className={classes.breadcrumbs}>
                 <SvgHome width={'12'} height={'12'} color={'#664EF9'}/>
                 <Link to='/news'>Новости</Link>

@@ -45,7 +45,7 @@ const MainNewsSection:FC = () => {
 
 
     return (
-        <section className={classes.newsSection}>
+        <section data-testid={'main-news-section'} className={classes.newsSection}>
             <div className={classes.textBlock}>
                 <div className={classes.header}>
                     <strong>ЧТО ТАКОЕ SDAEM.BY</strong>
@@ -71,7 +71,7 @@ const MainNewsSection:FC = () => {
                 <p className={classes.title}>Новости</p>
                 {
                     newsArr.map((post) =>
-                        <div key={post.id} className={classes.post}>
+                        <div data-testid={'news-item'} key={post.id} className={classes.post}>
                             <Link to={`news/${post.id}`}>{post.title}</Link>
                             <p>{post.date}</p>
                         </div>,

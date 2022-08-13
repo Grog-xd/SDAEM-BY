@@ -28,7 +28,7 @@ const CatalogTitleSection:FC = () => {
     }
 
     return (
-        <section className={classes.titleSection}>
+        <section data-testid={'catalog-title-section'} className={classes.titleSection}>
             <div className={classes.container}>
                 {
                     params.type === 'flats' ?

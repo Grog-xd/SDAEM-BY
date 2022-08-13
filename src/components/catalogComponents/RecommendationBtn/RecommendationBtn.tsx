@@ -24,12 +24,12 @@ const RecommendationBtn:FC <RecommendationBtnProps>= ({recommendationActive, chi
             ?
             isActive
                 &&
-                <button className={classes.recommendationBtn} onClick={() => recommendationHandler('')}>
+                <button data-testid={'active-recommendation-btn'} className={classes.recommendationBtn} onClick={() => recommendationHandler('')}>
                     {children}
                     <SvgExit width={'10'} height={'10'} color={'#664EF9'}/>
                 </button>
             :
-            <button className={classes.recommendationBtn} onClick={() => recommendationHandler(value)}>
+            <button data-testid={'not-active-recommendation-btn'} className={classes.recommendationBtn} onClick={() => recommendationHandler(value)}>
                 {children}
             </button>
 

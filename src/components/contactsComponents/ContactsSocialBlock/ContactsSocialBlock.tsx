@@ -8,7 +8,7 @@ import classes from './ContactsSocialBlock.module.scss';
 
 const ContactsSocialBlock:FC = () => {
     return (
-        <div className={classes.socialBtns}>
+        <div data-testid={'contacts-social-block'} className={classes.socialBtns}>
             <a target={'_blank'} rel={'noreferrer'} href='src/components/contactsComponents/ContactsSocialBlock/ContactsSocialBlock.tsx'>
                 <SvgInst width={'20'} height={'20'} color={'white'}/>
             </a>

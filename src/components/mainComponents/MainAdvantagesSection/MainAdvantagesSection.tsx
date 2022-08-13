@@ -13,7 +13,7 @@ import classes from './MainAdvantagesSection.module.scss';
 
 const MainAdvantagesSection:FC = () => {
     return (
-        <section className={classes.advantagesSection}>
+        <section data-testid={'main-advantages-section'} className={classes.advantagesSection}>
             <img className={classes.whitePoints} src={whitePoints} alt='Белые точки'/>
             <img className={classes.yellowPoints} src={yellowPoints} alt='Желтые точки'/>
             <div className={classes.textBlock}>
