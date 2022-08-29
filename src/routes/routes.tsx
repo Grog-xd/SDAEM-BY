@@ -7,6 +7,7 @@ import NewIdPage from '../pages/newsItem/NewIdPage.tsx';
 import Registration from '../pages/registration/Registration.tsx';
 import Page404 from '../pages/page404/Page404.tsx';
 
+
 export const publicRoutes =[
     {path: '/', element: <Main/>},
     {path: 'login', element: <Login/>},
