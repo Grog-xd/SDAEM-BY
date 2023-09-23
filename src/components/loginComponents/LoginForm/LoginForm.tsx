@@ -30,7 +30,7 @@ const LoginForm:FC = () => {
 
         postLogin(login, password)
 
-        for(let i = 0; i<profilesArr.length; i++){
+        for(let i = 0; i<profilesArr?.length; i++){
             if(profilesArr[i].name === login && profilesArr[i].password === password){
                 setLoginError(false)
                 dispatch(enter(profilesArr[i]))

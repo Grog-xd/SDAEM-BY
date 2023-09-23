@@ -168,7 +168,7 @@ const main = createSlice({
                     })
                 }
             })
-            state.productsLen = sortedRes.length
+            state.productsLen = sortedRes?.length
 
             // Сортировка массива
             switch (state.sortedValue) {
@@ -189,7 +189,7 @@ const main = createSlice({
             // Фильтрация по страницам
             let res = []
             let test = 0
-            for (let i = 0; test < sortedRes.length; i++) {
+            for (let i = 0; test < sortedRes?.length; i++) {
                 let obj = []
                 for (let j = 0; j< state.productsLimit; j++) {
                     if(sortedRes[test]){

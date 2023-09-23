@@ -40,7 +40,7 @@ const RegistrationForm:FC <RegistrationFormProps>= ({modalHandler}) => {
 
         postRegistration(data)
 
-        for(let i = 0; i<profilesArr.length; i++){
+        for(let i = 0; i<profilesArr?.length; i++){
             if(profilesArr[i].name === data.login){
                 registerError = true
                 setLoginError(true)

@@ -14,7 +14,7 @@ function App() {
     useEffect(()=>{
         if(localStorage.hasOwnProperty('profile')){
             const profile = localStorage.getItem('profile').split(' ')
-            for(let i = 0; i<profilesArr.length; i++){
+            for(let i = 0; i<profilesArr?.length; i++){
                 if(profilesArr[i].name === profile[0] && profilesArr[i].password === profile[1]){
                     dispatch(enter(profilesArr[i]))
                     break

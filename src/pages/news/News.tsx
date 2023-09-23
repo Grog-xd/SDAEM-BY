@@ -57,7 +57,7 @@ const News:FC = () => {
                     </div>
                     <div className={classes.backgroundItem}></div>
                 </div>
-                {posts.length
+                {posts?.length
                     ?
                     <NewsList />
                     :

@@ -37,7 +37,7 @@ const Main:FC = () => {
         <Fragment>
             <Header />
             {
-                products.length
+                products?.length
                     ?
                     <main  className={classes.mainPage}>
                         <div className={classes.container}>

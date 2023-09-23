@@ -19,7 +19,7 @@ const ProductsList:FC = () => {
 
 
     return (
-        sortedProducts.length
+        sortedProducts?.length
             ?
             <Fragment>
                 <h2 className={classes.productListTitle}>Найдено {productsLen} результата</h2>

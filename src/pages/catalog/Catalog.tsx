@@ -64,7 +64,7 @@ const Catalog:FC = () => {
                 <div className={classes.container}>
                     <CatalogVisualFilterSection />
                     {
-                        products.length
+                        products?.length
                             ?
                             <Fragment>
                                 <ProductsList />

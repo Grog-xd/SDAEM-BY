@@ -21,8 +21,8 @@ const MainNewsSection:FC = () => {
 
     function newsFilter(){
         let res = []
-        for (let i = 0; i < news.length; i++) {
-            if(res.length === 5){
+        for (let i = 0; i < news?.length; i++) {
+            if(res?.length === 5){
                 break
             } else{
                 res.push(news[i])

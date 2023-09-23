@@ -17,7 +17,7 @@ const NewIdPageSeeAlso:FC <NewIdPageSeeAlsoProps>= ({params, posts}) => {
             <div className={classes.container}>
                 <h2>Читайте также</h2>
                 {
-                    params.id > posts.length
+                    params.id > posts?.length
                         ?
                         null
                         :

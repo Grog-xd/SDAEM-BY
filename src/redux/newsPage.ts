@@ -20,11 +20,11 @@ const newsPage = createSlice({
 
             let res = []
             let test = 0
-            while(test < sortedPosts.length) {
+            while(test < sortedPosts?.length) {
                 let obj = []
-                while(obj.length < state.limitNewsItems){
+                while(obj?.length < state.limitNewsItems){
 
-                    if(test >= sortedPosts.length){
+                    if(test >= sortedPosts?.length){
                         break
                     }
                     obj.push(sortedPosts[test])

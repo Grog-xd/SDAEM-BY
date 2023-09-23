@@ -62,7 +62,7 @@ const MainSliderSection:FC = () => {
             </div>
             <div className={classes.sliderBgItem}></div>
             {
-                cityValue.length
+                cityValue?.length
                     ?
                     <Swiper
                         id={'main'}
@@ -84,7 +84,7 @@ const MainSliderSection:FC = () => {
             }
             <div className={classes.productLength}>
                 <div className={classes.valueBlock}>
-                    <p><b>{cityValue.length}</b> <strong>+</strong></p>
+                    <p><b>{cityValue?.length}</b> <strong>+</strong></p>
                     <p className={classes.text}>Предложений по {cityMainName}у</p>
                 </div>
                 <Link to={'catalog/flats'} onClick={()=> dispatch(setCity(`${cityMainName}`))}>

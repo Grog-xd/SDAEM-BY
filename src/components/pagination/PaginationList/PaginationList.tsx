@@ -16,9 +16,9 @@ const PaginationList:FC <PaginationListProps>= ({posts, currentPage, handler}) =
 
     function setPagesBtn(){
         let arr = []
-        for(let i = 0; i < posts.length; i++){
-            if((currentPage + 6 > i && currentPage - 6 < i) || i + 1 === posts.length || i === 0){
-                if(i === posts.length-1 && currentPage + 7 <= posts.length - 1){
+        for(let i = 0; i < posts?.length; i++){
+            if((currentPage + 6 > i && currentPage - 6 < i) || i + 1 === posts?.length || i === 0){
+                if(i === posts?.length-1 && currentPage + 7 <= posts?.length - 1){
                     arr.push('...')
                 }
                 arr.push(i + 1)

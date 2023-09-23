@@ -59,7 +59,7 @@ const MainCardsSection:FC = () => {
                         {cityOption.map(city =>
                             <li key={city.id}>
                                 <Link to={'catalog/flats'} onClick={()=> dispatch(setCity(city.value))}>Квартиры в {city.value}е</Link>
-                                <p>{products.flats.length}</p>
+                                <p>{products.flats?.length}</p>
                             </li>,
                         )}
                     </ul>
@@ -70,7 +70,7 @@ const MainCardsSection:FC = () => {
                         {cityOption.map(city =>
                             <li key={city.id}>
                                 <Link to={'catalog/cottages'} onClick={()=> dispatch(setCity(city.value))}>Коттеджи и усадьбы в {city.value}е</Link>
-                                <p>{products.cottages.length}</p>
+                                <p>{products.cottages?.length}</p>
                             </li>,
                         )}
                     </ul>
@@ -85,7 +85,7 @@ const MainCardsSection:FC = () => {
                                     {cityOption.map(city =>
                                         <li key={city.id}>
                                             <Link to={'catalog/baths'} onClick={()=> dispatch(setCity(city.value))}>Бани и сауны в {city.value}е</Link>
-                                            <p>{products.baths.length}</p>
+                                            <p>{products.baths?.length}</p>
                                         </li>,
                                     )}
                                 </ul>
@@ -96,7 +96,7 @@ const MainCardsSection:FC = () => {
                                     {cityOption.map(city =>
                                         <li key={city.id}>
                                             <Link to={'catalog/cars'} onClick={()=> dispatch(setCity(city.value))}>Авто на прокат в {city.value}е</Link>
-                                            <p>{products.cars.length}</p>
+                                            <p>{products.cars?.length}</p>
                                         </li>,
                                     )}
                                 </ul>

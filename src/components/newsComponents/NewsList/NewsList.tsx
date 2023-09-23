@@ -12,7 +12,7 @@ const NewsList:FC = () => {
     let {sortedPosts, currentPage} = useSelector((state:newsRedux) => state.news)
 
     return (
-        sortedPosts.length
+        sortedPosts?.length
             ?
             <div className={classes.newsList}>
                 <TransitionGroup>

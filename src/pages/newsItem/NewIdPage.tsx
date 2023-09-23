@@ -35,7 +35,7 @@ const NewIdPage:FC = () => {
         axios.get(`../api/${getPostUrl}`)
             .then(response => response.data.posts)
             .then(response => {
-                if(params.id > response.length){
+                if(params.id > response?.length){
                     navigate('/404')
                 } else{
                     dispatch(fetchNews(response))
