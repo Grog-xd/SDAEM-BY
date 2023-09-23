@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`news item tests snapshot test 1`] = `
+<div
+  class="newsItem"
+  data-testid="news-item"
+>
+  <img
+    alt="Изображение комнаты"
+    src="new-img.png"
+  />
+  <div
+    class="newsItemTextSection"
+  >
+    <p>
+      <b>
+        test
+      </b>
+    </p>
+    <p>
+      Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...
+    </p>
+    <div
+      class="newsItemBtnBlock"
+    >
+      <p>
+        14 января 2008
+      </p>
+      <button>
+        Читать
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,18 @@
+@import "../../../style/mixins";
+
+
+.recommendationBtn{
+  background: rgba(102, 78, 249, 0.1);
+  border-radius: 17px;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-right: 15px;
+  @include text(14px, 400, 14px, #664EF9);
+  border: none;
+  &:hover{
+    background: rgba(102, 78, 249, 0.2);
+  }
+  svg{
+    margin-left: 10px;
+  }
+}

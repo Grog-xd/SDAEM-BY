@@ -1,0 +1,23 @@
+@import "src/style/mixins";
+
+.socialPaySection{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  width: 68%;
+  .socialBtns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+    p{
+      @include text(14px, 500, 17px, #1E2123)
+    }
+  }
+  .payCardsSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 339px;
+  }
+}

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer logo section tests snapshot test 1`] = `
+<div
+  class="logoSection"
+  data-testid="footer-logo-section"
+>
+  <div>
+    <img
+      alt="logo"
+      src="logo.png"
+    />
+    <p>
+      СДАЁМ БАЙ
+    </p>
+  </div>
+  <p>
+    ИП Шушкевич Андрей Викторович УНП 192602485 Минским горисполкомом 10.02.2016 220068, РБ, г. Минск, ул. Осипенко, 21, кв.23 +375 29 621 48 33, sdaem@sdaem.by Режим работы: 08:00-22:00
+  </p>
+</div>
+`;

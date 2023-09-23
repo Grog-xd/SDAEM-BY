@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer nav section tests snapshot test 1`] = `
+<nav
+  data-testid="footer-nav-section"
+>
+  <ul
+    class="filterNav"
+  >
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/flats"
+      >
+        <b>
+          Квартиры
+        </b>
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/cottages"
+      >
+        <b>
+          Котеджы и усадьбы
+        </b>
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/baths"
+      >
+        <b>
+          Бани и сауны
+        </b>
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/cars"
+      >
+        <b>
+          Авто на прокат
+        </b>
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/flats"
+      >
+        Квартиры в 
+        Минск
+        е
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/flats"
+      >
+        Квартиры в 
+        Гомель
+        е
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/flats"
+      >
+        Квартиры в 
+        Брест
+        е
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/flats"
+      >
+        Квартиры в 
+        Витебск
+        е
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/flats"
+      >
+        Квартиры в 
+        Гродно
+        е
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        href="/catalog/flats"
+      >
+        Квартиры в 
+        Могилев
+        е
+      </a>
+    </li>
+  </ul>
+  <ul
+    class="pageNav"
+  >
+    <li
+      class="footerLink"
+    >
+      <a
+        class=""
+        href="/news"
+      >
+        Новости
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        class=""
+        href="/404"
+      >
+        Размещение и тарифы
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        class=""
+        href="/404"
+      >
+        Объявления на карте
+      </a>
+    </li>
+    <li
+      class="footerLink"
+    >
+      <a
+        class=""
+        href="/contacts"
+      >
+        Контакты
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
