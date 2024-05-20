@@ -1,0 +1,44 @@
+@import "src/style/mixins";
+.modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+  align-items: center;
+  background-color: rgba(46, 46, 46, 0.7);
+  overflow: hidden;
+}
+.modalDialog{
+  padding: 50px;
+  background: #FFFEFE;
+  box-shadow: 0 20px 40px rgba(39, 95, 158, 0.2);
+  border-radius: 10px;
+  min-width: 406px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 313px;
+  .modalTitle{
+    @include text(25px, 700, 30px, #000000);
+  }
+  .modalBody{
+    @include text(14px, 400, 17px, #686868);
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .modalButton{
+    background: #FFD54F;
+    border-radius: 33px;
+    padding: 12px 24px;
+    @include text(16px, 700, 24px, #1E2123);
+    cursor: pointer;
+    border: none;
+    &:hover{
+      background-color: #FEC100;
+    }
+  }
+}
+

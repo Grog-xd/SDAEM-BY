@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  app:
+    image: sdaem-by
+    container_name: sdaem-by
+    build: .
+    volumes:
+      - "./src:/app/src"
+    restart: always
+    ports:
+      - 3000:3000

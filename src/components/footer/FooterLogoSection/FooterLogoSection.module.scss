@@ -1,0 +1,11 @@
+@import "src/style/mixins";
+
+.logoSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 250px;
+  p{
+    @include text(11px, 400, 13px, #8291A3)
+  }
+}

@@ -1,0 +1,36 @@
+name: GitHub Actions
+on: [push]
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish to Register
+        uses: elgohr/Publish-Docker-Github-Action@v4
+        with:
+          registry: docker.pkg.github.com
+          name: grog-xd/SDAEM-BY/sdaem-by
+          username: ${{github.actor}}
+          password: ${{secrets.DOCKER_PASSWORD}}
+          tags: 'develop'
+
+      - name: Starting Node js
+        uses: actions/setup-node@v3
+
+      - name: install modules
+        run: npm install
+
+      - name: lint test
+        run: npm run lint
+
+      - name: unit test
+        run: npm run test
+
+      - name: build project
+        run: npm run build
+
+
+
+
