@@ -4,13 +4,13 @@ import axios from 'axios';
 
 import {fetchNews, getNews, setNewsPage} from '../../redux/newsPage';
 import {getPostUrl} from '../../server';
-import Header from '../../components/header/Header.tsx';
-import Footer from '../../components/footer/Footer.tsx';
-import NewsList from '../../components/newsComponents/NewsList/NewsList.tsx';
-import PaginationList from '../../components/pagination/PaginationList/PaginationList.tsx';
-import SvgHomeWithDot from '../../components/svg/SvgHomeWithDot.tsx';
-import SvgMagnifier from '../../components/svg/SvgMagnifier.tsx';
-import Loader from '../../components/loader/Loader.tsx';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import NewsList from '../../components/newsComponents/NewsList/NewsList';
+import PaginationList from '../../components/pagination/PaginationList/PaginationList';
+import SvgHomeWithDot from '../../components/svg/SvgHomeWithDot';
+import SvgMagnifier from '../../components/svg/SvgMagnifier';
+import Loader from '../../components/loader/Loader';
 
 import {newsRedux} from '../../types/types';
 

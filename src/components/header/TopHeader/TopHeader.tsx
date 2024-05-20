@@ -1,7 +1,7 @@
 import {FC} from 'react';
 
-import PageNavigation from './PageNavigation/PageNavigation.tsx';
-import BookmarkProfile from './BookmarkProfile/BookmarkProfile.tsx';
+import PageNavigation from './PageNavigation/PageNavigation';
+import BookmarkProfile from './BookmarkProfile/BookmarkProfile';
 import classes from './TopHeader.module.scss';
 
 const TopHeader:FC = () => {

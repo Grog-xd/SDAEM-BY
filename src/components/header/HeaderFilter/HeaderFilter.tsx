@@ -1,15 +1,20 @@
 import {FC} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 
-import SvgLocation from '../../svg/SvgLocation.tsx';
+import SvgLocation from '../../svg/SvgLocation';
 import logo from '../../../assets/img/logo.png';
 
-import HeaderSelect from './headerSelect/headerSelect.tsx';
+import HeaderSelect from './headerSelect/headerSelect';
 import classes from './HeaderFilter.module.scss';
 
 const HeaderFilter:FC = () => {
     const {pathname} = useLocation()
-    let navArr = [{type:'flats', value:'Квартиры на сутки', icon:true}, {type:'cottages', value:'Коттеджи и усадьбы', icon:false}, {type:'baths', value:'Бани и сауны', icon:false}, {type:'cars', value:'Авто напрокат', icon:false}]
+    let navArr = [
+        {type:'flats', value:'Квартиры на сутки', icon:true},
+        {type:'cottages', value:'Коттеджи и усадьбы', icon:false}, 
+        {type:'baths', value:'Бани и сауны', icon:false}, 
+        {type:'cars', value:'Авто напрокат', icon:false}
+    ]
 
     return (
         <div data-testid={'header-filter-section'} className={classes.headerFilter}>

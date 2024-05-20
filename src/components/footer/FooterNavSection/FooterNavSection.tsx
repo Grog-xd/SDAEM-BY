@@ -13,7 +13,12 @@ const FooterNavSection:FC = () => {
     const dispatch = useDispatch()
 
     const {cityOption, tabs}= useSelector((state:mainRedux) => state.main)
-    let navArr = [{link:'/news', value:'Новости'}, {link:'/404', value:'Размещение и тарифы'}, {link:'/404', value:'Объявления на карте'},{link:'/contacts', value:'Контакты'}]
+    let navArr = [
+        {link:'/news', value:'Новости'}, 
+        {link:'/404', value:'Размещение и тарифы'}, 
+        {link:'/404', value:'Объявления на карте'},
+        {link:'/contacts', value:'Контакты'}
+    ]
 
 
     return (

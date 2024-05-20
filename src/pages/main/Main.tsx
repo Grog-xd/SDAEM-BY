@@ -4,16 +4,16 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {fetchProducts} from '../../redux/mainPage';
 import {getProductsUrl} from '../../server';
-import Header from '../../components/header/Header.tsx';
-import Footer from '../../components/footer/Footer.tsx';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 
-import Loader from '../../components/loader/Loader.tsx';
+import Loader from '../../components/loader/Loader';
 
-import MainFilterSection from '../../components/mainComponents/MainFilterSection/MainFilterSection.tsx';
-import MainCardsSection from '../../components/mainComponents/MainCardsSection/MainCardsSection.tsx';
-import MainSliderSection from '../../components/mainComponents/MainSliderSection/MainSliderSection.tsx';
-import MainAdvantagesSection from '../../components/mainComponents/MainAdvantagesSection/MainAdvantagesSection.tsx';
-import MainNewsSection from '../../components/mainComponents/MainNewsSection/MainNewsSection.tsx';
+import MainFilterSection from '../../components/mainComponents/MainFilterSection/MainFilterSection';
+import MainCardsSection from '../../components/mainComponents/MainCardsSection/MainCardsSection';
+import MainSliderSection from '../../components/mainComponents/MainSliderSection/MainSliderSection';
+import MainAdvantagesSection from '../../components/mainComponents/MainAdvantagesSection/MainAdvantagesSection';
+import MainNewsSection from '../../components/mainComponents/MainNewsSection/MainNewsSection';
 
 import {mainRedux} from '../../types/types';
 

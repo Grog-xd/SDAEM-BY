@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
 
-import FooterLogoSection from './FooterLogoSection/FooterLogoSection.tsx';
-import FooterNavSection from './FooterNavSection/FooterNavSection.tsx';
-import FooterSocialPaySection from './FooterSocialPaySection/FooterSocialPaySection.tsx';
+import FooterLogoSection from './FooterLogoSection/FooterLogoSection';
+import FooterNavSection from './FooterNavSection/FooterNavSection';
+import FooterSocialPaySection from './FooterSocialPaySection/FooterSocialPaySection';
 import classes from './Footer.module.scss';
 
 const Footer:FC = () => {

@@ -1,8 +1,8 @@
 import {FC} from 'react';
 
-import SvgVk from '../../svg/SvgVk.tsx';
-import SvgFacebook from '../../svg/SvgFacebook.tsx';
-import SvgInst from '../../svg/SvgInst.tsx';
+import SvgVk from '../../svg/SvgVk';
+import SvgFacebook from '../../svg/SvgFacebook';
+import SvgInst from '../../svg/SvgInst';
 import visa from '../../../assets/img/visa.png';
 import webpay from '../../../assets/img/webpay.png';
 import visaV2 from '../../../assets/img/visa-v2.png';
