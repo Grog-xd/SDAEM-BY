@@ -3,13 +3,14 @@
 .header{
   background-color: #F8F8F8;
   .pageNavigation{
-    min-width: 726px;
+    width: 306px;
     ul{
       svg{
         margin-right: 5px;
       }
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       .pageNavigationItem{
         @include text(14px, 400, 17px, #8291A3);
         border-bottom: 0 solid white;
@@ -83,11 +84,17 @@
   .headerFilter{
     background-color: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-
+    .logo{
+      &{
+        @media (max-width:950px) {
+          display: none;
+        }
+      }
+    }
     ul{
       display: flex;
       justify-content: space-between;
-      min-width: 750px;
+      width: 750px;
     }
     .newCardLink{
       background: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
@@ -107,6 +114,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    flex-wrap: wrap;
   }
 }

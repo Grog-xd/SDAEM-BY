@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
+    flex-wrap: wrap;
     //background-color: #686868;
     //background-color: rgba(104, 104, 104, 0.3);
     .textBlock{
@@ -72,6 +73,12 @@
       }
     }
     .contactsForm{
+      &{
+        @media (max-width:950px){
+          margin-top: 20px;
+        
+        }
+      }
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -79,7 +86,7 @@
       background: #FFFEFE;
       box-shadow: 0 20px 40px rgba(39, 95, 158, 0.2);
       border-radius: 10px;
-      min-width: 34vw;
+      width: 570px;
       height: 537px;
       padding: 40px 37px 44px 38px;
       .nameAndEmailInputs{
@@ -90,13 +97,14 @@
       }
       .inputBlock{
         position: relative;
+        width: 100%;
         label{
           position: absolute;
           top: -35px;
           @include text(14px, 500, 17px, #686868)
         }
         input{
-          width: 14vw;
+          width: 240px;
           height: 47px;
           background: #F8F8F8;
           border-radius: 30px;
@@ -114,7 +122,7 @@
           left: 7%;
         }
         textarea {
-          width: 30vw;
+          width: 100%;
           height: 200px;
           padding: 15px 20px;
           @include text(14px, 500, 17px, #686868);
@@ -124,6 +132,10 @@
           outline-color: #664EF9;
           resize: none;
         }
+        .registerErrorIcon{
+          left: 85%;
+          opacity: 0;
+        }
       }
       button{
         background: #664EF9;
@@ -131,7 +143,7 @@
         padding: 12px 20px;
         border: none;
         cursor: pointer;
-        width: 11vw;
+        width: 150px;
         @include text(16px, 700, 24px, white);
         &:hover{
           background-color: #612BFB;
@@ -139,6 +151,11 @@
       }
     }
     .socialBtns{
+      &{
+        @media (max-width:950px){
+          display: none;
+        }
+      }
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -153,5 +170,66 @@
         margin-bottom: 15px;
       }
     }
+  }
+}
+.inputBlockError{
+  position: relative;
+  width: 100%;
+  label{
+    cursor: pointer;
+    position: absolute;
+    top: -35px;
+    @include text(14px, 500, 17px, #686868)
+  }
+  input {
+ 
+    height: 47px;
+    background: #F8F8F8;
+    border-radius: 30px;
+    outline-color: #664EF9;
+    padding-left: 55px;
+    @include text(14px, 500, 17px, #686868);
+    border: 1px solid red;
+  }
+  input:focus-visible + svg{
+    path{
+      fill: #664EF9;
+    }
+  }
+  svg {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+  }
+  .registerErrorIcon{
+    left: 75%;
+    opacity: 1;
+  }
+  textarea {
+    width: 30vw;
+    height: 200px;
+    padding: 15px 20px;
+    @include text(14px, 500, 17px, #686868);
+    background: #F8F8F8;
+    border-radius: 30px;
+    border: 1px solid red;
+    outline-color: #664EF9;
+    resize: none;
+  }
+}
+
+
+.errorBlock{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EB5757;
+  border-radius: 33px;
+  padding: 12px 15px;
+  width: 306px;
+  text-align: center;
+  @include text(16px, 700, 24px, #fff);
+  svg{
+    margin-left: 10px;
   }
 }

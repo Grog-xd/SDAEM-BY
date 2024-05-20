@@ -1,4 +1,6 @@
 @import "src/style/mixins";
+
+
 main{
   position: relative;
   padding-top: 1px;
@@ -43,6 +45,7 @@ main{
         margin-top: 25px;
       }
       .dateAndSocialBlock{
+        flex-wrap: wrap;
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
@@ -58,6 +61,7 @@ main{
     .imgBlock{
       display: flex;
       justify-content: center;
+      
     }
     .description{
       @include text(16px, 400, 24px, #1E2123);

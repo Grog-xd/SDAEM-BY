@@ -50,6 +50,11 @@
       h2{
         @include text(300px, 700, 50px, #fff);
         opacity: 0.3;
+        @media (max-width:800px){
+          &{
+            display: none;
+          }
+        }
       }
     }
   }

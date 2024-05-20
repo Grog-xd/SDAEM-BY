@@ -3,15 +3,21 @@ import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 import classes from './contacts.module.scss'
 import {useSelector} from "react-redux";
+import {useForm} from 'react-hook-form';
+import MyInput from '../../components/UI/myInput/myInput';
 import Modal from "../../components/modal/modal";
+import SvgEmail from '../../components/svg/SvgEmail';
+import SvgUser from '../../components/svg/SvgUser';
 
 const Contacts = () => {
     const information = useSelector(state => state.toolkit.contactsInformation)
     const [modalActive, setModalActive] = useState(false)
 
-    function submit(e){
-        e.preventDefault()
+    const { register, formState: {errors}, handleSubmit, reset} = useForm()
+
+    function sendMessageHandler(data){
         setModalActive(!modalActive)
+        reset({name:'', email:'', message:''})
     }
 
     return (
@@ -94,39 +100,20 @@ const Contacts = () => {
                                 о наличии свободных квартир</p>
                         </div>
                     </div>
-                    <form className={classes.contactsForm}>
+                    <form className={classes.contactsForm} onSubmit={handleSubmit(sendMessageHandler)}>
                         <div className={classes.nameAndEmailInputs}>
-                            <div className={classes.inputBlock}>
-                                <label htmlFor='name'>Ваше имя</label>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path d="M10.0013 0C7.14418 0 4.80859 2.33559 4.80859 5.19275C4.80859 8.04991 7.14418 10.3855 10.0013 10.3855C12.8585 10.3855 15.1941 8.04991 15.1941 5.19275C15.1941 2.33559 12.8585 0 10.0013 0Z" fill="#6868684C"/>
-                                        <path d="M18.913 14.536C18.7769 14.1959 18.5955 13.8784 18.3915 13.5836C17.3484 12.0416 15.7384 11.0212 13.9244 10.7718C13.6976 10.7492 13.4482 10.7945 13.2668 10.9305C12.3144 11.6335 11.1806 11.9963 10.0014 11.9963C8.82228 11.9963 7.68851 11.6335 6.73612 10.9305C6.5547 10.7945 6.30526 10.7265 6.07853 10.7718C4.26446 11.0212 2.63183 12.0416 1.61143 13.5836C1.40735 13.8784 1.22592 14.2186 1.0899 14.536C1.02189 14.6721 1.04454 14.8308 1.11256 14.9669C1.29398 15.2843 1.52071 15.6018 1.72479 15.8739C2.04224 16.3048 2.38239 16.6902 2.76789 17.053C3.08534 17.3705 3.44815 17.6653 3.81099 17.9601C5.60236 19.2979 7.75657 20.0009 9.97879 20.0009C12.201 20.0009 14.3552 19.2979 16.1466 17.9601C16.5094 17.688 16.8722 17.3705 17.1897 17.053C17.5525 16.6902 17.9153 16.3047 18.2328 15.8739C18.4595 15.5791 18.6636 15.2843 18.845 14.9669C18.9583 14.8308 18.981 14.672 18.913 14.536Z" fill="#6868684C"/>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_2831_1302">
-                                            <rect width="20" height="20" fill="white"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <input placeholder={'Введите ваше имя'} type="text" name={'name'} id={'name'} minLength={3} maxLength={10} required/>
-                            </div>
-                            <div className={classes.inputBlock}>
-                                <label htmlFor='email'>Ваша электронная почта</label>
-                                <svg width="20" height="20" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6603 12.3928C13.9975 12.3928 14.2896 12.2814 14.538 12.0616L10.2883 7.81169C10.1863 7.8847 10.0875 7.9557 9.99411 8.02321C9.67608 8.25753 9.41796 8.44037 9.21976 8.57139C9.02158 8.70271 8.75791 8.83656 8.42877 8.97322C8.09941 9.11004 7.79257 9.17823 7.50792 9.17823H7.49959H7.49126C7.20659 9.17823 6.89975 9.11007 6.57042 8.97322C6.24108 8.83656 5.97741 8.70271 5.77942 8.57139C5.58124 8.44037 5.32326 8.25756 5.00507 8.02321C4.9164 7.95821 4.81806 7.88688 4.71174 7.81055L0.461182 12.0616C0.709523 12.2814 1.00187 12.3928 1.33902 12.3928H13.6603Z" fill="#6868684C"/>
-                                    <path d="M0.845514 5.13653C0.52751 4.92452 0.245509 4.68171 0 4.4082V10.8741L3.7457 7.12838C2.99635 6.60523 2.03085 5.94204 0.845514 5.13653Z" fill="#6868684C"/>
-                                    <path d="M14.1632 5.13653C13.0231 5.90822 12.0541 6.57255 11.2561 7.12988L15.0003 10.8742V4.4082C14.7602 4.67621 14.4812 4.91886 14.1632 5.13653Z" fill="#6868684C"/>
-                                    <path d="M13.6607 0.607422H1.33944C0.909593 0.607422 0.579117 0.752576 0.347606 1.04258C0.115904 1.33273 0.000244141 1.69559 0.000244141 2.13075C0.000244141 2.48225 0.153731 2.86311 0.46057 3.27343C0.767408 3.68359 1.09391 4.00576 1.43991 4.24011C1.62959 4.37412 2.2016 4.77178 3.15594 5.43296C3.67111 5.78996 4.11913 6.10113 4.50413 6.36965C4.83229 6.5983 5.1153 6.79631 5.34896 6.96064C5.37578 6.97946 5.41797 7.00963 5.47396 7.04966C5.53428 7.09299 5.61062 7.14798 5.70479 7.21598C5.88614 7.34713 6.03679 7.45315 6.15678 7.53415C6.27661 7.61516 6.42179 7.70566 6.59211 7.80615C6.76229 7.90651 6.9228 7.98197 7.07346 8.03216C7.22414 8.08233 7.36363 8.10749 7.49195 8.10749H7.50029H7.50862C7.63691 8.10749 7.77643 8.08233 7.92714 8.03216C8.07777 7.98197 8.23815 7.90667 8.40846 7.80615C8.57862 7.70566 8.72361 7.61497 8.84382 7.53415C8.96381 7.45315 9.11446 7.34716 9.29584 7.21598C9.38982 7.14798 9.46615 7.09297 9.52647 7.0498C9.58249 7.0096 9.62465 6.97962 9.65164 6.96064C9.83367 6.83398 10.1173 6.63678 10.4987 6.37196C11.1927 5.8898 12.2147 5.18012 13.569 4.24011C13.9764 3.9556 14.3167 3.61227 14.5902 3.2106C14.8632 2.80894 15.0001 2.38761 15.0001 1.94676C15.0001 1.57843 14.8674 1.26326 14.6025 1.00075C14.3374 0.738578 14.0234 0.607422 13.6607 0.607422Z" fill="#6868684C"/>
-                                </svg>
-                                <input placeholder={'Введите вашу почту'} type="email" name={'email'} id={'email'} minLength={10} maxLength={20} required/>
-                            </div>
+                            <MyInput style={errors.name ? classes.inputBlockError : classes.inputBlock} register={register} errors={errors} validation={{required:true, minLength:3}} maxLength={20}  id={'name'} name={'name'} type={'text'} placeholder={'Введите'}  label={'Ваше имя'} styleIconError={classes.registerErrorIcon}>
+                                <SvgUser width={'20'} height={'20'} color={'#6868684C'}/>
+                            </MyInput>
+                            <MyInput style={errors.email ? classes.inputBlockError : classes.inputBlock} register={register} errors={errors}  validation={{pattern:/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, required:true}} id={'email'} name={'email'} type={'email'} placeholder={'Введите'}  styleIconError={classes.registerErrorIcon}>
+                                <SvgEmail width={'20'} height={'20'} color={'#6868684C'}/>
+                            </MyInput>
                         </div>
                         <div className={classes.inputBlock}>
                             <label htmlFor="message">Ваше сообщение</label>
-                            <textarea placeholder={'Сообщение'} name={'message'} id={'message'} required minLength={5} maxLength={100}></textarea>
+                            <textarea {...register('message', {required:true, minLength:5})} maxLength={800}  placeholder={'Сообщение'}  name={'message'} id={'message'}></textarea>
                         </div>
-                        <button type={'submit'} onClick={e => submit(e)}>Отправить</button>
+                        <button type={'submit'}>Отправить</button>
                     </form>
                     <div className={classes.socialBtns}>
                         <a target={'_blank'} rel={'noreferrer'} href="https://instagram-my.ru/help/instagram-login-my-page/">
