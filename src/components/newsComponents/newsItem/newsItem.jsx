@@ -10,7 +10,7 @@ const NewsItem = ({post}) => {
             <img src={post.img} alt="Изображение комнаты"/>
             <div className={classes.textSection}>
                 <p><b>{post.title}</b></p>
-                <p>{post.body}</p>
+                <p className={classes.text}>{post.body}</p>
                 <div className={classes.btnsBlock}>
                     <p>{post.date}</p>
                     <button onClick={()=>navigate(`/news/${post.id}`)}>Читать</button>

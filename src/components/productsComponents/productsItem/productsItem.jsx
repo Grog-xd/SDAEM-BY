@@ -117,7 +117,7 @@ const ProductsItem = ({product}) => {
                                         </svg>
                                         Контакты
                                     </button>
-                                    <Link to={`/catalog/${product.obj}/${product.id}`}>Подробнее</Link>
+                                    {/* <Link to={`/catalog/${product.obj}/${product.id}`}>Подробнее</Link> */}
                                 </div>
                                 {profileActive
                                     ?
@@ -212,7 +212,7 @@ const ProductsItem = ({product}) => {
                                             }
                                         </button>
                                     </div>
-                                    <Link to={`/catalog/${product.obj}/${product.id}`}>Подробнее</Link>
+                                    {/* <Link to={`/catalog/${product.obj}/${product.id}`}>Подробнее</Link> */}
                                 </div>
                                 {profileActive
                                     ?

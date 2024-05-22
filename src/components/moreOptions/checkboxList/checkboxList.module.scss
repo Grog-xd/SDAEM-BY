@@ -6,4 +6,11 @@
   justify-content: start;
   flex-wrap: wrap;
   margin-top: 19px;
+  &{
+    @media (max-width:800px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 }

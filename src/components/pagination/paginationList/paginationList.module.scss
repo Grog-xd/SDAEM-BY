@@ -4,4 +4,9 @@
   margin-bottom: 60px;
   justify-content: start;
   align-items: center;
+  &{
+    @media (max-width:800px) {
+      justify-content: center;
+    }
+  }
 }

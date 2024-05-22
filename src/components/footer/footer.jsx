@@ -49,12 +49,12 @@ const Footer = () => {
                             <li>
                                 <NavLink to={'/news'}>Новости</NavLink>
                             </li>
-                            <li>
+                            {/* <li>
                                 <NavLink to={'/404'}>Размещение и тарифы</NavLink>
                             </li>
                             <li>
                                 <NavLink to={'/404'}>Объявления на карте</NavLink>
-                            </li>
+                            </li> */}
                             <li>
                                 <NavLink to={'/contacts'}>Контакты</NavLink>
                             </li>

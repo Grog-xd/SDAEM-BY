@@ -63,6 +63,11 @@ body{
 //tabs
 .react-tabs__tab-list{
   display: flex;
+  &{
+    @media (max-width:800px) {
+      flex-direction: column;
+    }
+  }
 }
 .react-tabs__tab{
   background: rgba(45, 57, 136, 0.5);
@@ -81,12 +86,17 @@ body{
   }
 }
 .react-tabs__tab-panel{
+  &{
+    @media (max-width:800px) {
+      flex-direction: column;
+    }
+  }
   background: #FFFFFF;
   border-radius: 0 10px 10px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  flex-wrap: wrap;
 }
 //swiper
 .swiper{

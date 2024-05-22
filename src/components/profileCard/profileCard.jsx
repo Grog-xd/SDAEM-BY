@@ -71,8 +71,8 @@ const ProfileCard = ({profile, setActive, style}) => {
             { profile.password
                 ?
                     <div className={classes.btnsProfile}>
-                        <Link to={'/404'}>Редактировать профиль</Link>
-                        <button onClick={exitAuth}>Выйти из акаунта</button>
+                        {/* <Link to={'/404'}>Редактировать профиль</Link> */}
+                        <button onClick={exitAuth}>Выйти из аккаунта</button>
                     </div>
                 : null
 
