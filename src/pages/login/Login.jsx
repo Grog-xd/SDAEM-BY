@@ -72,7 +72,7 @@ const Login = () => {
                             </label>
                             <p>Запомнить меня</p>
                         </div>
-                        <Link to={'/404'}>Забыли пароль?</Link>
+                        {/* <Link to={'/404'}>Забыли пароль?</Link> */}
                     </div>
                     {
                         loginError
