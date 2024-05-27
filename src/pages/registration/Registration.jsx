@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import classes from './registration.module.scss'
-import {Link} from "react-router-dom";
+import {Link, Navigate, useNavigate} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import Modal from "../../components/modal/modal";
 import {registerUser} from "../../redux/toolkitSlice";
 
 const Registration = () => {
     const [registerError, setRegisterError] = useState(false)
-    const [modalActive, setModalActive] = useState(false)
+    // const [modalActive, setModalActive] = useState(false)
 
     const [loginValue, setLoginValue] = useState('')
     const [emailValue, setEmailValue] = useState('')
@@ -24,7 +24,7 @@ const Registration = () => {
 
 
     const dispatch = useDispatch()
-
+    const navigate = useNavigate()
 
     function validation(e){
         const emailMask = /\S+@\S+\.\S+/
@@ -54,18 +54,19 @@ const Registration = () => {
         }
         if(!validationError){
             register()
+            navigate('/login')
         }
     }
 
     function register(){
-        setModalActive(true)
+        // setModalActive(true)
         const user = {name: `${loginValue}`, avatar:'', phone:'', city:'', email: `${emailValue}`, password: `${passwordValue}`, viber: '', whatsUpp:''}
         dispatch(registerUser(user))
     }
 
     return (
         <main className={classes.mainRegistration}>
-            {
+            {/* {
                 modalActive
                     ?
                         <Modal>
@@ -74,7 +75,7 @@ const Registration = () => {
                             <Link to='/login' className={'modalButton'}>Понятно</Link>
                         </Modal>
                     : null
-            }
+            } */}
 
             <div className={classes.registration}>
                 <form>
